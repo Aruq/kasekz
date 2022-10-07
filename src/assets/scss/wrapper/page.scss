@@ -1,0 +1,50 @@
+@import "~assets/scss/variables";
+
+html {
+  overflow-x: auto;
+  overflow-y: auto;
+  @media screen and (max-width: $width) {
+    // 20px - scroll width
+    //width: calc($width + 20px);
+    width: initial;
+  }
+}
+
+body {
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  display: table;
+  flex-direction: column;
+  @media screen and (max-width: $width) {
+    display: flex;
+  }
+}
+
+.page {
+  margin-top: 89px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  @media screen and (max-width: $width) {
+    padding: 0 16px;
+  }
+}
+
+.page > * {
+  flex: none;
+}
+
+main {
+  width: 100%;
+  max-width: calc($width + 60px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-p {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}

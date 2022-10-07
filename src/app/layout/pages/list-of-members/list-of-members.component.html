@@ -1,0 +1,19 @@
+<div class="list-of-companies">
+  <main class="padding-top_60">
+    <span class="font-40_48 font-500">Члены биржи</span>
+  </main>
+  <div class="p-30_0__p-16_0">
+    <app-tabs
+      [id]="tabId"
+      [tabs]="getTabs()"
+    ></app-tabs>
+  </div>
+  <main class="padding-bottom_60">
+    <app-list-of-kase-members *ngIf="getTabCurrentTab().header === 'Список членов KASE'"></app-list-of-kase-members>
+    <app-activity-ranking *ngIf="getTabCurrentTab().header === 'Рэнкинг активности'"></app-activity-ranking>
+    <app-diploma-winners-of-nominations *ngIf="getTabCurrentTab().header === 'Дипломанты номинаций'"></app-diploma-winners-of-nominations>
+  </main>
+  <main>
+    <app-actual-information></app-actual-information>
+  </main>
+</div>

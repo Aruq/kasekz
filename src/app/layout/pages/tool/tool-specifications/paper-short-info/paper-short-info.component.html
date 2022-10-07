@@ -1,0 +1,47 @@
+<main class="main-p">
+  <div class="paper-short-info">
+    <div class="psi-left">
+      <span class="font-700 font-32_384">{{data?.emitterCode}}</span>
+      <div class="psil-link" *ngIf="data?.emitterName || data?.instrumentCodeDto?.emitterName">
+        <!--      <img src="assets/images/const-svgs/companies-logo/kaspi-icon.svg" alt="">-->
+        <a class="font-300 font-16_24 underline"
+           href="#">{{data?.emitterName ?? data?.instrumentCodeDto?.emitterName}}</a>
+      </div>
+      <div class="psil-promotion font-300 font-14_196">
+        <span>{{data?.[getObjectByLang('typeShareName')]}}</span><span> {{data?.isin}}</span>
+      </div>
+    </div>
+    <div class="psi-right">
+      <div class="button-h38-p0_30 primary-button">
+        <svg-icon [src]="'assets/images/const-svgs/menu/plus-icon.svg'"></svg-icon>
+        <span class="font-500 font-14_196">Добавить в мой список инструментов</span>
+      </div>
+      <div class="psir-condition">
+        <div class="psirc-item border-sec_5">
+          <div class="psirci-values">
+            <span class="font-300 font-20_24 font-nowrap font-main_2">-</span>
+          </div>
+          <span class="font-300 font-12_168 font-nowrap uppercase font-main_2">Цена последней сделки</span>
+        </div>
+        <div class="psirc-item border-sec_5">
+          <div class="psirci-values block-sec_2">
+            <app-svg-icon [width]="'12'" [height]="'12'"
+                          [iconName]="'arrow_down_strong-icon'">
+            </app-svg-icon>
+            <span class="font-300 font-20_24 font-nowrap">-</span>
+          </div>
+          <span class="font-300 font-12_168 uppercase fc-main_2">Тренд, kzt</span>
+        </div>
+        <div class="psirc-item border-sec_5">
+          <div class="psirci-values block-sec_2">
+            <app-svg-icon [width]="'12'" [height]="'12'"
+                          [iconName]="'arrow_down_strong-icon'">
+            </app-svg-icon>
+            <span class="font-300 font-20_24 font-nowrap">-</span>
+          </div>
+          <span class="font-300 font-12_168 font-nowrapfont-uppercase font-main_2">Тренд, %</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

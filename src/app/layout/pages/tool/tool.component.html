@@ -1,0 +1,12 @@
+<div id="indexes2" style="width: 100%; flex: none"></div>
+<app-path-tree [pathTree]="toolService.pathTree"></app-path-tree>
+<app-paper-short-info [data]="toolValue"></app-paper-short-info>
+<app-tabs
+  [id]="tabId"
+  [tabs]="toolService.tabs"
+></app-tabs>
+<app-tool-specifications *ngIf="getTabCurrentTab().header === 'Характеристика ценной бумаги'"
+                         [data]="toolValue"
+></app-tool-specifications>
+<app-tool-bidding *ngIf="getTabCurrentTab().header === 'Торги'"
+                  [data]="toolValue"></app-tool-bidding>

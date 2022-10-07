@@ -1,0 +1,15 @@
+.trading-system {
+  display: grid;
+  grid-template-areas:
+  "first third"
+  "second third";
+  gap: 80px 64px;
+}
+.connector-params {
+  display: grid;
+  grid-template-areas:
+  "first third"
+  "second third";
+  row-gap: 64px;
+  column-gap: 80px;
+}

@@ -1,0 +1,60 @@
+@import "../theme/light-theme";
+
+html.theme-light {
+
+  .drp-button-v1 {
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 4px;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 0 25px 4px 25px;
+
+    * {
+      user-select: none;
+    }
+
+    legend {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    > div {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      display: flex;
+      flex-direction: row;
+      gap: 12px;
+
+      span {
+        margin-right: auto;
+      }
+
+      svg {
+        margin-left: auto;
+      }
+    }
+  }
+
+  .drp-menu-v1 {
+
+  }
+
+}
+
+html.theme-light {
+  .drp-button-v1 {
+    border: 1px solid $main_1;
+
+    legend {
+      color: $main_1;
+    }
+  }
+
+  .cdk-overlay-pane {
+    border: none;
+  }
+}

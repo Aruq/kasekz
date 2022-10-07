@@ -1,0 +1,23 @@
+<div class="technologies-header padding-bottom_30">
+  <app-path-tree [pathTree]="getPathTree()"></app-path-tree>
+  <main>
+    <span class="margin-top_30 font-40_48 font-500 fc-main-5">Технологии</span>
+    <div class="technologies-header-info margin-top_15 column-c gap-30 font-18_28 font-300 fc-main-5">
+      <span>Для получения технической поддержки, а&nbsp;для высказывания пожеланий и&nbsp;замечаний о&nbsp;работе торговой системы KASE, просим обращаться в&nbsp;службу технической поддержки Service Desk:</span>
+      <span>Тел.:&nbsp;+7&nbsp;(727)&nbsp;237&nbsp;60&nbsp;17</span>
+      <span>E-mail:&nbsp;support@kase.kz</span>
+    </div>
+  </main>
+</div>
+<div class="p-30_0__p-16_0">
+  <app-tabs
+    [id]="tabId"
+    [tabs]="getTabs()"
+  ></app-tabs>
+</div>
+<main class="padding-bottom_60" *ngIf="getTabCurrentTab().header === 'Фондовый рынок ASTS+'">
+  <app-asts-stock-market></app-asts-stock-market>
+</main>
+<main>
+  <app-actual-information></app-actual-information>
+</main>

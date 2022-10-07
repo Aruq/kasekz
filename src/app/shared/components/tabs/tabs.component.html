@@ -1,0 +1,21 @@
+<main class="p-12_24 main-p">
+  <div *ngIf="getCurrentTabByKey()" class="tabs f-nn">
+    <drag-scroll class="tabs-field f-nn">
+
+      <ng-container *ngFor="let tab of tabs; index as i">
+        <div drag-scroll-item class="tab f-nn f-none us-none pointer "
+             (click)="clickTab(tab)"
+             [ngClass]="{
+         'tab-on font-700': tab.active,
+         'tab-off font-300': !tab.active
+         }">
+          <div
+            class="f-nc p-7_16 font-16_192 fc-main_2 {{tab.active ? 'b_tlr-main_1 font-900' : 'bb-main_1 font-500'}}">
+            <span>{{tab.header}}</span>
+          </div>
+        </div>
+      </ng-container>
+      <div class="tab-empty bb-main_1"></div>
+    </drag-scroll>
+  </div>
+</main>

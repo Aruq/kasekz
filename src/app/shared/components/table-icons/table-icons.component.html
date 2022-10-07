@@ -1,0 +1,58 @@
+<div class="table-body box-shadow_1">
+  <table class="{{tableSettings ? tableSettings : 'table-zebra'}}">
+    <thead class="{{thTdSettings.th ? thTdSettings.th.classList : 'font-300 font-12_20'}}">
+    <tr>
+      <th *ngFor="let col of columns; index as i"
+          class="{{col.name}}"
+          [ngStyle]="{
+          'text-align': columnsSettings[i]?.textAlign,
+          'width': columnsSettings[i]?.width
+          }"
+      >
+        <div [ngClass]="{'sub-header': columnsSettings[i].subHeader}">
+          <ng-container *ngIf="columnsSettings[i].subHeader">
+          <span *ngFor="let sHeader of columnsSettings[i].subHeader"
+                [ngClass]="{
+          'opacity-0': columnsSettings[i].subHeader && columnsSettings[i].subHeader[0] === 'none'
+          }"
+          >
+            {{sHeader}}
+          </span>
+          </ng-container>
+          <span>{{col?.name}}</span>
+        </div>
+      </th>
+    </tr>
+    </thead>
+    <tbody class=" {{thTdSettings.td?.classList ? thTdSettings.td?.classList : 'font-300 font-16_24'}}">
+    <tr *ngFor="let value of values; index as i">
+      <td class=" {{valuesSettings[j]?.color}}"
+          *ngFor="let field of getNumberOfProperties(value); index as j"
+          [ngStyle]="{
+          'text-align': valuesSettings[j]?.textAlign,
+          'justify-content': valuesSettings[j]?.justifyAlign,
+          'width': valuesSettings[j]?.width,
+          'color': valuesSettings[j]?.color
+          }">
+
+        <ng-container *ngIf="valuesSettings[j].text">
+          <span>{{value[columns[j].field]}}</span>
+        </ng-container>
+
+        <ng-container *ngIf="valuesSettings[j].image_text">
+          <div class="row gap-8">
+            <svg-icon src="assets/images/const-svgs/companies-logo/kaspi-icon.svg"></svg-icon>
+            <span>{{value[columns[j].field]}}</span>
+          </div>
+        </ng-container>
+
+        <ng-container *ngIf="valuesSettings[j].image">
+          <div *ngIf="value[columns[j].field]" class="row gap-8"
+               [ngStyle]="{'justify-content': valuesSettings[j]?.justifyAlign}">
+            <svg-icon src="assets/images/const-svgs/companies-logo/kaspi-icon.svg"></svg-icon>
+          </div>
+        </ng-container>
+    </tr>
+    </tbody>
+  </table>
+</div>

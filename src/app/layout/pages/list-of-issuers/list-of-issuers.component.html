@@ -1,0 +1,26 @@
+<div class="list-of-issuers">
+  <main class="padding-top_60">
+    <span class="font-40_48 font-500">Список эмитентов</span>
+  </main>
+  <div class="p-30_0__p-16_0">
+    <app-tabs [tabs]="getTabs()"></app-tabs>
+  </div>
+  <main class="padding-bottom_60">
+    <div class="loc-input-field-big input-field-big input-width">
+      <app-svg-icon class="if-icon_left" [width]="'20'" [height]="'20'"
+                    [iconName]="'search-icon'">
+      </app-svg-icon>
+      <input [(ngModel)]="searchCode" placeholder="Поиск по коду ценной бумаги">
+    </div>
+    <div class="margin-top_15">
+      <app-table-icons [columns]="getOfficialListCols()"
+                       [values]="getOfficialListValues()"
+                       [columnsSettings]="getOfficialListColsSettings()"
+                       [valuesSettings]="getOfficialListValueSetting()"
+      ></app-table-icons>
+    </div>
+  </main>
+  <main>
+    <app-actual-information></app-actual-information>
+  </main>
+</div>

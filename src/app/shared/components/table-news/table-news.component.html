@@ -1,0 +1,16 @@
+<div>
+  <span class="font-500 font-28_336 fc-main_2">Новости</span>
+  <div class="mt-12">
+    <app-table-icons
+      [columns]="columns"
+      [values]="values"
+      [columnsSettings]="getNewsColsSettings()"
+      [valuesSettings]="getNewsValueSetting()"
+      [tableSettings]="'table-news'"
+    ></app-table-icons>
+  </div>
+  <div class="f-ec mt-16">
+    <span>Все новости</span>
+    <svg-icon class="rotate-90 svg-main_2" src="assets/images/const-svgs/arrows/arrow-up.svg"></svg-icon>
+  </div>
+</div>

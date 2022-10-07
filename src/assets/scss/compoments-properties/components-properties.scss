@@ -1,0 +1,11 @@
+.open-close-div-anim {
+  transition: height 0.5s;
+  * {
+    transition: all 0.5s;
+  }
+  svg-icon {
+    * {
+      transition: all 0.5s;
+    }
+  }
+}

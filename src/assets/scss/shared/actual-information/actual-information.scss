@@ -1,0 +1,54 @@
+.actual-information {
+
+  .ai-cards {
+
+    .drag-scroll-content {
+      //padding: 30px 15px;
+      display: flex;
+      flex-direction: row !important;
+      flex-wrap: wrap;
+      gap: 30px;
+      @media screen and (max-width: 1140px) {
+        flex-wrap: initial;
+        gap: 24px;
+      }
+      .ai-card {
+        flex-basis: 350px;
+        height: 155px;
+        padding: 24px;
+        border-radius: 4px;
+        display: flex !important;
+        flex-direction: column;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        @media screen and (max-width: 1140px) {
+          width: 307px;
+          height: 177px;
+          flex: none;
+        }
+
+        .ai-type {
+          width: fit-content;
+          height: 28px;
+          padding: 0 15px;
+          border-radius: 2px;
+          display: flex;
+          align-items: center;
+        }
+
+        .ai-header {
+          margin-top: 16px;
+        }
+
+        .ai-more {
+          margin-top: auto;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 7px;
+        }
+      }
+    }
+  }
+}

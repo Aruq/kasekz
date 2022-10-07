@@ -1,0 +1,67 @@
+@import "~assets/scss/variables";
+
+:host {
+  display: flex;
+}
+
+.tabs {
+  width: 100%;
+  position: relative;
+
+  .tabs-field {
+    width: $width;
+  }
+
+  .left {
+    width: calc((100vw - $width) / 2.07);
+    border-width: 0px;
+    border-bottom-width: 2px;
+  }
+
+  .right {
+    flex-grow: 1;
+    border-width: 0px;
+    border-bottom-width: 2px;
+  }
+
+  > div {
+  }
+
+  .tab {
+
+    div {
+      height: 38px;
+      display: flex;
+    }
+
+    img {
+      align-self: flex-end;
+    }
+
+    .corner-right {
+      transform: rotate(90deg) translateY(1px);
+    }
+  }
+
+  .tab-on {
+    padding: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+
+    div {
+      border-radius: 8px 8px 0 0;
+    }
+  }
+
+  .tab-off {
+    padding: 0;
+    border-width: 0;
+    border-bottom-width: 2px;
+  }
+
+  .tab-empty {
+    flex-grow: 1;
+    border-width: 0;
+    border-bottom-width: 1px;
+  }
+}

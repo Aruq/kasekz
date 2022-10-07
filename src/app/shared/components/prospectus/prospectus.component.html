@@ -1,0 +1,19 @@
+<div class="prospectus p-24_40 f-nn f-col gap-12__gap-16"
+     [ngStyle]="{
+       'padding-top': paddingTop + 'px'
+       }">
+  <span *ngIf="text" class="font-700 font-24_288 fc-main_2">Проспекты</span>
+  <div class="ps-dates">
+    <app-tabs-sec [tabs]="tabs"
+                  classStyle="' '"
+                  (currentTab)="getEmitCurrentTab($event)"
+    ></app-tabs-sec>
+  </div>
+  <div class="f-nc gap-15">
+    <app-svg-icon class="svg-sec_3"
+                  [width]="'24'" [height]="'24'"
+                  [iconName]="'file-icon'">
+    </app-svg-icon>
+    <span class="font-300 font-16_24 fc-sec_3 underline">Проспект выпуска акций (KSPI)</span>
+  </div>
+</div>

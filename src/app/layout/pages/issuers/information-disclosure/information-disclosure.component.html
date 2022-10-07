@@ -1,0 +1,14 @@
+<main class="main-p">
+  <div class="row-c">
+    <span class="font-28_336 font-500">Раскрытие информации</span>
+    <div class="margin-left-auto row-c gap-30">
+      <app-drp-button-v1 [title]="'Тип документа'" [menuList]="getMenuListDocumentType()"></app-drp-button-v1>
+      <app-drp-button-v1 [title]="'Год предоставления'" [menuList]="getMenuListYear()"></app-drp-button-v1>
+    </div>
+  </div>
+</main>
+<main class="mt-24">
+  <app-table [columns]="getDisclosureCols()"
+                   [values]="getDisclosureValues()"
+  ></app-table>
+</main>

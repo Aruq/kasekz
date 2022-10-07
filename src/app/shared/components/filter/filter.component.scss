@@ -1,0 +1,21 @@
+:host {
+  > div {
+  }
+
+  * {
+    transition: height 0.5s;
+  }
+
+  #filter-checkboxes {
+    height: 56px;
+    @media screen and (max-width: 1140px) {
+      border: none;
+    }
+  }
+
+  #filter-btn {
+    * {
+      transition: all 0.5s;
+    }
+  }
+}

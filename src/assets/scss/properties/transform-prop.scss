@@ -1,0 +1,18 @@
+.arrow-rotate-right {
+  transform: rotate(270deg);
+}
+
+.rotate-180 {
+  transition: 0.2s;
+  transform: rotate(180deg);
+}
+
+.rotate-90 {
+  transition: 0s;
+  transform: rotate(90deg);
+}
+
+.rotate-0 {
+  transition: 0.2s;
+  transform: rotate(0);
+}

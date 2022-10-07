@@ -1,0 +1,79 @@
+.modal-filter {
+  position: fixed;
+  top: 9999px;
+  left: 9999px;
+  width: 685px !important;
+  border-width: 1px;
+  border-radius: 4px;
+  padding: 16px 0;
+
+  .mf-header {
+
+    svg-icon {
+    }
+  }
+
+  .mf-checkboxes {
+
+    .mfc-left {
+      .mfc-block {
+        margin-top: 24px;
+      }
+    }
+
+    .mfc-right {
+      .mfc-block {
+        margin-top: 16px;
+      }
+    }
+
+    .mfc-block {
+      margin-top: 24px;
+
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+
+      .mfc-header {
+        font-size: 14px;
+        line-height: 19.6px;
+        font-family: MuseoSansCyrl300;
+        text-transform: uppercase;
+      }
+
+      .mfc-body {
+        margin-top: 4px;
+        font-size: 14px;
+        line-height: 19.6px;
+        font-family: MuseoSansCyrl300;
+
+        .mfc-header_type {
+          font-family: MuseoSansCyrl500;
+        }
+
+        &:nth-child(1) {
+          margin-top: 0;
+        }
+
+        .mf-checkbox {
+          margin-top: 8px;
+
+          &:nth-child(1) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .mfc-header-sec {
+      margin-top: 30px;
+    }
+
+    .mf-checkbox {
+
+      span {
+        white-space: nowrap;
+      }
+    }
+  }
+}

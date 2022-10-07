@@ -1,0 +1,21 @@
+<main class="main-p">
+  <div class="actual-information p-60_0_120__p-40-40">
+    <span class="font-700 font-24_288 fc-main_2">Актуальная информация</span>
+    <drag-scroll class="ai-cards m-24_0">
+      <div drag-scroll-item class="ai-card" *ngFor="let card of cards"
+           [ngStyle]="{'background-image': card.imageUrl + ''}"
+      >
+        <span class="ai-type font-300 font-12_168 uppercase bg-main-5_30per fc-main-5">{{card.type}}</span>
+        <span class="ai-header font-700 font-16_224 fc-main-5">{{card.title}}</span>
+        <div class="ai-more font-500 font-14_24 pointer"
+             [routerLink]="card.link">
+          <span class="font-500 font-14_196 fc-main-5">Подробнее</span>
+          <app-svg-icon [width]="'20'" [height]="'20'"
+                        class="svgs-main_5"
+                        [iconName]="'arrow_right-light'">
+          </app-svg-icon>
+        </div>
+      </div>
+    </drag-scroll>
+  </div>
+</main>

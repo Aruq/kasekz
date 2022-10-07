@@ -1,0 +1,103 @@
+<div class="paper-info">
+  <span class="pi-header font-700 font-24_288 fc-main_2">Характеристика ценной бумаги</span>
+  <div class="pi-condition font-16_224_all" *ngIf="data">
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Эмитент:</span>
+        <span class="font-300 font-main_2">{{data?.emitterName ?? data?.instrumentCodeDto?.emitterName ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Торговый код:</span>
+        <span class="font-300 fc-main_2">{{data?.emitterCode ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">ISIN:</span>
+        <span class="font-300 fc-main_2">{{data?.isin ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Маркет-мейкеры:</span>
+        <span class="font-300 fc-main_2">{{data?.marketMaker ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Тип акции:</span>
+        <span class="font-300 font-main_2">{{data[getObjectByLang('typeShareName')] ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">CFI:</span>
+        <span class="font-300 fc-main_2">{{data?.cfi ?? '-'}}</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Список ценных бумаг:</span>
+        <div class="font-300 fc-main_2">
+          <span *ngIf="data?.listSecuritiesName">{{data[getObjectByLang('listSecuritiesName')]}}</span>
+          <span *ngIf="data?.kaseOfficialMarketName && data?.listSecuritiesName">, </span>
+          <span *ngIf="data?.kaseOfficialMarketName" [innerHTML]="data[getObjectByLang('kaseOfficialMarketName')] + '&nbsp;площадка'"></span>
+          <span *ngIf="data[getObjectByLang('listSecuritiesName')] || data[getObjectByLang('kaseOfficialMarketName')] && data[getObjectByLang('typeCategoryShareName')]">, </span>
+          <span *ngIf="data?.typeCategoryShareName" [innerHTML]='"категория&nbsp;\"" + data[getObjectByLang("typeCategoryShareName")] + "\""'></span>
+        </div>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Точность котирования:</span>
+        <span class="font-300 fc-main_2">{{data?.secPrecious ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Схема расчетов:</span>
+        <span class="font-300 font-main_2">{{data?.schemaCalculate ?? data?.quotationAccuracy ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">BBGID</span>
+        <span class="font-300 font-main_2">{{data?.bbgid ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Регистратор:</span>
+        <span class="font-300 font-main_2">{{data[getObjectByLang('registrarName')] ?? '-'}}</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-main-3">T+2</span>
+        <span class="font-300 fc-main_2">{{data?.qwe ?? '- (null)'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Дата открытия торгов:</span>
+        <span class="font-300 font-main_2">{{data?.tradeOpenDate ?? '-' | DdMmYyDate}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Дата включения в торговые списки:</span>
+        <span class="font-300 font-main_2">{{data?.dateListingTradeList ?? '-' | DdMmYyDate}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Общее количество объявленных акций:</span>
+        <span class="font-300 fc-main_2">{{data?.numberOfAnnouncedShare ?? data?.numberSecurities ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Дивиденды:</span>
+        <span class="font-300 font-main_2">{{data?.dividends ?? '-'}}</span>
+      </div>
+    </div>
+    <div class="pic-column">
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Количество акций в обращении:</span>
+        <span class="font-300 fc-main_2">{{data?.numberOfShareInCirculation ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Валюта котирования:</span>
+        <span class="font-300 font-main_2">{{data?.currencyQuotationCode ?? data?.settlementCurrencyCode ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Валюта выпуска:</span>
+        <span class="font-300 fc-main_2">{{data?.currencyCode ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Номинальная стоимость:</span>
+        <span class="font-300 fc-main_2">{{data?.pricePlacement ?? '-'}}</span>
+      </div>
+      <div class="pic-item">
+        <span class="font-300 font-main-3">Периодичность выплаты дивиденда:</span>
+        <span class="font-300 font-main_2">{{data?.dividendPaymentPeriodI ?? '-'}}</span>
+      </div>
+    </div>
+  </div>
+</div>

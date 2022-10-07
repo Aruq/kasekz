@@ -1,0 +1,46 @@
+<div class="table-field {{tableStyle}} box-shadow_1">
+  <table class="table-bgOff">
+    <thead class="font-900 font-14_196">
+    <tr>
+      <th *ngFor="let col of columns; index as i"
+          [ngStyle]="{
+          'text-align': col?.textAlign}"
+          class="{{col.name}}"
+          [innerHTML]="col.name"
+      ></th>
+    </tr>
+    </thead>
+    <tbody class="font-500 font-14_196">
+    <tr *ngFor="let value of values | slice:0:20; index as i">
+      <td *ngFor="let field of getNumberOfCols(); index as j"
+          [ngStyle]="{
+          'text-align': columns[j]?.textAlign,
+          'white-space': columns[j]?.whiteSpace,
+          'cursor': columns[j]?.pointer
+          }"
+          [ngClass]="{
+            'underline': trueOrFalse(value[getObjectByLang(columns[j].field)], value[columns[j].field], columns[j]?.underline)
+          }"
+      >
+        <ng-container>
+          <ng-container *ngIf="columns[j]?.navigateTo">
+            <a class="fc-main_2" [ngStyle]="{
+            'text-decoration': trueOrFalse(value[getObjectByLang(columns[j].field)], value[columns[j].field], columns[j]?.underline) ? columns[j]?.underline : 'none'
+            }" [href]="navigateTo(columns[j]?.navigateTo, paperType, value?.instrumentCodeDto?.emitterCode ?? value?.emitterCode, value?.instrumentCode, value?.id)">
+              <ng-container *ngTemplateOutlet="contentText"></ng-container>
+            </a>
+          </ng-container>
+
+          <ng-container *ngIf="!columns[j]?.navigateTo">
+            <ng-container *ngTemplateOutlet="contentText"></ng-container>
+          </ng-container>
+        </ng-container>
+
+        <ng-template #contentText>
+          <span>{{value[getObjectByLang(columns[j].field)] ?? value[columns[j].field] ?? '-'}}</span>
+        </ng-template>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

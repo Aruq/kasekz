@@ -1,0 +1,70 @@
+<div id="header-field" class="header-field box-shadow_2 bg-main_5">
+  <div id="header-inner" class="header-inner">
+    <div class="header-item-1 screenMaxOff-1140px">
+      <div class="header-logo">
+        <svg-icon src="assets/images/const-svgs/companies-logo/kase-logo.svg"></svg-icon>
+      </div>
+      <span class="header-datetime font-14_196 font-500">Cреда, 14 июля 2021, 15:31</span>
+<!--      <div class="block-span-svg">-->
+<!--        <app-svg-icon class="if-icon_left svg-main_2"-->
+<!--                      [width]="'16'" [height]="'16'"-->
+<!--                      [iconName]="'bar_chart_line_fill-icon'"></app-svg-icon>-->
+<!--        <span class="font-300 font-12_20 font-main_2">Торговая информация</span>-->
+<!--      </div>-->
+      <span class="font-14_196 font-500">+7 (727) 237 53 00</span>
+      <div class="input-field-medium font-300 font-14_196">
+        <svg-icon class="svg-main_3" src="assets/images/const-svgs/menu/search-icon.svg"></svg-icon>
+        <input placeholder="Поиск по сайту">
+      </div>
+      <div class="header-language font-10_16 pointer us-none">
+        <ng-container *ngFor="let lang of languages">
+        <span class="{{currentLang?.value === lang.value ? 'font-900 fc-main_1' : 'font-500 fc-main_2'}}"
+        >
+<!--          (click)="pickLanguage(lang)">-->
+          {{lang.name}}
+        </span>
+        </ng-container>
+      </div>
+      <div class="header-sign_in button-h28-p0_12 primary-button">
+        <span class="font-700 font-14_196 fc-main_1">Войти</span>
+      </div>
+    </div>
+    <div class="header-item-2 screenMaxOff-1140px">
+      <div class="header-menu-1 font-300 font-14_168 fc-main_2">
+        <div class="hms-header pointer us-none"
+             *ngFor="let item of headerMenuBigList"
+             (click)="showHeaderMenuList(item.header)"
+             [id]="item.header"
+             [ngClass]="{
+     'border-main_1 header-menu-active': show === item.header,
+     'header-menu': show != item.header
+     }">
+          {{item.header}}
+          <app-header-menu-big *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
+                               [menuList]="item.menuList"></app-header-menu-big>
+        </div>
+        <div class="hms-header pointer us-none"
+             *ngFor="let item of headerMenuList"
+             (click)="showHeaderMenuList(item.header)"
+             [id]="item.header"
+             [ngClass]="{
+     'border-main_1 header-menu-active': show === item.header,
+     'header-menu': show != item.header
+     }">
+          {{item.header}}
+          <app-header-menu-small *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
+                                 [menuList]="item.menuList"></app-header-menu-small>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-item_mob screenMaxOn-1140px">
+      <svg-icon class="svgs-sec_6" src="assets/images/const-svgs/menu/mob/burger-mob.svg"></svg-icon>
+      <div>
+      <svg-icon src="assets/images/const-svgs/companies-logo/kase-logo-mob.svg"></svg-icon>
+      </div>
+      <svg-icon class="svgs-sec_6" src="assets/images/const-svgs/menu/mob/search-icon-mob.svg"></svg-icon>
+      <svg-icon class="svgs-sec_6" src="assets/images/const-svgs/menu/mob/user-mob.svg"></svg-icon>
+    </div>
+  </div>
+</div>

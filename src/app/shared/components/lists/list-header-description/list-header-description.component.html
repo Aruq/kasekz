@@ -1,0 +1,8 @@
+<div class="column gap-8">
+  <div class="column gap-4 fc-main_2" *ngFor="let drive of getData(); index as i">
+    <span class="font-500 {{i === 0 ? 'font-20_24' : 'font-16_24'}}">{{drive.header}}</span>
+    <span class="font-16_24 font-300" *ngFor="let desc of drive.description">
+      {{desc}}
+    </span>
+  </div>
+</div>

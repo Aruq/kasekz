@@ -1,0 +1,26 @@
+<div class="row-c">
+<div *ngIf="overflow" class="flex-none margin-right_24 us-none pointer ps-arrow-left rotate-180 bg-main_2_005" (click)="clickLeft()">
+  <app-svg-icon class="svg-main_3" [iconName]="'arrow_right-light'"
+                [height]="'20'"
+                [width]="'20'"
+  ></app-svg-icon>
+</div>
+<div [id]="id" #tabsSec class="tabs font-14_168">
+  <div class="tab-on"
+       [id]="id + tab.header"
+       (click)="clickTab(tab)"
+       [ngClass]="{
+       'tab-on font-700 block-main_1': tab.active,
+       'tab-off font-300 font-main_2 border-sec_5': !tab.active
+       }"
+       *ngFor="let tab of tabs; index as i">
+    <span>{{tab.header}}</span>
+  </div>
+</div>
+<div *ngIf="overflow" class="flex-none margin-left_24 us-none pointer ps-arrow-right bg-main_2_005" (click)="clickRight()">
+  <app-svg-icon class="svg-main_3" [iconName]="'arrow_right-light'"
+                [height]="'20'"
+                [width]="'20'"
+  ></app-svg-icon>
+</div>
+</div>

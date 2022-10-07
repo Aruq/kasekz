@@ -1,0 +1,59 @@
+<main class="main-p">
+    <div class="about_us">
+        <div class="fi-header  f-nn f-row__f-col" style="margin-top: 60px;height: 536px;"> 
+     <div class ='fb-left'>
+        <span class="font-700  " style="font-size: 72px">О Бирже</span>
+        <div class="font-500  " style="font-size: 22px">АО "Казахстанская фондовая Биржа" </div>
+        <div class="font-300  " style="font-size: 16px ; width:40% ">является единственной в Республике Казахстан многофункциональной биржевой площадкой по торговле акциями, облигациями, производными финансовыми инструментами, иностранной валютой, а также инструментами денежного рынка" </div>
+      </div>
+    
+        
+        <div class="about_us p-60_0_120__p-40-40" *ngFor="let link of links"
+        
+   >
+     <span class="head">{{link.title}}</span>
+     </div>
+         
+         
+      </div>
+      </div>
+
+ <div class="f_m" >
+   <div class="f_k">
+    <div class="left">
+      <img class ='im' src='assets/images/const-svgs/about-us/img.jpg'>
+       </div>  <div class="right" >
+         <div class="sjj"><span >Фондовый рынок</span></div>
+         <div class="dhh" style="width:520px ;"><p class="kdk font-300" >Биржа проводит торги акциями, корпоративными облигациями, государственными ценными бумагами Республики Казахстан 
+            и государственными ценными бумагами иностранных государств, облигациями международных финансовых организаций, суверенными и корпоративными еврооблигациями, депозитарными расписками, ценными бумагами инвестиционных фондов, биржевыми инвестиционными фондами (Exchange Traded Funds — ETF).
+            Расчеты по ликвидным ценным бумагам происходят по технологии T+2 
+            (на второй день после заключения сделки), по неликвидным ценным бумагам 
+            по технологии T+0 (в день заключения сделки)</p>
+           
+</div>
+        
+           
+</div>
+    </div>
+ </div>
+ <div class="about_us p-60_0_120__p-40-40">
+   <span class="font-700 font-24_288 fc-main_2">Актуальная информация</span>
+   <drag-scroll class="ai-cards m-24_0">
+     <div drag-scroll-item class="ai-card" *ngFor="let card of cards"
+          [ngStyle]="{'background-image': card.imageUrl + ''}"
+     >
+       <span class="ai-type font-300 font-12_168 uppercase bg-main-5_30per fc-main-5">{{card.type}}</span>
+       <span class="ai-header font-700 font-16_224 fc-main-5">{{card.title}}</span>
+       <div class="ai-more font-500 font-14_24 pointer"
+            [routerLink]="card.link">
+         <span class="font-500 font-14_196 fc-main-5">Подробнее</span>
+         <app-svg-icon [width]="'20'" [height]="'20'"
+                       class="svgs-main_5"
+                       [iconName]="'arrow_right-light'">
+         </app-svg-icon>
+       </div>
+     </div>
+   </drag-scroll>
+ </div>
+  </main>
+  

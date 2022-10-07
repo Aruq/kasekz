@@ -1,0 +1,207 @@
+
+.table-field {
+  overflow-x: auto;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  table {
+    overflow: visible;
+    position: relative;
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+
+    td, th {
+    }
+
+    //tbody {
+    //  height: 44px;
+    //}
+
+    tr > th:first-child, tr > td:first-child {
+      z-index: 2;
+      position: sticky;
+      left: -0.5px;
+    }
+
+    th, td {
+      text-align: left;
+      text-overflow: ellipsis;
+      max-width: 100%;
+      white-space: nowrap;
+    }
+
+    th > .sub-header {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .table-body-min-col {
+    width: 0;
+  }
+}
+
+@import "~assets/scss/theme/light-theme";
+
+.table-news {
+  thead {
+    display: none;
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 0 0 0 0;
+
+        &:first-child {
+          padding: 15px 30px 8px 0;
+          vertical-align: top;
+        }
+
+        &:last-child {
+          width: 100%;
+          padding: 15px 0 8px 0;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.table-version-1 {
+  th, td {
+    padding-left: 12px;
+  }
+  table {
+    thead {
+      tr {
+        height: 47px;
+      }
+    }
+
+    tbody {
+      tr {
+        height: 47px;
+      }
+    }
+  }
+}
+
+.table-version-2 {
+  table {
+    thead {
+      tr {
+        height: 34px;
+      }
+    }
+
+    tbody {
+      tr {
+        height: 36px;
+      }
+    }
+
+    tr {
+      td, th {
+        &:first-child {
+          padding-left: 16px;
+        }
+
+        &:last-child {
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+}
+
+
+.theme-light {
+  .table-version-1 {
+    tr {
+      td {
+        border-top: 1px solid $sec_5;
+      }
+    }
+  }
+
+  .table-version-2 {
+    tr {
+      th {
+        border-bottom: 1px solid $sec_5;
+      }
+    }
+  }
+
+  .table-news, .table-news table {
+    border-collapse: collapse;
+
+    tbody {
+      tr {
+        td {
+          border-bottom: 1px solid $sec_5;
+
+          &:first-child {
+            color: $main_3;
+          }
+
+          &:last-child {
+            color: $main_2;
+          }
+
+          &:last-child {
+            td {
+              border-bottom: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .table-bgOff {
+
+  }
+
+  .table-zebra {
+    thead {
+      background: $main_5;
+      color: $main_3;
+      border-bottom: 1px solid $sec_5;
+    }
+
+    thead {
+      tr {
+        th {
+          background: $main_5;
+        }
+      }
+    }
+
+    tbody {
+      color: $main_2;
+
+      tr {
+        &:nth-child(odd) {
+          td {
+            background: $misc_5;
+          }
+        }
+
+        &:nth-child(even) {
+          td {
+            background: $main_5;
+          }
+        }
+      }
+    }
+  }
+}

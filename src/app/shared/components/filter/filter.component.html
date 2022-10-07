@@ -1,0 +1,182 @@
+<div class="">
+  <div class="f-nn f-col gap-16 p-16_24__p-0 b-1px_sec_5 br-4"
+       id="filter-checkboxes">
+    <div class="f-nn f-col f-none">
+      <div id="filter-btn" class="f-nn {{openCloseDivAnimService.checkSize('filter-checkboxes', 'filter-btn', 56) ? 'svgs-main_1 fc-main_1' : 'svgs-main_2 fc-main_2'}}"
+           (click)="openCloseDivAnimService.setFullSize('filter-checkboxes', 'filter-btn', 56)">
+        <svg-icon class="mr-4" src="assets/images/const-svgs/menu/settings-icon-mob.svg"></svg-icon>
+        <span class="pointer us-none font-500 font-20_24 ">Фильтр</span>
+        <svg-icon
+          class="ml-8 {{openCloseDivAnimService.checkSize('filter-checkboxes', 'filter-btn', 56) ? '' : 'rotate-180'}}"
+          src="assets/images/const-svgs/arrows/arrow-up.svg"></svg-icon>
+      </div>
+      <div class="f-nn f-row__f-col p-12_0">
+        <span class="font-300 font-14_196 uppercase fc-main_2__main-3">900 инструментов, 180 эмитентов</span>
+        <div class="ml-auto__0 mt-0__mt-8 f-nn gap-8 font-300_all font-12_168">
+          <span class="pointer us-none fc-main_1">Выбрать все</span>
+          <span class="font-sec_5">/</span>
+          <span class="pointer us-none fc-sec_2">Очистить все</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="f-nn f-col gap-48 f-none {{openCloseDivAnimService.checkSize('filter-checkboxes', 'filter-btn', 56)}}">
+      <div class="f-nn f-row__f-col">
+        <div class="f-nn f-col gap-16 f-100__f-none">
+          <div class="f-nn f-col gap-12__gap-8">
+            <span class="font-500 font-20_24 font-main-3">Основная площадка</span>
+            <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+              <span class="font-500">Акции</span>
+              <div class="f-nn f-col gap-2 font-300_all">
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Категория “Премиум”</span>
+                </div>
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Категория “Стандарт”</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-nn f-col gap-12__gap-8">
+            <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+              <span class="font-500">Долговые ценные бумаги</span>
+              <div class="f-nn f-col gap-2 font-300_all">
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Категория “Облигации”</span>
+                </div>
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Категория “Коммерческие облигации”</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-vert screenMaxOff-1140px"></div>
+        <div class="horizontal-line screenMaxOn-1140px"><div></div></div>
+        <div class="f-nn f-col gap-16 f-100__f-none">
+          <div class="f-nn f-col gap-12__gap-8">
+            <span class="font-500 font-20_24 font-main-3">Альтернативная площадка</span>
+            <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+              <div class="f-nn f-col gap-2 font-500_all">
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Акции</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="f-nn f-col gap-12__gap-8">
+            <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+              <span class="font-500">Долговые ценные бумаги</span>
+              <div class="f-nn f-col gap-2 font-300_all">
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Категория “Коммерческие облигации”</span>
+                </div>
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Облигации</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-vert screenMaxOff-1140px"></div>
+        <div class="horizontal-line screenMaxOn-1140px"><div></div></div>
+        <div class="f-nn f-col gap-16 f-100__f-none">
+          <div class="f-nn f-col gap-12__gap-8">
+            <span class="font-500 font-20_24 font-main-3">Частное размещение</span>
+            <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+              <div class="f-nn f-col gap-2 font-500_all">
+                <div class="f-nc gap-2">
+                  <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                  <span>Облигации</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="f-nn f-row__f-col">
+        <div class="f-nn f-col gap-12__gap-8">
+          <span class="font-500 font-20_24 font-main-3">Другие инструменты</span>
+          <div class="f-nn f-col gap-6 font-14_196_all fc-main_2_all">
+            <span class="font-500">Государственные ценные бумаги</span>
+            <div class="f-nn f-col gap-2 font-300_all">
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Национальный банк РК</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Министерство финансов РК</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Местные исполнительные органы</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Иностранные эмитенты</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-vert screenMaxOff-1140px"></div>
+        <div class="horizontal-line screenMaxOn-1140px"><div></div></div>
+        <div class="f-nn f-col gap-12__gap-8">
+          <div class="f-nn f-col gap-6 mt-auto font-14_196_all fc-main_2_all">
+            <div class="f-nn f-col gap-2 font-500_all">
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>KASE Global</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Ценные бумаги инвестиционных фондов</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Ценные бумаги МФО</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Производные ценные бумаги</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="line-vert screenMaxOff-1140px"></div>
+        <div class="horizontal-line screenMaxOn-1140px"><div></div></div>
+        <div class="f-nn f-col gap-12__gap-8">
+          <div class="f-nn f-col gap-6 mt-auto font-14_196_all fc-main_2_all">
+            <div class="f-nn f-col gap-2 font-500_all">
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Нелистинговые ценные бумаги</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Иностранные валюты</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Операции автоматического репо</span>
+              </div>
+              <div class="f-nc gap-2">
+                <svg-icon src="assets/images/const-svgs/checkbox/checkbox-on.svg"></svg-icon>
+                <span>Фьючерсы</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+<app-path-tree [pathTree]="pathTree"></app-path-tree>
+<main class="main-p">
+  <div class="finance_instruments">
+    <div class="fi-header">
+      <span class="font-900 font-28_336 fc-main_2">Финансовые инструменты</span>
+    </div>
+  </div>
+</main>
+
+<app-tabs
+  [id]="tabId"
+  [tabs]="getTabs()"
+></app-tabs>
+<main class="main-p">
+  <div class="finance_instruments">
+    <div class="fi-header">
+      <ng-container *ngIf="getTabCurrentTab().header !== 'Все инструменты'">
+        <ng-container *ngTemplateOutlet="templateSearch"></ng-container>
+      </ng-container>
+      <ng-container *ngIf="getTabCurrentTab().header === 'Все инструменты'">
+        <ng-container *ngTemplateOutlet="templateSearchFilter"></ng-container>
+      </ng-container>
+      <ng-container *ngTemplateOutlet="templatePromotions"></ng-container>
+      </div>
+      <ng-template #templatePromotions>
+        <div class="mt-24 mb-40">
+          <app-table [columns]="getTableColumns(getTabCurrentTab().link)"
+                     [values]="getTableValues(getTabCurrentTab().link)"
+                     [paperType]="getTabCurrentTab().link"
+          ></app-table>
+        </div>
+      </ng-template>
+  </div>
+</main>
+
+<ng-template #templateSearch>
+  <div class="f-nn">
+    <div class="input-field-medium">
+      <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
+      <input [(ngModel)]="searchCode" placeholder="Код ценной бумаги">
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #templateSearchFilter>
+  <div class="f-nn">
+    <div class="input-field-medium box-shadow_1 br-8 f-nc gap-4 font-14_196 font-300 bg-main_5 border-sec_5">
+      <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
+      <input [(ngModel)]="searchCode" placeholder="Код ценной бумаги">
+    </div>
+    <div class="ml-auto">
+      <app-filter-button (filterValues)="getEmitFilterValues($event)"></app-filter-button>
+    </div>
+  </div>
+</ng-template>

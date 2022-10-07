@@ -1,0 +1,49 @@
+<div class="padding-bottom_30">
+  <app-tabs-sec [tabs]="getTabsSec()"></app-tabs-sec>
+</div>
+<ng-container *ngIf="getTabCurrentTab(tabsSecId).header === 'Торговая система'">
+  <div class="trading-system">
+    <div class="grid-area-1">
+      <span class="font-main_2 font-28_336 font-500">Дистрибутивы</span>
+      <div class="margin-top_24">
+        <app-list-file-description [data]="getDistributions()"></app-list-file-description>
+      </div>
+    </div>
+    <div class="grid-area-2">
+      <span class="fc-main_2 font-28_336 font-500">Драйверы</span>
+      <div class="margin-top_24">
+        <app-list-header-description [data]="getDrivers()"></app-list-header-description>
+      </div>
+    </div>
+    <div class="grid-area-3 column gap-10">
+      <span class="font-main_2 font-28_336 font-500">Руководства и&nbsp;инструкции</span>
+      <span class="fc-main_2 font-14_22 font-300 white_space-break_spaces">В руководстве пользователя описывается процесс установки и&nbsp;настройки терминала, объясняются основные принципы работы интерфейса, разъясняется структура рынков внутри системы и&nbsp;уточняются некоторые особенности работы.</span>
+      <div class="margin-top_24">
+        <app-list-file-description [data]="getInstructions()"></app-list-file-description>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<ng-container *ngIf="getTabCurrentTab(tabsSecId).header === 'FIX'">
+<!--<ng-container>-->
+  <div class="row gap-48 padding-bottom_60">
+    <div class="column flex_46per font-300 padding-top_16-bottom_16">
+      <span class="font-16_24">Участникам торгов фондового и валютного рынков предоставляется возможность осуществлять операции в режиме основных торгов, подключая собственные внешние программно-технические средства с использованием протокола FIX версии 4.4.</span>
+      <br>
+      <span class="font-16_24">Информация о FIX-протоколе доступна по адресу: <a class="fc-main_1a" href="http://www.fixprotocol.org" target="_blank">http://www.fixprotocol.org</a></span>
+      <span class="margin-top_15 font-16_24">Сертификаты предоставляются по запросу на <a class="fc-main_1a" href="mailto:support@kase.kz" target="_blank">support@kase.kz</a></span>
+    </div>
+    <div>
+      <app-list-file-description [data]="getFixInstructions()"></app-list-file-description>
+    </div>
+  </div>
+  <div class="column padding-top_60">
+    <span class="font-28_336 font-500 font-main_2">Параметры подключения</span>
+    <span class="margin-top_36 font-18_27 font-500 fc-main_2">Сервис MFIX Transactional состоит из трех раздельных сервисов:</span>
+    <div class="row gap-48">
+      <app-list-header-description></app-list-header-description>
+      <app-list-header-description></app-list-header-description>
+      <app-list-header-description></app-list-header-description>
+    </div>
+  </div>
+</ng-container>

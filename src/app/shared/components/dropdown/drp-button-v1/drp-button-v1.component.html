@@ -1,0 +1,27 @@
+<fieldset class="drp-button-v1" [matMenuTriggerFor]="menu"
+          *ngIf="menuList.length !== 0"
+          (menuOpened)="menuOpened()"
+          (menuClosed)="menuClosed()"
+>
+  <legend align="left">{{title}}</legend>
+  <div>
+    <span>{{current}}</span>
+    <div class="row-c">
+      <app-svg-icon
+        [svgStorageName]="'icon-arrow'"
+        [classFill]="'svg-main_3' + getClassName()"
+        [iconName]="'arrow-down'"
+        [width]="'14'"
+        [height]="'8'"
+      ></app-svg-icon>
+    </div>
+  </div>
+  <mat-menu class="drp-menu-v1" #menu="matMenu">
+    <div *ngFor="let m of menuList" (click)="setCurrent(m.header)">
+      {{m.header}}
+    </div>
+  </mat-menu>
+</fieldset>
+<ng-container *ngIf="menuList.length === 0">
+  Dropdown menu is empty
+</ng-container>

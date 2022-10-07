@@ -1,0 +1,15 @@
+.drag-scroll-content {
+  height: initial !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  display: -ms-flex !important;
+  display: -moz-flex !important;
+  display: -moz-box !important;
+  display: -webkit-flex !important;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

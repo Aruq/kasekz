@@ -1,0 +1,77 @@
+<div id="button1" (click)="modalOn()"
+     class="modal-filter-button button-g12-p0_24 font-14_196 font-500 primary-button">
+  <svg-icon class="svg-main_3" src="assets/images/const-svgs/menu/filter-icon.svg"></svg-icon>
+  <span>Фильтр</span>
+</div>
+<div [ngStyle]="{
+  top: y+'px',
+  left: x+'px'
+}"
+     *ngIf="show"
+     class="modal modal-filter bg-main_4 border-main_1 modal-drop_shadow">
+  <div class="mf-header f-sn p-0_24 bg-main_5">
+    <span class="font-20_24 font-500 font-main_2">Фильтр</span>
+    <svg-icon class="ml-auto" src="assets/images/const-svgs/menu/close-icon.svg"></svg-icon>
+  </div>
+  <div class="mt-8 p-0_24 f-nc gap-4 pointer" (click)="clearAll()">
+    <svg-icon src="assets/images/const-svgs/menu/close-reset-icon.svg"></svg-icon>
+    <div>Сбросить</div>
+  </div>
+  <div class="mf-checkboxes f-nn gap-32 mt-12 p-0_24 width-100per">
+    <div class="mfc-left f-nn f-col">
+      <div class="mfc-block">
+        <div class="mfc-header fc-main_2">{{mainSite.header}}</div>
+        <div class="mfc-body fc-main_2" *ngFor="let type of mainSite.types">
+          <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+          <div class="mf-checkbox f-nn us-none pointer gap-8" *ngFor="let category of type.categories"
+               (click)="category.active = !category.active; submit()">
+            <img [src]="category.active ? 'assets/images/const-svgs/checkbox/checkbox-on.svg' : 'assets/images/const-svgs/checkbox/checkbox-off.svg'" alt="">
+            <span>{{category.header}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="mfc-block">
+        <div class="mfc-header font-700 font-16_24 fc-main_2">{{alternativeSite.header}}</div>
+        <div class="mfc-body font-main_2" *ngFor="let type of alternativeSite.types">
+          <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+          <div class="mf-checkbox f-nn us-none pointer gap-8" *ngFor="let category of type.categories"
+               (click)="category.active = !category.active; submit()">
+            <img [src]="category.active ? 'assets/images/const-svgs/checkbox/checkbox-on.svg' : 'assets/images/const-svgs/checkbox/checkbox-off.svg'" alt="">
+            <span>{{category.header}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mfc-right f-sn f-col">
+      <div class="mfc-block">
+        <div class="mfc-header font-700 font-16_24 fc-main_2">{{otherInstruments.header}}</div>
+        <div class="mfc-body fc-main_2" *ngFor="let type of otherInstruments.types">
+          <div class="mfc-header_type"><span class="font-16_24">{{type.header}}</span></div>
+          <div class="mf-checkbox f-nn us-none pointer gap-8" *ngFor="let category of type.categories | slice:0:4"
+               (click)="category.active = !category.active; submit()">
+            <img [src]="category.active ? 'assets/images/const-svgs/checkbox/checkbox-on.svg' : 'assets/images/const-svgs/checkbox/checkbox-off.svg'" alt="">
+            <span>{{category.header}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="mfc-block">
+        <div class="mfc-body fc-main_2" *ngFor="let type of otherInstruments.types">
+          <div class="mf-checkbox f-nn us-none pointer gap-8" *ngFor="let category of type.categories | slice:4:8"
+               (click)="category.active = !category.active; submit()">
+            <img [src]="category.active ? 'assets/images/const-svgs/checkbox/checkbox-on.svg' : 'assets/images/const-svgs/checkbox/checkbox-off.svg'" alt="">
+            <span>{{category.header}}</span>
+          </div>
+        </div>
+      </div>
+      <div class="mfc-block">
+        <div class="mfc-body fc-main_2" *ngFor="let type of otherInstruments.types">
+          <div class="mf-checkbox f-nn us-none pointer gap-8" *ngFor="let category of type.categories | slice:8:13"
+               (click)="category.active = !category.active; submit()">
+            <img [src]="category.active ? 'assets/images/const-svgs/checkbox/checkbox-on.svg' : 'assets/images/const-svgs/checkbox/checkbox-off.svg'" alt="">
+            <span>{{category.header}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

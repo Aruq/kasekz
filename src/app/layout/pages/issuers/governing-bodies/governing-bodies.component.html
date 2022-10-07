@@ -1,0 +1,29 @@
+<main class="main-p">
+  <span class="font-500 font-28_336">Акционеры</span>
+  <div class="mt-12">
+    <app-table [columns]="getStockholdersCols()"
+               [values]="getStockholdersValues()"
+    ></app-table>
+  </div>
+  <div class="mt-12">
+    <app-table [columns]="getStockholdersQuantityCols()"
+               [values]="getStockholdersQuantityValues()"
+    ></app-table>
+  </div>
+  <div class="mt-24">
+    <span class="font-500 font-28_336">Орган управления</span>
+    <div class="mt-12">
+      <app-table [columns]="getGovernmentCols()"
+                 [values]="getGovernmentValues()"
+      ></app-table>
+    </div>
+  </div>
+  <div class="mt-24">
+    <span class="font-500 font-28_336">Исполнительный орган</span>
+    <div class="mt-12">
+      <app-table [columns]="getExecutiveAgencyCols()"
+                 [values]="getExecutiveAgencyValues()"
+      ></app-table>
+    </div>
+  </div>
+</main>

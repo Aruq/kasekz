@@ -1,0 +1,57 @@
+<div class="issuers font-main_2">
+  <app-path-tree [pathTree]="getPathTree()"></app-path-tree>
+  <main>
+    <div>
+      <div class="row-c gap-15 main-p">
+<!--        <span class="font-40_48 font-500">АО Kaspi.kz (KSPI)</span>-->
+        <span class="font-40_48 font-500">{{emitterCode}}</span>
+<!--        <img src="assets/images/const-svgs/companies-logo/kase-big_logo.svg" alt="">-->
+        <div class="margin-left-auto column-cr font-16_24">
+          <span class="font-500 font-main_2">Капитализация</span>
+          <div class="row-c gap-8 fc-main_1">
+            <div class="row-c">
+              <span class="font-500">9 500 132,43&nbsp;</span>
+              <span>млн KZT</span>
+            </div>
+            <div>
+              <span>(</span>
+              <span class="font-500">$ 22 280,38&nbsp;</span>
+              <span>млн)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="issuers-info row gap-30 p-24_0 main-p">
+        <div class="card padding-24">
+          <app-tabs-sec [tabs]="getTabsSec()" [classStyle]="'none'"></app-tabs-sec>
+          <div class="margin-top_15 row-c gap-8 font-300">
+            <span class="font-14_22 font-main_3">Сайт:</span>
+            <span class="font-16_24 fc-sec_3">ir.kaspi.kz</span>
+          </div>
+          <span class="margin-top_8 font-16_24 font-300">
+            С 2014 по&nbsp;2018 год&nbsp;Kaspi Bank занимает первое место по&nbsp;размеру розничного ссудного портфеля.
+          </span>
+          <span class="margin-top_4 font-16_24 font-300">
+            По состоянию на январь 2017 года Kaspi Bank занимает первое место по&nbsp;объему кредитного портфеля среди банков второго уровня Республики Казахстан. За&nbsp;первые полгода 2018&nbsp;года Kaspi Bank стал вторым по&nbsp;наращиванию кредитного портфеля, увеличив объем кредитов на&nbsp;101,54&nbsp;млрд&nbsp;тенге,или на&nbsp;10,8&nbsp;%.
+          </span>
+          <div class="margin-top_15"></div>
+        </div>
+        <div class="card padding-top_24-bottom_24">
+          <app-table [columns]="getIssuersInfoCols()"
+                     [values]="getIssuersInfoValues()"
+                     [tableStyle]="'table-version-2'"
+          >
+          </app-table>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-tabs
+    [id]="tabId"
+    [tabs]="getTabs()"></app-tabs>
+  <app-securities *ngIf="getTabCurrentTab().header === 'Ценные бумаги'"></app-securities>
+  <app-governing-bodies *ngIf="getTabCurrentTab().header === 'Органы управления'"></app-governing-bodies>
+  <app-information-disclosure *ngIf="getTabCurrentTab().header === 'Раскрытие информации'"></app-information-disclosure>
+  <app-news *ngIf="getTabCurrentTab().header === 'Новости'"></app-news>
+</div>
+
