@@ -1,24 +1,30 @@
 <main class="main-p">
     <div class="about_us">
-        <div class="fi-header  f-nn f-row__f-col" style="margin-top: 60px;height: 536px;"> 
+        <div class="fi-header   f-nn f-row__f-col" style="margin-top: 60px;height: 536px;"> 
      <div class ='fb-left'>
         <span class="font-700  " style="font-size: 72px">О Бирже</span>
         <div class="font-500  " style="font-size: 22px">АО "Казахстанская фондовая Биржа" </div>
-        <div class="font-300  " style="font-size: 16px ; width:40% ">является единственной в Республике Казахстан многофункциональной биржевой площадкой по торговле акциями, облигациями, производными финансовыми инструментами, иностранной валютой, а также инструментами денежного рынка" </div>
+        <span class="font-300  " style="font-size: 16px ; line-height: 25.2px;width: 100%;">является единственной в Республике Казахстан многофункциональной биржевой площадкой по торговле акциями, облигациями, производными финансовыми инструментами, иностранной валютой, а также инструментами денежного рынка" </span>
       </div>
-    
-        
-        <div class="about_us p-60_0_120__p-40-40" *ngFor="let link of links"
-        
-   >
-     <span class="head">{{link.title}}</span>
-     </div>
+   
+    <div class=" font-24_288 fc-main_2">
+        <div drag-scroll-item class="aed" *ngFor="let link of links"   
+        >
+          <span class="asss">{{link.title}}</span>
+          <div class="rr"
+               [routerLink]="link.link">
+            <app-svg-icon [width]="'20'" [height]="'20'"
+                          class="svgs-main_5"
+                          [iconName]="'arrow_right-light'">
+            </app-svg-icon>
+          </div>
+        </div>
+      </div>
          
-         
       </div>
-      </div>
+      
 
- <div class="f_m" >
+ <div class="f_m mt-24 bg-main_4" >
    <div class="f_k">
     <div class="left">
       <img class ='im' src='assets/images/const-svgs/about-us/img.jpg'>
@@ -29,31 +35,85 @@
             Расчеты по ликвидным ценным бумагам происходят по технологии T+2 
             (на второй день после заключения сделки), по неликвидным ценным бумагам 
             по технологии T+0 (в день заключения сделки)</p>
-           
-</div>
-        
-           
-</div>
-    </div>
- </div>
- <div class="about_us p-60_0_120__p-40-40">
-   <span class="font-700 font-24_288 fc-main_2">Актуальная информация</span>
-   <drag-scroll class="ai-cards m-24_0">
-     <div drag-scroll-item class="ai-card" *ngFor="let card of cards"
-          [ngStyle]="{'background-image': card.imageUrl + ''}"
-     >
-       <span class="ai-type font-300 font-12_168 uppercase bg-main-5_30per fc-main-5">{{card.type}}</span>
-       <span class="ai-header font-700 font-16_224 fc-main-5">{{card.title}}</span>
-       <div class="ai-more font-500 font-14_24 pointer"
-            [routerLink]="card.link">
-         <span class="font-500 font-14_196 fc-main-5">Подробнее</span>
+            <div class="p_d" style="margin-top: 30px;"
+            [routerLink]="">
+         <span class="s_p" >Подробнее</span>
          <app-svg-icon [width]="'20'" [height]="'20'"
-                       class="svgs-main_5"
+                       class=""
                        [iconName]="'arrow_right-light'">
          </app-svg-icon>
        </div>
+           
+</div>
+        
+           </div>
+</div>
+   
+    <div class=" f-nn f-row__f-col ar">
+   
+     
+        <div drag-scroll-item class="scroll" *ngFor="let market of markets"
+           
+        >
+          <span class="m_t">{{market.type}}</span>
+          <span class="m_ti">{{market.title}}</span>
+          <div class="p_d"
+          [routerLink]="market.link">
+       <span class="s_p" >Подробнее</span>
+       <app-svg-icon [width]="'20'" [height]="'20'"
+                     class="svgs-main_1"
+                     [iconName]="'arrow_right-light'">
+       </app-svg-icon>
      </div>
-   </drag-scroll>
- </div>
+        </div>
+    
+    </div> </div>
+    <div class="d_l "> <span class='n_d'>Действующие лицензии </span>
+      <div class="f_k" style="font-size: 22px">
+      <div class="fb-left ">
+        <span class=" li ">Лицензия на осуществление деятельности на рынке ценных бумаг от 19 июля 2012 года 
+          № 4.2.3/1, выданная Комитетом по контролю и надзору финансового рынка и финансовых организаций Национального банка Республики Казахстан. Лицензия дает право 
+          на осуществление следующих видов деятельности на рынке ценных бумаг:" </span>
+          <div class="add  f-nn f-row__f-col ">
+          <app-svg-icon [width]="'20'" [height]="'20'"
+          class="svgs-main_1"
+          [iconName]="'check2-circle'">
+         </app-svg-icon> <span class ='ae'>Деятельность по организации торговли с ценными бумагам и иными финансовыми инструментами</span></div>
+         <div class="add  f-nn f-row__f-col ">
+         <app-svg-icon [width]="'20'" [height]="'20'"
+         class="svgs-main_1"
+         [iconName]="'check2-circle'">
+         </app-svg-icon> <span class ='ae'  >Клиринговая деятельность по сделкам с финансовыми инструментами на рынке ценных бумаг</span></div>
+      </div>
+      
+      <div class="fb-right ">
+        <span class=" li ">Лицензия на проведение банковских операций в национальной и иностранной валюте от 30 января 2020 года № 4.3.8, выданная Национальным банком Республики Казахстан. Лицензия дает право на проведение следующих банковских операций:</span>
+        <div class="add  f-nn f-row__f-col ">
+            <app-svg-icon [width]="'20'" [height]="'20'"
+            class="svgs-main_1"
+            [iconName]="'check2-circle'"
+           >
+          </app-svg-icon> <span class ='ae'>Открытие и ведение корреспондентских счетов банков и организаций, осуществляющих отдельные виды банковских операций</span></div>
+          <div class="add  f-nn f-row__f-col ">
+            <app-svg-icon [width]="'20'" [height]="'20'"
+            class="svgs-main_1"
+            [iconName]="'check2-circle'">
+          </app-svg-icon> <span class ='ae'>Переводные операции: выполнение поручений физических и юридических лиц 
+            по платежам и переводам денег</span></div>
+            <div class="add  f-nn f-row__f-col ">
+              <app-svg-icon [width]="'20'" [height]="'20'"
+              class="svgs-main_1"
+              [iconName]="'check2-circle'">
+            </app-svg-icon> <span class ='ae'>Открытие и ведение банковских счетов юридических лиц</span></div>
+          <div class="add  f-nn f-row__f-col ">
+            <app-svg-icon [width]="'20'" [height]="'20'"
+            class="svgs-main_1"
+            [iconName]="'check2-circle'">
+          </app-svg-icon> <span class ='ae'>Обменные операции с иностранной валютой, за исключением организации обменных операций с наличной иностранной валютой</span></div>
+    </div>
+      </div>
+      </div>
+    </div>
+ 
   </main>
   

@@ -166,6 +166,12 @@ $footer-license: rgba(255, 255, 255, 0.7);
       fill: $main_5;
     }
   }
+  
+  .svgs-main_1 {
+    use {
+      fill: $main_1a;
+    }
+  }
 
   .svgs-sec_1 {
     svg {

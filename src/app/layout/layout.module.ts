@@ -32,6 +32,7 @@ import {AngularSvgIconModule} from "angular-svg-icon";
 
     component.TechnologiesComponent,
     component.AstsStockMarketComponent,
+    component.AboutUsComponent
   ],
   imports: [
     LayoutRouterModule,
