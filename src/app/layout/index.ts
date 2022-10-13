@@ -1,5 +1,5 @@
 export * from './pages/financial-tools/financial-tools.component';
-export * from './pages/about_us/about_us.component';
+
 // tool
 export * from './pages/tool/tool.component';
 
@@ -30,3 +30,6 @@ export * from './pages/list-of-members/diploma-winners-of-nominations/diploma-wi
 // technologies
 export * from './pages/technologies/technologies.component';
 export * from './pages/technologies/asts-stock-market/asts-stock-market.component';
+
+export * from './pages/about_us/about_us.component';
+export * from './pages/about_us/mission-values/mission-value.component'

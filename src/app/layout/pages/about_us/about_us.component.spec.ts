@@ -21,35 +21,35 @@ describe('AboutUsComponent', () => {
 
   it(`default value`, () => {
     expect(component.links).toEqual([
-        {   
+        {
           title: 'Миссия и ценности',
+          link: "/mission-value"
+        },
+        {
+          title: 'История Биржи',
           link: "/#"
         },
-        {  
-          title: 'История биржы',
-          link: "/#"
-        },
-        {  
+        {
           title: 'Руководство',
           link: "/#"
         },
         {
-          title: 'Коммитеты и комиссии',
+          title: 'Комитеты и омиссии',
           link: "/#"
         },
         {
-         
+
           title: 'Раскрытие информации компаниями',
-         
+
           link: "/#"
         },
         {
-         
+
           title: 'Участие в профессиональных организациях',
           link: "/#"
         },
         {
-         
+
           title: 'Корпаративные документы',
           link: "/#"
         },

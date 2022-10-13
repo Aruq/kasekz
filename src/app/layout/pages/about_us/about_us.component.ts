@@ -18,48 +18,43 @@ interface market{
 export class AboutUsComponent implements OnInit {
 
   links: link[] = [
-    {   
+    {
       title: 'Миссия и ценности',
+      link: "/mission-value"
+    },
+    {
+      title: 'История Биржи',
       link: "/#"
     },
-    {  
-      title: 'История биржы',
-      link: "/#"
-    },
-    {  
+    {
       title: 'Руководство',
       link: "/#"
     },
     {
-      title: 'Коммитеты и комиссии',
+      title: 'Комитеты и комиссии',
       link: "/#"
     },
+
     {
-     
-      title: 'Раскрытие информации компаниями',
-     
-      link: "/#"
-    },
-    {
-     
+
       title: 'Участие в профессиональных организациях',
       link: "/#"
     },
     {
-     
-      title: 'Корпаративные документы',
+
+      title: 'Корпоративные документы',
       link: "/#"
     },
   ];
- 
+
   markets:market[]=[
-    
+
    {
     type:'Срочный рынок',
     title:'На рынке обращаются: фьючерс на индекс KASE, фьючерс валютную пару USD/KZT_TOM, фьючерсы на наиболее ликвидные акции.',
     link:'/#'
    },
-   { 
+   {
     type:'Валютный рынок',
     title:'На рынке ведутся торги следующими валютами: RUB/KZT, USD/KZT, CNY/KZT, EUR/KZT и EUR/USD.',
     link:'/#'
@@ -82,6 +77,6 @@ export class AboutUsComponent implements OnInit {
 
 
 
-  
 
-  
+
+

@@ -13,7 +13,8 @@ const routes: Routes = [
   {path: 'issuers/:paperType/:emitterCode/:id', component: component.IssuersComponent},
   {path: 'list-of-members', component: component.ListOfMembersComponent},
   {path: 'technologies', component: component.TechnologiesComponent},
-  {path: 'about_us' , component: component.AboutUsComponent}
+  {path: 'about-us' , component: component.AboutUsComponent},
+  {path: 'mission-value' , component: component.MissionValueComponent}
 ]
 
 @NgModule({

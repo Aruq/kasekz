@@ -4,7 +4,7 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'О нас',
     translateCode: 'О нас',
-    link: '/about_us',
+    link: 'about-us',
     active: false
   },
   {

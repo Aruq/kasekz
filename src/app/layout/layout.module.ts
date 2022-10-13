@@ -7,6 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {MatMenuModule} from "@angular/material/menu";
 import {MatButtonModule} from "@angular/material/button";
 import {AngularSvgIconModule} from "angular-svg-icon";
+import {DragScrollModule} from "ngx-drag-scroll";
 
 @NgModule({
   declarations: [
@@ -32,16 +33,18 @@ import {AngularSvgIconModule} from "angular-svg-icon";
 
     component.TechnologiesComponent,
     component.AstsStockMarketComponent,
-    component.AboutUsComponent
+    component.AboutUsComponent,
+    component.MissionValueComponent
   ],
-  imports: [
-    LayoutRouterModule,
-    SharedModule,
-    CommonModule,
-    FormsModule,
-    MatMenuModule,
-    MatButtonModule,
-    AngularSvgIconModule
-  ]
+    imports: [
+        LayoutRouterModule,
+        SharedModule,
+        CommonModule,
+        FormsModule,
+        MatMenuModule,
+        MatButtonModule,
+        AngularSvgIconModule,
+        DragScrollModule
+    ]
 })
 export class LayoutModule {}

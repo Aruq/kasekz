@@ -1,6 +1,7 @@
 import {Component, EventEmitter, HostListener, Inject, Input, OnInit, Output} from '@angular/core';
 import {TabsInterface} from "@shared/interfaces/tabs-interface";
 import {ModalPositionService} from "@shared/services/modal-position.service";
+import {RouterLinkService} from "@shared/services/router-link.service";
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
 
 @Component({
@@ -19,7 +20,8 @@ export class HeaderMenuSmallComponent implements OnInit {
   @Input() itemHeader: string = '';
   @Input() menuList: TabsInterface[] = [];
 
-  constructor(public modalPositionService: ModalPositionService) {
+  constructor(public modalPositionService: ModalPositionService, private routerService: RouterLinkService) {
+
   }
 
   ngOnInit(): void {
@@ -27,6 +29,10 @@ export class HeaderMenuSmallComponent implements OnInit {
     this.screenHeight = window.innerHeight;
     this.modalOn();
     // console.log(this.menuList);
+
+
+
+
   }
 
   @HostListener('window:resize', ['$event'])
@@ -47,6 +53,12 @@ export class HeaderMenuSmallComponent implements OnInit {
       }, 0)
     }
     return
+  }
+
+
+
+  public link2(value: string){
+     this.routerService.setValue(value);
   }
 
 }

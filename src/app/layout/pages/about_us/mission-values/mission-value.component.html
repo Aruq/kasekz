@@ -1,0 +1,44 @@
+<main class="main-p"></main>
+<div class="bg-main_4">
+<app-path-tree [pathTree]="pathTree"></app-path-tree>
+
+  <div class='main_m' >
+      <div class="fi-header">
+        <span class="font-700 font-28_336 fc-main_2">Миссия и ценности</span>
+      </div>
+   
+    <div class=" font-24_288 fc-main_2  adf" >
+      <div drag-scroll-item class="" *ngFor="let mission of missions">
+       <div class="un"> <div class='m_s'><span class="font-700">{{mission.type}}</span></div>
+        <div class='st_t'><span class=" font-300">{{mission.title2}}</span>
+        
+        <div drag-scroll-item class="st_t" *ngFor="let t of mission.title ">
+
+           {{t.name}}
+           {{t.t}}
+
+          <!-- <div drag-scroll-item *ngFor="let v of t">
+
+          {{v.name}}
+           {{v.t}}
+
+        </div> --></div> </div>
+
+      </div> </div>
+
+  <!--  -->
+         
+
+
+
+
+
+        
+          </div>
+       
+    </div>
+
+
+
+
+  
