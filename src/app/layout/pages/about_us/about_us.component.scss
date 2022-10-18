@@ -4,14 +4,14 @@
     align-items: flex-start;
     padding: 0px;
    width:1324px !important;
- margin-top: 24px;
+
   
    
 }
 
 .f_m{
 
-padding: 60px 290px;
+padding: 48px 290px;
 }
 .akl{
   color: #038726;
@@ -26,11 +26,10 @@ padding: 60px 290px;
     flex: none;
     order: 0;
     flex-grow: 1;
-    .im{
-
-height: 425px;
-
-    }
+  
+}
+.im{
+    width: 100%;
 }
 .right{
     display: flex;
@@ -39,60 +38,30 @@ height: 425px;
     padding: 0px;
     gap: 24px;
     width: 620px;
-    
-    
-    /* Inside auto layout */
-    
-    flex: none;
-    order: 1;
-    flex-grow: 1;
-    .sjj{
-   line-height: 120%;
-    font-size: 28px;
-      height: 34px;  
-
-
- }
-
-
-
 }
 .aed{
-    display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
+    text-align: left!important;
+   
 padding: 10px 24px;
 gap: 12px;
 
 width: 489px;
 height: 56px;
 
-/* Main colors/White BG
-
-Фоновый белый, дополнительный
-*/
 background: #FFFFFF;
-/* Main colors/White BG
 
-Фоновый белый, дополнительный
-*/
 border: 1px solid #FFFFFF;
 /* shadow */
 
 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
  margin-bottom: 16px;
 border-radius: 8px;
 
 /* Inside auto layout */
  margin-left: 160px;
  margin-right: 100px;
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
+
 }
 
 .fb-left{
@@ -107,6 +76,7 @@ flex-grow: 0;
 .asss{
 font-size: 16px;
 width: 405px;
+line-height: 140%;
 }
 .ro{
   margin-top: 15px;
@@ -126,25 +96,25 @@ width: 24px;
 height: 24px;
 background-color: #038726;
 border-radius: 4px;
-margin-top: 4px;
+
 }
 .add{
     justify-content: center;
     align-items: center;
-    height: 40px;
+  
  
     float: left;
    margin-bottom: 12px;
 }
 .ae{
 
-    line-height: 140%;
+    line-height: 120%;
     margin-left: 15px;
-    font-size:14px;
+    font-size:16px;
     width:567px
 }
 .scroll{
-  
+  margin-top: 40px;
 gap: 24px;
 width: 405px;
 height: 244px;
@@ -152,7 +122,7 @@ height: 244px;
   
 border: 1px solid #3CBD0D;
 border-radius: 4px;
-margin:15px;
+margin-right: 24px;
 }
 .m_t{
     height: 34px;
@@ -160,10 +130,10 @@ margin:15px;
    
 }
 .m_ti{
-height: 88px;
+height:115px;
 font-size: 16px;
 float: left;
-margin-bottom: 40px;
+margin-bottom: 20px;
 margin-top:16px;
 line-height: 140%;
 }
@@ -185,17 +155,23 @@ font-size: 14px;
 line-height: 140%;
 }
 .n_d{
-font-size: 28px;
+font-size: 34px;
 line-height: 120%;
 }
 .d_l{
-    padding: 60px 0px;
+    padding: 48px 0px;
 }
 .li{
   
-font-size: 14px;
+font-size: 16px;
+line-height: 140%;
 
 }
 .ac{
  margin-left: 50px;
+padding-top: 20px;
+gap: 16px;
+
+
+height: 460px;
 }

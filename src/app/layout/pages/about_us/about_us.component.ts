@@ -28,11 +28,11 @@ export class AboutUsComponent implements OnInit {
     },
     {
       title: 'Руководство',
-      link: "/#"
+      link: "/management"
     },
     {
       title: 'Комитеты и комиссии',
-      link: "/#"
+      link: "/board"
     },
 
     {

@@ -31,11 +31,11 @@ describe('AboutUsComponent', () => {
         },
         {
           title: 'Руководство',
-          link: "/#"
+          link: "/management"
         },
         {
           title: 'Комитеты и омиссии',
-          link: "/#"
+          link: "/board"
         },
         {
 
@@ -46,7 +46,7 @@ describe('AboutUsComponent', () => {
         {
 
           title: 'Участие в профессиональных организациях',
-          link: "/#"
+          link: "/participation"
         },
         {
 

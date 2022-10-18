@@ -14,7 +14,10 @@ const routes: Routes = [
   {path: 'list-of-members', component: component.ListOfMembersComponent},
   {path: 'technologies', component: component.TechnologiesComponent},
   {path: 'about-us' , component: component.AboutUsComponent},
-  {path: 'mission-value' , component: component.MissionValueComponent}
+  {path: 'mission-value' , component: component.MissionValueComponent},
+  {path:'management', component:component.ManagementComponent},
+  {path:'board',component:component.BoardComponent},
+  {path:'participation', component:component.ParticipationComponent}
 ]
 
 @NgModule({

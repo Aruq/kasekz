@@ -4,41 +4,32 @@
 
   <div class='main_m' >
       <div class="fi-header">
-        <span class="font-700 font-28_336 fc-main_2">Миссия и ценности</span>
+        <span class="font-900 font-28_336 fc-main_2">Миссия и ценности</span>
       </div>
-   
-    <div class=" font-24_288 fc-main_2  adf" >
-      <div drag-scroll-item class="" *ngFor="let mission of missions">
-       <div class="un"> <div class='m_s'><span class="font-700">{{mission.type}}</span></div>
-        <div class='st_t'><span class=" font-300">{{mission.title2}}</span>
-        
+
+    <div class="ad" >
+
+      <div drag-scroll-item class="mission_card " style="display:flex ;" *ngFor="let mission of missions">
+       <div class='type'><span class="font-900 font-22_26 fc-main-3  ">{{mission.type}}</span></div>
+        <div class='title'><span class=" font-300 font-18_25 ">{{mission.title2}}</span>
+
         <div drag-scroll-item class="st_t" *ngFor="let t of mission.title ">
 
-           {{t.name}}
-           {{t.t}}
-
-          <!-- <div drag-scroll-item *ngFor="let v of t">
-
-          {{v.name}}
-           {{v.t}}
-
-        </div> --></div> </div>
-
-      </div> </div>
-
-  <!--  -->
-         
+           <div class="mb-8"><span class="font-700 font-20_24">{{t.name}}</span></div>
+         <div><span class=" font-300 font-18_25">{{t.t}}</span> </div>
+</div> </div>
+        </div></div>
 
 
 
 
 
-        
-          </div>
-       
-    </div>
 
 
 
 
-  
+
+
+
+
+

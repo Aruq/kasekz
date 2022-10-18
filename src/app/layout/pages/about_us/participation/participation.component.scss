@@ -1,0 +1,68 @@
+.main_part{
+    width:1324px;
+    margin-left: 300px;
+}
+.organization{
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 24px;
+
+width: 620px;
+height: 208px;
+
+/* Main colors/White BG
+
+Фоновый белый, дополнительный
+*/
+background: #FFFFFF;
+/* Main colors/White BG
+
+Фоновый белый, дополнительный
+*/
+border: 1px solid #FFFFFF;
+/* shadow new */
+
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 8px;
+
+
+}
+.body{
+    flex-wrap:wrap;
+    gap: 24px;
+    margin-top: 24px;
+}
+.img{
+    width: 120px;
+    height: 60px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px ;
+gap: 10px;
+
+
+}
+.i{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name{
+    margin-left: 16px;
+    width: 436px;
+}
+.p_d{
+    display: flex;
+}

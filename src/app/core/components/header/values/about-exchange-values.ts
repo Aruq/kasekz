@@ -16,13 +16,13 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Руководство',
     translateCode: 'Руководство',
-    link: '/',
+    link: 'management',
     active: false
   },
   {
     header: 'Комитеты и комиссии',
     translateCode: 'Комитеты и комиссии',
-    link: '/',
+    link: 'board',
     active: false
   },
   {
@@ -34,7 +34,7 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Участие в профессиональных организациях',
     translateCode: '',
-    link: '/',
+    link: 'participation',
     active: false
   },
   {
@@ -46,7 +46,7 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Устойчивое развитие',
     translateCode: '',
-    link: '/',
+    link: '/technologies',
     active: false
   },
   {

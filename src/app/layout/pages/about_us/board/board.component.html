@@ -1,0 +1,66 @@
+
+<div class="bg-main_4">
+    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+      <div class="bo-header">
+        <span class="font-900 font-40_48 ">Комитеты и комиссии</span>
+      </div>
+
+<div class="main">
+  
+
+<div class="column-1">
+  <ul class="vertical-menu ">
+      <li (click)="viewMode ='tab1'" class="font-300 font-14_168 " [ngClass]="{'active':viewMode =='tab1'}">Комитет Совета директоров 
+        <br>по бюджету и стратегическому планированию</li>
+      <li (click)="viewMode ='tab2'"   class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab2'}">Комитет Совета директоров 
+        <br>по кадрам, вознаграждениям 
+        <br>и социальным вопросам</li>
+      <li (click)="viewMode ='tab3'"  class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab3'}">Комитет Совета директоров 
+        <br>по внутреннему аудиту</li>
+      <li (click)="viewMode ='tab4'"  class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab4'}">Листинговая комиссия</li>
+      <li (click)="viewMode ='tab5'"  class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab5'}">Комитет Совета директоров 
+        <br>по аудиту эмитентов</li>
+      <li (click)="viewMode ='tab6'"  class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab6'}">Комиссия по разрешению споров 
+        <br>и конфликтов</li>
+      <li (click)="viewMode ='tab7'"  class="font-300 font-14_168 "[ngClass]="{'active':viewMode =='tab7'}">Комитет по индексам 
+        <br>и индикаторам</li>
+  </ul>
+</div>
+<div class="column-2" [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'tab1'">
+<div class="row tab"*ngFor="let budget of budgets">
+    <div class="col1"><span class="font-600 font-16_192">{{budget.name}}</span>
+        <span class ="font-300 font-16_224">{{budget.post}}</span>
+        <span class="font-300 font-12_168 uppercase ">{{budget.job}}</span>
+    </div>
+<div class="col2">
+    <span class="font-300 font-14_196">{{budget.info}}</span>
+</div>
+</div>
+  </div>
+  <div *ngSwitchCase="'tab2'">
+    <h2>Tabs 2</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
+        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
+        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+  </div>
+  <div *ngSwitchCase="'tab3'">
+    <h2>Tabs 3</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
+        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
+        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+  </div>
+  <div *ngSwitchCase="'tab4'">
+    <h2>Tabs 4</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
+        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
+        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+  </div>
+  <div *ngSwitchCase="'tab5'">
+    <h2>Tabs 5</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
+        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
+        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+  </div>
+</div>
+</div>

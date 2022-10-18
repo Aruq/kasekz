@@ -32,4 +32,7 @@ export * from './pages/technologies/technologies.component';
 export * from './pages/technologies/asts-stock-market/asts-stock-market.component';
 
 export * from './pages/about_us/about_us.component';
-export * from './pages/about_us/mission-values/mission-value.component'
+export * from './pages/about_us/mission-values/mission-value.component';
+export * from './pages/about_us/management/management.component';
+export * from './pages/about_us/board/board.component';
+export * from './pages/about_us/participation/participation.component'
