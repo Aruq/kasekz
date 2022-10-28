@@ -8,6 +8,16 @@ import {BiddersValues} from "@core/components/header/values/bidders-values";
 import {ListingValues} from "@core/components/header/values/listing-values";
 import {MarketsValues} from "@core/components/header/values/markets-values";
 import {IndexesValues} from "@core/components/header/values/indexes-values";
+import { TabsInterface } from '@shared/interfaces/tabs-interface';
+import { RouterLink } from '@angular/router';
+import {RouterLinkService} from '@shared/services/router-link.service';
+
+
+interface MenuList {
+  header: string,
+  menuList: any,
+  active: boolean
+}
 
 @Component({
   selector: 'app-header',
@@ -24,27 +34,33 @@ export class HeaderComponent implements OnInit {
   public headerMenuList = [
     {
       header: 'Инвесторам',
-      menuList: InvestorsValues
+      menuList: InvestorsValues,
+      active: false
     },
     {
       header: 'Участникам торгов',
-      menuList: BiddersValues
+      menuList: BiddersValues,
+      active: false
     },
     {
       header: 'Листинг',
-      menuList: ListingValues
+      menuList: ListingValues,
+      active: false
     },
     {
       header: 'Информация',
-      menuList: InformationValues
+      menuList: InformationValues,
+      active: false
     },
     {
       header: 'Пресс-центр',
-      menuList: PressCenterValues
+      menuList: PressCenterValues,
+      active: false
     },
     {
       header: 'О Бирже',
-      menuList: AboutExchangeValues
+      menuList: AboutExchangeValues,
+      active: true
     }
   ]
 
@@ -63,23 +79,31 @@ export class HeaderComponent implements OnInit {
   public show = '';
 
 
-  constructor(private translateConfigService: TranslateConfigService) {
+  constructor(private translateConfigService: TranslateConfigService, private router: RouterLinkService) {
     translateConfigService.changeLanguage('ru')
   }
   // constructor() {}
+  
 
   ngOnInit(): void {
     // this.getLangChange()
   }
 
-  showHeaderMenuList(value: string) {
+  showHeaderMenuList(value: any) {
     if (this.show === '') {
-      this.show = value;
-    } else if (this.show !== value && this.show != '') {
-      this.show = value;
-    } else if (this.show === value) {
+      this.show = value.header;
+    } else if (this.show !== value.header && this.show != '') {
+      this.show = value.header;
+    } else if (this.show === value.header) {
       this.show = '';
     }
+
+     console.log(value.active);
+
+     if(value.active === true){this.router.setValue(value.active)}
+
+
+
   }
 
   // getLangChange() {

@@ -32,26 +32,30 @@
     <div class="header-item-2 screenMaxOff-1140px">
       <div class="header-menu-1 font-300 font-14_168 fc-main_2">
         <div class="hms-header pointer us-none"
+            
              *ngFor="let item of headerMenuBigList"
-             (click)="showHeaderMenuList(item.header)"
+             (click)="showHeaderMenuList(item)"
              [id]="item.header"
              [ngClass]="{
      'border-main_1 header-menu-active': show === item.header,
      'header-menu': show != item.header
      }">
           {{item.header}}
-          <app-header-menu-big *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
+          <app-header-menu-big   *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
                                [menuList]="item.menuList"></app-header-menu-big>
         </div>
         <div class="hms-header pointer us-none"
+        
              *ngFor="let item of headerMenuList"
-             (click)="showHeaderMenuList(item.header)"
+             (click)="showHeaderMenuList(item)"
              [id]="item.header"
              [ngClass]="{
      'border-main_1 header-menu-active': show === item.header,
      'header-menu': show != item.header
      }">
-          {{item.header}}
+        
+     
+     {{item.header}}
           <app-header-menu-small *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
                                  [menuList]="item.menuList"></app-header-menu-small>
         </div>

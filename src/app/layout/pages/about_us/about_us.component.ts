@@ -38,12 +38,12 @@ export class AboutUsComponent implements OnInit {
     {
 
       title: 'Участие в профессиональных организациях',
-      link: "/#"
+      link: "/participation"
     },
     {
 
       title: 'Корпоративные документы',
-      link: "/#"
+      link: "/corparate-documents"
     },
   ];
 

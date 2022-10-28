@@ -17,7 +17,13 @@ const routes: Routes = [
   {path: 'mission-value' , component: component.MissionValueComponent},
   {path:'management', component:component.ManagementComponent},
   {path:'board',component:component.BoardComponent},
-  {path:'participation', component:component.ParticipationComponent}
+  {path:'participation', component:component.ParticipationComponent},
+  {path:'corparate-documents', component:component.CorparateDocumentsComponent},
+  {path:'contacts',component:component.ContactsComponent},
+  {path:'purchase', component:component.PurchaseComponent},
+  {path:'stockholder', component:component.StockholderComponent},
+  {path:'career', component:component.CareerComponent},
+  {path:'history', component:component.HistoryComponent}
 ]
 
 @NgModule({

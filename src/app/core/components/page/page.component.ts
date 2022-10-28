@@ -13,13 +13,7 @@ export class PageComponent implements OnInit {
 
   constructor(private router: RouterLinkService, private route: Router) {
       this.router.getValue().subscribe(next =>{
-        if(next === 'about-us'){
-             this.vv = true;
-           }else if(next == 'mission-value'){
-            this.vv = true;
-            }else{
-              this.vv = false;
-            }
+         this.vv = next;
       })
 
 
@@ -46,14 +40,14 @@ export class PageComponent implements OnInit {
       //  })
 
       
-      if(this.route.url === '/about-us'){
-        this.vv = true;
-      }
+      //  if(this.route.url === '/about-us'){
+      //    this.vv = true;
+      //  }
 
 
-       if(this.route.url === '/mission-value'){
-        this.vv = true;
-       }
+      //  if(this.route.url === '/mission-value'){
+      //  this.vv = true;
+      //   }
 
     
 

@@ -35,4 +35,10 @@ export * from './pages/about_us/about_us.component';
 export * from './pages/about_us/mission-values/mission-value.component';
 export * from './pages/about_us/management/management.component';
 export * from './pages/about_us/board/board.component';
-export * from './pages/about_us/participation/participation.component'
+export * from './pages/about_us/participation/participation.component';
+export * from './pages/about_us/corparate-documents/corparate-documents.component';
+export * from './pages/about_us/contacts/contacts.component';
+export * from './pages/about_us/purchase/purchase.component';
+export * from './pages/about_us/stockholder/stockholder.component';
+export * from './pages/about_us/career/career.component';
+export * from './pages/about_us/history/history.component'

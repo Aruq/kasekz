@@ -1,0 +1,22 @@
+<div class="bg-main_4 ">
+    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <main class="main-p">
+      <div class="left"> <span class="font-900 font-28_336 fc-main_2">История Биржи</span></div>
+<div class="row">
+<div class="a">
+ <div  *ngFor="let history of hist" >
+
+  <div class="font-700 font-22_26 margin-top_24 mb-30">{{history.year}}</div>
+  <div class="row"><div class="im"><img  class ="img" src="{{history.img}}" /></div>
+  <div class="info"><span class="font-300 font-16_224">{{history.info}}</span></div></div>
+</div>
+</div>
+    <div class="padding-bottom_30">
+      <app-tabs-his [tabs]="tabsYears" [overflow]="true"></app-tabs-his>
+    </div>
+   
+  </div>
+ 
+  </main>
+  </div>
+  

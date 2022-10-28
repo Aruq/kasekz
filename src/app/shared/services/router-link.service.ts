@@ -8,11 +8,11 @@ import { Subject } from "rxjs";
 
   export class RouterLinkService{
 
-   private subject = new Subject<string>();
+   private subject = new Subject<boolean>();
 
 
 
-   public setValue(value: string){
+   public setValue(value: boolean){
       this.subject.next(value);
    }
 

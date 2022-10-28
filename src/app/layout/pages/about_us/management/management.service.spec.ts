@@ -34,27 +34,5 @@ describe('ManagementService', () => {
     ]);
   });
 
-  it(`officialListCols has default value`, () => {
-    expect(service.officialListCols).toEqual(OfficialListCols);
-  });
-
-  it(`officialListValues has default value`, () => {
-    expect(service.officialListValues).toEqual([]);
-  });
-
-  it(`tableColsSettings has default value`, () => {
-    expect(service.officialListColsSettings).toEqual(OfficialListColsSettings);
-  });
-
-  it(`tableValuesSettings has default value`, () => {
-    expect(service.officialListValuesSettings).toEqual(OfficialListValuesSettings);
-  });
-
-  describe('start', () => {
-    it('makes expected calls', () => {
-      spyOn(service,'setCurrentTab').and.callThrough();
-      service.start();
-      expect(service.setCurrentTab).toHaveBeenCalled();
-    });
-  });
+ 
 });

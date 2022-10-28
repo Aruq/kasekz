@@ -323,7 +323,37 @@ $footer-license: rgba(255, 255, 255, 0.7);
       }
     }
   }
+ 
 
+  .pr-button {
+    border: 1px solid $main_1;
+    background: $main_1;
+
+    svg {
+      path {
+        fill: $main_5;
+      }
+    }
+
+    span {
+      color: $main_5;
+    }
+
+    &:hover {
+      background: $main_5;
+
+      svg {
+        path {
+          fill: $main_1;
+        }
+      }
+
+      span {
+        color: $main_1;
+      }
+    }
+  }
+ 
 
   // mat-menu
   .cdk-overlay-pane {

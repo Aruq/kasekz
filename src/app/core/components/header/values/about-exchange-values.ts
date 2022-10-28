@@ -5,13 +5,16 @@ export const AboutExchangeValues: TabsInterface[] = [
     header: 'О нас',
     translateCode: 'О нас',
     link: 'about-us',
-    active: false
+    active: false,
+    
+    
   },
   {
     header: 'История',
     translateCode: 'История',
-    link: '/',
-    active: false
+    link: 'history',
+    active: false,
+
   },
   {
     header: 'Руководство',
@@ -27,8 +30,8 @@ export const AboutExchangeValues: TabsInterface[] = [
   },
   {
     header: 'Корпоративные документы',
-    translateCode: '',
-    link: '/',
+    translateCode: 'Корпоративные документы',
+    link: 'corparate-documents',
     active: false
   },
   {
@@ -40,7 +43,7 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Акционерам Биржи',
     translateCode: '',
-    link: '/',
+    link: 'stockholder',
     active: false
   },
   {
@@ -52,19 +55,19 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Карьера',
     translateCode: '',
-    link: '/',
+    link: 'career',
     active: false
   },
   {
     header: 'Закупки',
     translateCode: '',
-    link: '/',
+    link: 'purchase',
     active: false
   },
   {
     header: 'Контакты и реквизиты',
     translateCode: '',
-    link: '/',
+    link: 'contacts',
     active: false
   }
 ]

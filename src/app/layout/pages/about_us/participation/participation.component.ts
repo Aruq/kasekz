@@ -39,17 +39,17 @@ throw new Error('Method not implemented.');
 
       organizations:organization[]=[
         {
-            imageUrl:'assets/images/const-svgs/about-us/participation/wfe.jpeg',
+            imageUrl:'assets/images/const-svgs/about-us/participation/wfe.svg',
             name:'Член Всемирной федерации бирж (WFE)',
             info:'WFE объединяет более 60-ти бирж мира,на которых сконцентрирован почти весь биржевой оборот мирового фондового рынка.'
         },
         {
-            imageUrl:'assets/images/const-svgs/about-us/participation/feas.png',
+            imageUrl:'assets/images/const-svgs/about-us/participation/feas.svg',
             name:'Член Федерации евро-азиатских фондовых бирж (FEAS)',
             info:'FEAS объединяет около 45-ти профессиональных организаций биржевой индустрии, функционирующих на развивающихся фондовых рынках Европы и Азии.'
         },
         {
-            imageUrl:'assets/images/const-svgs/about-us/participation/afk.jpeg',
+            imageUrl:'assets/images/const-svgs/about-us/participation/afk.svg',
             name:'Член Ассоциации финансистов Казахстана (АФК)',
             info:'Крупнейшее профессиональное объединение на финансовом рынке Республики Казахстан, насчитывающее около 250-ти членов.'
         },
@@ -59,12 +59,12 @@ throw new Error('Method not implemented.');
             info:'МАБ СНГ объединяет около 20-ти бирж и депозитариев постсоветских государств.'
         },
         {
-            imageUrl:'assets/images/const-svgs/about-us/participation/fisd.png',
+            imageUrl:'assets/images/const-svgs/about-us/participation/fisd.svg',
             name:'Член Международной ассоциации распространителей и потребителей финансовой информации (SIIA/FISD)',
             info:'WFE объединяет более 60-ти бирж мира,на которых сконцентрирован почти весь биржевой оборот мирового фондового рынка.'
         },
         {
-            imageUrl:'assets/images/const-svgs/about-us/participation/oic.png',
+            imageUrl:'assets/images/const-svgs/about-us/participation/oic.svg',
             name:'Участник Биржевого форума стран Организации Исламского Сотрудничества (ОИС)',
             info:'Платформа для обсуждения деятельности по международному сотрудничеству среди представителей компаний и институтов ОИС и предлагает участникам возможность обмениваться опытом. '
         }

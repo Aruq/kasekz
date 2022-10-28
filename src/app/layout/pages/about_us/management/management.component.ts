@@ -2,6 +2,7 @@
 import {Component,OnInit} from '@angular/core';
 import {ManagementService} from '@layout/pages/about_us/management/management.service'
 import { TabsInterface } from '@shared/interfaces/tabs-interface';
+import {ModalService} from './modal/modal.service'
 interface director{
     name:string,
     post?:string,
@@ -191,14 +192,14 @@ directors:director[]=[
   }
 ]
 
-constructor( public managementService :ManagementService){}
+constructor( public managementService :ManagementService, private modalService: ModalService){}
 ngOnInit():void
 {
     this.managementService.start();
-}getTabs(): TabsInterface[]{
+     }getTabs(): TabsInterface[]{
     return this.managementService.tabs;
   }
-
+ 
 
 
 
@@ -210,4 +211,4 @@ ngOnInit():void
 
 
    }
-}
+  }

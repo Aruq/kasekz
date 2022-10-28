@@ -3,4 +3,5 @@ export interface TabsInterface {
   translateCode: string,
   link: string,
   active: boolean
+  
 }

@@ -14,6 +14,7 @@ const components : any = [
   component.TabsComponent,
   component.ProspectusComponent,
   component.TabsSecComponent,
+  component.TabsHisComponent,
   component.TableNewsComponent,
   component.SvgIconComponent,
   component.TradingviewComponent,
@@ -25,7 +26,8 @@ const components : any = [
   component.ListHeaderDescriptionComponent,
   component.ListFileDescriptionComponent,
   //pipes
-  component.DdMmYyDatePipe
+  component.DdMmYyDatePipe,
+
 ]
 @NgModule({
   declarations: [

@@ -1,8 +1,8 @@
 import {Component, EventEmitter, HostListener, Inject, Input, OnInit, Output} from '@angular/core';
 import {TabsInterface} from "@shared/interfaces/tabs-interface";
 import {ModalPositionService} from "@shared/services/modal-position.service";
-import {RouterLinkService} from "@shared/services/router-link.service";
 import {MAT_DIALOG_DATA} from "@angular/material/dialog";
+import { RouterLinkService } from '@shared/services/router-link.service';
 
 @Component({
   selector: 'app-header-menu-small',
@@ -20,7 +20,7 @@ export class HeaderMenuSmallComponent implements OnInit {
   @Input() itemHeader: string = '';
   @Input() menuList: TabsInterface[] = [];
 
-  constructor(public modalPositionService: ModalPositionService, private routerService: RouterLinkService) {
+  constructor(public modalPositionService: ModalPositionService, private router: RouterLinkService) {
 
   }
 
@@ -56,9 +56,8 @@ export class HeaderMenuSmallComponent implements OnInit {
   }
 
 
-
-  public link2(value: string){
-     this.routerService.setValue(value);
-  }
+ public link2(value: boolean){
+    this.router.setValue(value);
+ }
 
 }

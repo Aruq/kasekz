@@ -1,0 +1,41 @@
+
+<div class="bg-main_4" style="height: 614px;">
+    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+      <div class="bo-header">
+        <span class="font-900  font-28_336">Корпоративные документы</span>
+      </div>
+
+<div class="main">
+  
+
+<div class="column-1">
+  <ul class="vertical-menu ">
+      <li (click)="viewMode ='tab1'" class="font-300 font-14_168 " [ngClass]="{'active font-900':viewMode =='tab1'}">Учредительные документы</li>
+      <li (click)="viewMode ='tab2'"   class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab2'}">Стратегия развития</li>
+      <li (click)="viewMode ='tab3'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab3'}">Корпоративные документы</li>
+      <li (click)="viewMode ='tab4'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab4'}">Инсайдерская информация</li>
+      <li (click)="viewMode ='tab5'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab5'}">Другие материалы</li>
+  </ul>
+</div>
+<div class="column-2" [ngSwitch]="viewMode">
+  <div *ngSwitchCase="'tab1'">
+<div class="custom"*ngFor="let constit of consts">
+  <img src="assets/images/const-svgs/file-types/doc.svg">
+  <span class="font-300 font-14_196">{{constit.name}}</span> 
+
+</div>
+  </div>
+  <div *ngSwitchCase="'tab2'">
+   
+  </div>
+  <div *ngSwitchCase="'tab3'">
+  
+  </div>
+  <div *ngSwitchCase="'tab4'">
+   
+  </div>
+  <div *ngSwitchCase="'tab5'">
+  
+  </div>
+</div>
+</div>

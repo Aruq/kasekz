@@ -1,0 +1,16 @@
+<div class="bg-main_4 ">
+    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <div class="fi-header main">
+        
+     <span class="font-700 font-28_336 fc-main_2 margin-left_300">План закупок</span></div>
+    <app-tabs [tabs]="getTabs()" ></app-tabs>
+         <div class="fi-header main">
+        <div class="margin-top_15  row-wrap margin-left_300">
+            <div class="custom" *ngFor="let custom of customs">
+                <img src="assets/images/const-svgs/file-types/xls.svg">
+                <span class="font-300 font-14_196">{{custom.plan}}</span> 
+            </div>
+            </div>
+            </div>
+            </div>
+            

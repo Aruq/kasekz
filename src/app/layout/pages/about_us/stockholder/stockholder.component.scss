@@ -1,0 +1,134 @@
+.a{
+    width:730px
+}
+.b{
+    width: 157px;
+}
+.c{
+    width:377px;
+}
+.stock{
+
+display: flex;
+
+padding-top: 10px;
+padding-bottom: 10px;
+border-top: 1px solid #D1D1D1;
+
+}
+.all{
+padding-left: 733px;
+}
+.ak{
+    margin-bottom: 15px;
+}
+.left{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+
+
+width: 740px;
+height: 1176px;
+
+/* Main colors/White BG
+
+Фоновый белый, дополнительный
+*/
+background: #FFFFFF;
+/* shadow */
+
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+.right{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 40px;
+margin-left: 40px;
+width: 484px;
+height: auto;
+
+
+/* Inside auto layout */
+
+
+}
+.right1{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 12px;
+
+width: 484px;
+height: auto;
+
+/* Main colors/White BG
+
+Фоновый белый, дополнительный
+*/
+background: #FFFFFF;
+/* shadow */
+
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+}
+.fin{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    width: auto;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   
+    gap: 8px;
+    
+    border-bottom: 1px solid #D1D1D1;
+ 
+}
+.td{
+    text-decoration: underline;
+}
+.ap{
+    width: 404px;
+}
+.al{
+    width: 685px;
+}
+.new{
+    padding-top: 4px;
+    padding-bottom: 4px;
+width: 692px;
+
+
+border-bottom: 1px solid #D1D1D1;
+
+
+}
