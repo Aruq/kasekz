@@ -1,27 +1,14 @@
-.main{
-    
-    display: flex;
-    margin-left: 300px;
-    margin-right: 290px;
-    
-    .column-1{
-        width: 365px;
-       
-      float: left;
-    }
+
     .column-2{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 23px;
-       
+  
+
         
         width: 876px;
         
         overflow-y: scroll;
       
     }
-  }
+  
   .active{
     border-left:1px solid #038726;
     cursor: pointer;
@@ -81,9 +68,13 @@ width: 496px;
     .tab{
      padding-bottom: 12px;
         border-bottom:  1px solid #D1D1D1;;
+        border-bottom: 1px solid #F8F9FA;
         padding-top: 12px;
     }
+.tab:not(:last-child){
+  border-bottom: 1px solid #D1D1D1;
+}
     .bo-header{
         margin-bottom: 62px;
-        margin-left: 295px;
+      
     }

@@ -1,35 +1,36 @@
 <div class="bg-main_4 ">
     <app-path-tree [pathTree]="pathTree"></app-path-tree>
-    <main class="main-p">
+    <main class="main-p mb-12">
      <span class="font-700 font-28_336 fc-main_2">Акционерам Биржи</span></main>
        <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
-       <main class="main-p"> <div class="fi-header main">
-        <div class="margin-top_15 "> </div>
+       <main class="main-p"> <div class="">
+     
             <ng-container  *ngIf="link !== 'unlisted'">
-          <span class="font-300 font-18_252">По состоянию на 01 октября 2021 года общее количество объявленных акций 
+
+          <span class="font-300 font-18_252 margin-top_15">По состоянию на 01 октября 2021 года общее количество объявленных акций 
             <br>АО "Казахстанская фондовая биржа" составляет  <span class='font-700'>5 000 000 </span>штук, <span class="font-700">1 075 231 </span>акция размещена.</span>
-           
-           <div class="f-nn margin-top_24">
+              <div class="pb-40"> 
+           <div class="row margin-top_24">
                 <div class="input-field-medium">
                   <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
                   <input  placeholder="Поиск по коду или названию компании">
                 </div>
                 <div class="all font-300 font-16_224">Всего акционеров – 49</div>
                 </div>
-                <div class="row margin-top_24 ak">
+                <div class="row margin-top_24 mb-15">
                     <div class="font-700 font-14_196 a">Количество акций	</div>
                     <div  class="font-700 font-14_196 b">Количество акций	</div>
                     <div  class="font-700 font-14_196 c">Доля от общего количества голосующих акций, %</div>
                 </div>
 
-            <div class="row stock" *ngFor="let stock of stocks">  
+            <div class="row stock " *ngFor="let stock of stocks">  
                 <div class="font-300 font-14_196 a">{{stock.company}}</div> 
                 <div class="font-300 font-14_196 b">{{stock.q_stock}}</div> 
                 <div class="font-300 font-14_196 c">{{stock.p_stock}}</div> 
-            </div></ng-container>
+            </div></div> </ng-container>
     
             <ng-container *ngIf="link === 'unlisted'">
-              <div class="row">
+              <div class="row pb-40">
                 <div class="left">
                   <div class="row mb-8">
                     <span class="font-700 font-20_24">Новости </span>
@@ -44,14 +45,14 @@
                      
                     </div>
               
-                  
-                  <div class="new al" *ngFor="let news of n">
+                 
+                  <div class="new line " *ngFor="let news of n">
                    
-                    <div class="">
+                   
                         <div class="font-300 font-14_196  mb-4 margin-top_8" >{{news.day}}</div> 
                     <div class="font-500 font-16_224  td mb-8">{{news.name}}</div> 
                   
-                </div></div>
+                </div>
 
               <div>
                 <div class="row margin-top_36">
@@ -61,7 +62,7 @@
                     <div class="font-300 font-14_196 " >{{notice.day}}</div> 
                  
                  
-                    <div class="fin"><img src="assets/images/const-svgs/file-types/file.svg">
+                    <div class="fin line1"><img src="assets/images/const-svgs/file-types/file.svg">
                  
                 <div>{{notice.name}}</div>
 
@@ -78,7 +79,7 @@
 
                     </div>
                     <div class="" *ngFor="let fin of fins">
-                      <div class="fin ap" *ngFor="let a of fin.year">
+                      <div class="fin ap line1" *ngFor="let a of fin.year">
                       <img src="assets/images/const-svgs/file-types/file.svg">
                       <div class="font-500 font-16_224 td">{{a.name}}</div> 
                     </div>
@@ -90,7 +91,7 @@
 
                     </div>
                    
-                      <div class="fin" *ngFor="let report of reports">
+                      <div class="fin ap line1" *ngFor="let report of reports">
                       <img src="assets/images/const-svgs/file-types/file.svg">
                       <div class="">
                       <div class="font-500 font-16_224  td">{{report.name}}</div> 

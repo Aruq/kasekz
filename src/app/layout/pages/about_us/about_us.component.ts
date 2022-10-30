@@ -24,7 +24,7 @@ export class AboutUsComponent implements OnInit {
     },
     {
       title: 'История Биржи',
-      link: "/#"
+      link: "/history"
     },
     {
       title: 'Руководство',

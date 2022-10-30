@@ -1,24 +1,25 @@
-<main class="main-p"></main>
+
+
 <div class="bg-main_4">
 <app-path-tree [pathTree]="pathTree"></app-path-tree>
 
-  <div class='main_m' >
+  <main class="main-p" >
       <div class="fi-header">
         <span class="font-900 font-28_336 fc-main_2">Миссия и ценности</span>
       </div>
 
-    <div class="ad" >
+    <div class="margin-top_24" >
 
-      <div drag-scroll-item class="mission_card " style="display:flex ;" *ngFor="let mission of missions">
-       <div class='type'><span class="font-900 font-22_26 fc-main-3  ">{{mission.type}}</span></div>
-        <div class='title'><span class=" font-300 font-18_25 ">{{mission.title2}}</span>
+      <div drag-scroll-item class="pb-24  mb-24 gap-80 row line " style="display:flex ;" *ngFor="let mission of missions">
+       <div class='w-384'><span class="font-900 font-22_26 fc-main-3  ">{{mission.type}}</span></div>
+        <div class='w-800'><span class=" font-300 font-18_25 ">{{mission.title2}}</span>
 
-        <div drag-scroll-item class="st_t" *ngFor="let t of mission.title ">
+        <div drag-scroll-item class="mb-30" *ngFor="let t of mission.title ">
 
            <div class="mb-8"><span class="font-700 font-20_24">{{t.name}}</span></div>
          <div><span class=" font-300 font-18_25">{{t.t}}</span> </div>
 </div> </div>
-        </div></div>
+</div>
 
 
 

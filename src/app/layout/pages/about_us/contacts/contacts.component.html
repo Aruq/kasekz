@@ -1,19 +1,20 @@
 
 <div class="bg-main_4 ">
     <app-path-tree [pathTree]="pathTree"></app-path-tree>
-    <div class="fi-header main">
+    <main class="main-p">
+    <div class="fi-header mb-12">
         
-     <span class="font-700 font-28_336 fc-main_2">Контакты и реквизиты</span></div>
+     <span class="font-700 font-28_336 fc-main_2">Контакты и реквизиты</span></div></main>
     <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
-         <div class="fi-header main">
-        <div class="margin-top_15  ">
+       <main class="main-p">  <div class="fi-header">
+        <div class=" pb-40 ">
             <ng-container *ngIf="link === 'unlisted'">
                 <div class ="a">
            <div  class="con_card" *ngFor="let requisite of requisites">
             <div class="font-700 font-22_26">{{requisite.title}}</div> 
            
-            <div *ngFor="let t of requisite.property let last = last">
-                   <div class='info' aria-details="last">
+            <div class="line" *ngFor="let t of requisite.property let last = last">
+                   <div class='info ' aria-details="last">
              <div> <span class=" font-600  font-16_192 ">{{t.name}}</span></div>
              <div><span class=" font-300 font-16_224 ">{{t.info}}</span></div>
              <div><span class=" font-300 font-16_224 ">{{t.info1}}</span></div>
@@ -38,10 +39,10 @@
                   <div class="column-2" [ngSwitch]="viewMode">
                     <div *ngSwitchCase="'tab1'" >
                   <div class="row tab"*ngFor="let contact of contacts">
-                      <div class="col1"><img src="{{contact.img}}">
+                      <div class="col1 "><img src="{{contact.img}}">
                          
                       </div>
-                       <div class="ad"><div class="col2"  *ngFor="let t of contact.info">
+                       <div class="ad"><div class="col2 line"  *ngFor="let t of contact.info">
                 
                      <div class="name"><span class="font-300 font-14_196">{{t.name}}</span></div>
                       <div class="in"><span class="font-600 font-16_192">{{t.inside}}</span></div>
@@ -74,5 +75,7 @@
      
    
    
-   </div></div>
+   </div>
+  </main>
+  </div>
    
