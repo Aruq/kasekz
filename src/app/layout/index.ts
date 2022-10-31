@@ -42,3 +42,5 @@ export * from './pages/about_us/purchase/purchase.component';
 export * from './pages/about_us/stockholder/stockholder.component';
 export * from './pages/about_us/career/career.component';
 export * from './pages/about_us/history/history.component'
+
+export * from './pages/about_us/management/modal/modal.component'

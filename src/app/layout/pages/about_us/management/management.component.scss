@@ -68,3 +68,80 @@ height: 200px;
 background: radial-gradient(50% 50% at 50% 50%, #95A6AE 0%, #97A4B3 51.04%, #8598A7 100%);
 
 }
+.box{
+    position: absolute;
+
+height: 640px;
+
+/* Main colors/Light gray
+
+Основной фон
+*/
+background: #F8F9FA;
+/* shadow */
+
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(10px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 8px;
+margin-top:7%;
+margin-left:27%;
+
+}
+.forImg{
+   
+ 
+        width: 360px;
+        height: 400px;
+        background: radial-gradient(50% 50% at 50% 50%, #95A6AE 0%, #97A4B3 51.04%, #8598A7 100%);
+        
+        
+}
+.im{
+    width: 380px;
+height: 400px;
+
+top: 0px;
+width: 360px;
+height: 400px;
+}
+.a{
+    margin-top: 72px;
+    margin-left: 16px;
+}
+.in{
+  
+        display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding-top: 16px;
+gap: 8px;
+
+width: 360px;
+height: 122px;
+
+
+    
+}
+.e{
+    width: 460px;
+   
+    padding: 0px 17px 0px 17px;
+    height: 1391px;
+}
+.ac{
+ 
+    padding: 0px;
+  margin-bottom:4px ;
+    padding-bottom: 12px;
+ 
+    padding-top: 12px;
+ 
+}
+.fl-r{
+    float: right;
+}
+.c{
+    color:#696969
+}

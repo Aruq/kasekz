@@ -27,6 +27,9 @@ interface notice{
     day:string,
     name:string
 }
+interface year{
+y:string
+}
 @Component({
     selector:'app-stockholder',
     templateUrl:'./stockholder.component.html',
@@ -56,6 +59,21 @@ throw new Error('Method not implemented.');
           name: 'План закупок'
         }
       ]
+      years:year[]=[{
+        y:'2022'
+      },
+      {
+        y:'2021'
+      },
+      {y:'2020'},{
+        y:'2019'
+      },
+      {y:'2018'},
+      {y:'2017'},
+      {y:'2016'},
+      {y:'2015'},
+      {y:'2014'}
+    ]
       stocks:stock[]=[{
         company:'Государственное учреждение "Национальный Банк Республики Казахстан"	',
         q_stock:'505 318',

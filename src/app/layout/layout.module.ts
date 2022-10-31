@@ -43,7 +43,10 @@ import {DragScrollModule} from "ngx-drag-scroll";
     component.PurchaseComponent,
     component.StockholderComponent,
     component.CareerComponent,
-    component.HistoryComponent
+    component.HistoryComponent,
+    component.ModalComponent
+    
+
   ],
     imports: [
         LayoutRouterModule,

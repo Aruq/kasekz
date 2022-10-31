@@ -118,3 +118,60 @@ border-radius: 8px;
 width: 692px;
 
 }
+.select{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 8px;
+    
+    width: 94px;
+    height: 36px;
+    
+    /* Secondary colors/Middle gray
+    
+    Основные линии
+    */
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
+    padding: 8px 16px;
+    gap: 8px;
+    
+    width: 94px;
+    height: 36px;
+    
+    /* Secondary colors/Middle gray
+    
+    Основные линии
+    */
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+  }
+  .ml-360{
+    margin-left: 360px;
+  }
+  .ml-105{
+    margin-left:105px
+  }
+  .ml-40{
+    margin-left: 40px;
+  }

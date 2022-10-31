@@ -36,13 +36,17 @@
                     <span class="font-700 font-20_24">Новости </span>
 
                   </div>
-              
+                  
                     <div class="f-nn mb-24 margin-top_18">
                       <div class="input-field-vacancies box-shadow_1 br-8 f-nc gap-4 font-14_196 font-300 bg-main_5 border-sec_5">
                         <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
                         <input [(ngModel)]="searchCode" placeholder="Поиск по названию">
                       </div>
-                     
+                     <div class="ml-360">
+                  <select  >
+                  <option *ngFor="let year of years">{{year.y}}</option>
+                  </select>
+                 </div>
                     </div>
               
                  
@@ -75,8 +79,12 @@
                 <div class="right">
                   <div class ='right1'>
                     <div class="row mb-8">
-                      <span class="font-700 font-20_24">Финансовая отчетность </span>
-
+                      <span class="font-700 font-20_24 pt-4">Финансовая отчетность </span>
+                      <div class="ml-105">
+                        <select  >
+                        <option *ngFor="let year of years">{{year.y}}</option>
+                        </select>
+                       </div>
                     </div>
                     <div class="" *ngFor="let fin of fins">
                       <div class="fin ap line1" *ngFor="let a of fin.year">
@@ -87,8 +95,12 @@
                     </div>
                   <div class="right1">
                     <div class="row mb-8">
-                      <span class="font-700 font-20_24">Годовые и квартальные  отчеты </span>
-
+                      <span class="font-700 font-20_24 pt-4">Годовые и квартальные  отчеты </span>
+                      <div class="ml-40">
+                        <select  >
+                        <option *ngFor="let year of years">{{year.y}}</option>
+                        </select>
+                       </div>
                     </div>
                    
                       <div class="fin ap line1" *ngFor="let report of reports">
