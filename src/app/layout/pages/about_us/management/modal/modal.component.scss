@@ -17,11 +17,21 @@ jw-modal {
         overflow: auto;
 
         .jw-modal-body {
-         
-            background: #fff;
+            z-index: 1200;
+        
+position: absolute;
+width: 837px;
+height: 592px;
+left: 0px;
+top: 48px;
+overflow-y: scroll;
+margin-top:7%;
+margin-left:27%;
+/* Main colors/Light gray
 
-            /* margin exposes part of the modal background */
-            margin: 40px;
+Основной фон
+*/
+background: #F8F9FA;
         }
     }
 
@@ -47,14 +57,19 @@ body.jw-modal-open {
     overflow: hidden;
     .header{
         position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
+      float: right;
         z-index: 1200;
-        
+        width: 840px;
         /* enables scrolling for tall modals */
         overflow:auto;
 
+    }
+    .fix{
+        position: fixed;
+        float: right;
+          z-index: 1200;
+          
+          /* enables scrolling for tall modals */
+          overflow:auto;
     }
 }

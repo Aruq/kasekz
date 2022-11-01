@@ -69,9 +69,8 @@ background: radial-gradient(50% 50% at 50% 50%, #95A6AE 0%, #97A4B3 51.04%, #859
 
 }
 .box{
-    position: absolute;
 
-height: 640px;
+height: auto;
 
 /* Main colors/Light gray
 
@@ -109,6 +108,9 @@ height: 400px;
 .a{
     margin-top: 72px;
     margin-left: 16px;
+
+    height: auto;
+    overflow-y: scroll;
 }
 .in{
   
@@ -129,6 +131,7 @@ height: 122px;
    
     padding: 0px 17px 0px 17px;
     height: 1391px;
+    margin-left: 360px;
 }
 .ac{
  

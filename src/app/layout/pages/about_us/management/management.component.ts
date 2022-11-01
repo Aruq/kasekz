@@ -1,15 +1,19 @@
 
 import {Component, EventEmitter, HostListener, OnInit, Output} from '@angular/core';
+import { IndexesValues } from '@core/components/header/values/indexes-values';
 import {ManagementService} from '@layout/pages/about_us/management/management.service'
 import { TabsInterface } from '@shared/interfaces/tabs-interface';
 import {ModalPositionService} from "@shared/services/modal-position.service";
+import * as e from 'cors';
 import { ModalService } from './modal/modal.service';
 interface director{
     name:string,
     post?:string,
     imageUrl?:string,
   id:string
- 
+  education?:any[],
+    experience?:any[],
+    more_info?:any[]
 
 }
 interface board{
@@ -17,9 +21,7 @@ interface board{
     post:string,
     imageUrl:string,
     id:string,
-    education?:any[],
-    experience?:any[],
-    more_info?:any[]
+   
 }
 @Component({
     selector:'app-management',
@@ -36,7 +38,9 @@ export class ManagementComponent implements OnInit{
  public show = false;
  public x = 9999;
  public y = 9999;
- public modalId: string | undefined;
+ public modalId: string = 'test';
+
+ public boardForModal!: director[];
  @Output() filterValues: any = new EventEmitter<any>();
 getTableValues(arg0: any): any {
 throw new Error('Method not implemented.');
@@ -69,7 +73,59 @@ directors:director[]=[
         name:'Алдамберген Алина Өтемісқызы',
         post:'Председатель Правления',
         imageUrl:"assets/images/const-svgs/about-us/managers/alina_aldambergen.jpg",
-        id:'2'
+        id:'2',
+        education:[{
+          year:'1995',
+          edu:'Казахская Государственная Академия Управления по специальности "Финансы и кредит".'
+          
+        },
+        {
+          year:'1997',
+          edu:'Школа Делового Администрирования им. Уильяма Е. Саймона Университета Рочестера со степенью Магистра делового администрирования (MBA).'
+        }
+      ],
+        experience:[{
+          year:'1997–2001',
+          work:'Финансовый аналитик, менеджер, главный специалист, заместитель начальника управления структурного финансирования, заместитель начальника управления кредитного анализа и структурирования в ЗАО "ДАБ "ABN AMRO Банк Казахстан"',
+        },
+        {
+          year:'2001–2003',
+          work:'Рейтинговый консультант, Старший рейтинговый консультант, подразделение Глобальные финансовые рынки ABN AMRO Bank N.V., Лондон, Великобритания'
+        },
+        {
+          year:'2003–2005',
+          work:'Председатель Правления, член совета директоров АО "ООИУПА "ABN AMRO Asset Management"'
+        },
+        {
+          year:'2005–2006',
+          work:'Заместитель Председателя Правления АО "ДАБ "ABN AMRO Банк Казахстан"'
+        },
+        {
+          year:'2006–2008',
+          work:'Заместитель Председателя Агентства Республики Казахстан по регулированию деятельности регионального финансового центра города Алматы'
+        },
+        {
+          year:'2008–2011',
+          work:'Заместитель Председателя Агентства Республики Казахстан  по регулированию и надзору финансового рынка и финансовых организаций'
+        },
+        {
+          year:'2011–2013',
+          work:'Заместитель Генерального директора, Генеральный директор ТОО "Самрук-Казына Финанс"'
+        },
+        {
+          year:'2013–2016',
+          work:'Заместитель Председателя Правления АО "Национальный управляющий холдинг "Байтерек"'
+        },
+        {
+          year:'2016–н.в.',
+          work:'Председатель Правления, член Совета директоров АО "Казахстанская фондовая биржа" (KASE)'
+        }
+      ],
+      more_info:[{
+        info:'В разные годы входила в состав советов директоров казахстанских финансовых организаций, в том числе АО "Казахстанская фондовая биржа" (KASE).'},
+       { info:'В 2016 году награждена юбилейной медалью "Қазақстан Республикасының тәуелсіздігіне 25 жыл", в 2018 году – орденом "Құрмет".'
+    
+      }]
         
     },
     {
@@ -136,58 +192,7 @@ directors:director[]=[
     post:'Председатель Правления',
     imageUrl:"assets/images/const-svgs/about-us/managers/alina_aldambergen.jpg",
     id:'1',
-    education:[{
-      year:'1995',
-      edu:'Казахская Государственная Академия Управления по специальности "Финансы и кредит".'
-      
-    },
-    {
-      year:'1997',
-      edu:'Школа Делового Администрирования им. Уильяма Е. Саймона Университета Рочестера со степенью Магистра делового администрирования (MBA).'
-    }
-  ],
-    experience:[{
-      year:'1997–2001',
-      work:'Финансовый аналитик, менеджер, главный специалист, заместитель начальника управления структурного финансирования, заместитель начальника управления кредитного анализа и структурирования в ЗАО "ДАБ "ABN AMRO Банк Казахстан"',
-    },
-    {
-      year:'2001–2003',
-      work:'Рейтинговый консультант, Старший рейтинговый консультант, подразделение Глобальные финансовые рынки ABN AMRO Bank N.V., Лондон, Великобритания'
-    },
-    {
-      year:'2003–2005',
-      work:'Председатель Правления, член совета директоров АО "ООИУПА "ABN AMRO Asset Management"'
-    },
-    {
-      year:'2005–2006',
-      work:'Заместитель Председателя Правления АО "ДАБ "ABN AMRO Банк Казахстан"'
-    },
-    {
-      year:'2006–2008',
-      work:'Заместитель Председателя Агентства Республики Казахстан по регулированию деятельности регионального финансового центра города Алматы'
-    },
-    {
-      year:'2008–2011',
-      work:'Заместитель Председателя Агентства Республики Казахстан  по регулированию и надзору финансового рынка и финансовых организаций'
-    },
-    {
-      year:'2011–2013',
-      work:'Заместитель Генерального директора, Генеральный директор ТОО "Самрук-Казына Финанс"'
-    },
-    {
-      year:'2013–2016',
-      work:'Заместитель Председателя Правления АО "Национальный управляющий холдинг "Байтерек"'
-    },
-    {
-      year:'2016–н.в.',
-      work:'Председатель Правления, член Совета директоров АО "Казахстанская фондовая биржа" (KASE)'
-    }
-  ],
-  more_info:[{
-    info:'В разные годы входила в состав советов директоров казахстанских финансовых организаций, в том числе АО "Казахстанская фондовая биржа" (KASE).'},
-   { info:'В 2016 году награждена юбилейной медалью "Қазақстан Республикасының тәуелсіздігіне 25 жыл", в 2018 году – орденом "Құрмет".'
-
-  }]
+   
 
   },
   {
@@ -279,8 +284,21 @@ ngOnInit():void
   }
 
   modalOpen(id :string){
-     //this.modalId = id;
-    this.modal.open(id);
+     this.modalId = id;
+
+     this.boardForModal = this.directors.filter(e=> e.id === id);
+    
+     console.log("======");
+     console.log(this.boardForModal[0]);
+ 
+     console.log("======"); 
+     
+     this.modal.open(this.modalId);
+  }
+  
+
+  modalClose(id: string){
+   this.modal.close(id);
   }
 
 
