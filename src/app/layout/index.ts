@@ -1,3 +1,5 @@
+import { from } from 'rxjs';
+
 export * from './pages/financial-tools/financial-tools.component';
 
 // tool
@@ -32,15 +34,18 @@ export * from './pages/technologies/technologies.component';
 export * from './pages/technologies/asts-stock-market/asts-stock-market.component';
 
 export * from './pages/about_us/about_us.component';
-export * from './pages/about_us/mission-values/mission-value.component';
-export * from './pages/about_us/management/management.component';
-export * from './pages/about_us/board/board.component';
-export * from './pages/about_us/participation/participation.component';
-export * from './pages/about_us/corparate-documents/corparate-documents.component';
-export * from './pages/about_us/contacts/contacts.component';
-export * from './pages/about_us/purchase/purchase.component';
-export * from './pages/about_us/stockholder/stockholder.component';
-export * from './pages/about_us/career/career.component';
-export * from './pages/about_us/history/history.component'
+export * from './pages/mission-values/mission-value.component';
+export * from './pages/management/management.component';
+export * from './pages/board/board.component';
+export * from './pages/participation/participation.component';
+export * from './pages/corparate-documents/corparate-documents.component';
+export * from './pages/contacts/contacts.component';
+export * from './pages/purchase/purchase.component';
+export * from './pages/stockholder/stockholder.component';
+export * from './pages/career/career.component';
+export * from './pages/history/history.component'
+export *from './pages/social-governance/social.component';
 
-export * from './pages/about_us/management/modal/modal.component'
+export * from './pages/management/modal/modal.component';
+export * from './pages/social-governance/esg/esg.component';
+export * from './pages/social-governance/news-env/news-env.component';

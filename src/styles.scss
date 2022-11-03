@@ -48,6 +48,7 @@ $kasekz-theme: mat.define-light-theme((
 @import "src/assets/scss/layout/tool/tool-specifications/tool-specifications";
 @import "src/assets/scss/layout/tool/tool-bidding/tool-bidding";
 @import "src/assets/scss/layout/technologies/technologies";
+@import "src/assets/scss/layout/governance/governance";
 
 // shared
 @import "src/assets/scss/shared/filter-button/filter-button";
@@ -92,6 +93,7 @@ $kasekz-theme: mat.define-light-theme((
 @import "assets/scss/properties/tabs";
 @import "assets/scss/properties/dropdown";
 @import "assets/scss/properties/grid";
+@import "assets/scss/properties/width.scss";
 
 // z-index
 @import "assets/scss/z-index/z-index";

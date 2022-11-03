@@ -44,8 +44,10 @@ import {DragScrollModule} from "ngx-drag-scroll";
     component.StockholderComponent,
     component.CareerComponent,
     component.HistoryComponent,
-    component.ModalComponent
-    
+    component.ModalComponent,
+    component.SocialComponent,
+    component.EsgComponent,
+    component.NewsEnvComponent
 
   ],
     imports: [

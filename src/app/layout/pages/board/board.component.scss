@@ -1,0 +1,24 @@
+
+  .active{
+    border-left:1px solid #038726;
+    cursor: pointer;
+    color:  #038726;;
+  }
+  .vertical-menu {
+      
+      display: block !important;
+      width: 100%;
+      text-align: center;
+      list-style-type: none;
+      padding: 0px;
+    }
+   
+    li {
+      text-align: left;
+      padding: 12px;
+      cursor: pointer;
+     width: 280px;
+    }
+    a {
+      padding: 8px;
+    }

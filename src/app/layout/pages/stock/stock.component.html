@@ -1,0 +1,44 @@
+<div class="governance-header padding-bottom_30">
+   
+    <main class="main-p">
+     <div class="margin-top_30"> <span class="margin-top_30 font-28_336 font-700 fc-main-5">Enviromental Social Governance</span></div>
+      <div class="technologies-header-info  column-c font-16_224 font-300 fc-main-5">
+        Биржа последовательно продвигает вопросы устойчивого развития, повышения экологичности и социальной <br>ответственности при ведении бизнеса, прозрачности, а также повышения стандартов корпоративного управления 
+<br>и принципов ответственного инвестирования среди листинговых компаний и членов Биржи
+      </div>
+    </main>
+  </div>
+  <div  class=" bg-main_4">
+  <main class="main-p">
+  <div class=" row  margin-top_40 gap-30 font-16_224 font-300">
+    <div  class ='br-4 i'style="border-radius: 4px;"><img class ='image' src='assets/images/const-svgs/about-us/gover.svg'></div>
+    <div class="w technologies-header-info column-c gap-15 font-18_28 font-300 ">
+      <span>Облигации устойчивого развития (ESG облигации) направлены 
+        на финансирование проектов в области экологии, защиты окружающей среды и социально-значимых проектов и включают в себя зеленые облигации, социальные облигации и иные облигации, выпускаемые в целях финансирования проектов устойчивого развития.</span>
+        <span>Критерии соответствия зеленых, социальных или иных облигаций, выпускаемых в целях финансирования проектов устойчивого развития, применимым принципам и стандартам, определяются соответствующим уполномоченным органом или организациями, осуществляющими независимую оценку проектов, подлежащих финансированию через выпуск облигаций устойчивого развития, перечень которых определяется Биржей.</span>
+        <span>В целях развития ESG направления Биржа предоставляет льготы по уплате листинговых сборов эмитентам облигаций устойчивого развития, а также соответствующую консультационную поддержку.</span>
+    </div>
+  </div>    
+  </main>
+  <app-tabs
+    [id]="tabId"
+    [tabs]="getTabs()"
+    class="margin-top_30"
+  ></app-tabs>
+  <main class="main-p padding-bottom_30">
+    <app-esg></app-esg>
+  </main>
+
+  </div>
+ 
+  
+    <div class="">
+      <app-tabs [tabs]="getTabsSec()" [id]="tabId"  class="margin-top_30"></app-tabs>
+      <main class="main-p padding-bottom_30" *ngIf="getTabCurrentTab().header === 'Новости'">
+        <app-news-env></app-news-env>
+      </main>
+    </div>
+
+
+
+  

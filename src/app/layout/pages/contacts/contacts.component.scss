@@ -1,0 +1,67 @@
+
+.con_card{
+width: 620px;
+
+}
+  .info{
+    width: 560px;
+ }
+.column-1{
+    width: 365px;
+   height: 607px;
+
+}
+.active{
+border-left:1px solid #038726;
+cursor: pointer;
+
+color:  #038726;;
+
+}
+.vertical-menu {
+  display: block !important;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+  padding: 0px;
+  padding-top: 24px;
+}
+li {
+  text-align: left;
+  padding: 8px 15px;
+  cursor: pointer;
+ width: 280px;
+
+}
+a{
+ color: #1666BC
+}
+.col2{
+width: 596px;
+
+}
+.in{
+  margin-top:4px
+}
+.tab{
+ padding-bottom: 12px;
+   margin-left: 70px;
+    padding-top: 12px;
+}
+.bo-header{
+    margin-bottom: 48px;
+    margin-left: 295px;
+}
+
+img{
+  width: 368px;
+height: 607px;
+background: #FFFFFF;
+border-radius: 4px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}

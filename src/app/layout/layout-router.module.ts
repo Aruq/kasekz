@@ -23,7 +23,8 @@ const routes: Routes = [
   {path:'purchase', component:component.PurchaseComponent},
   {path:'stockholder', component:component.StockholderComponent},
   {path:'career', component:component.CareerComponent},
-  {path:'history', component:component.HistoryComponent}
+  {path:'history', component:component.HistoryComponent},
+  {path:'governance', component:component.SocialComponent}
 ]
 
 @NgModule({

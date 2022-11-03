@@ -1,0 +1,81 @@
+
+<div class="bg-main_4 ">
+    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <main class="main-p">
+    <div class="fi-header mb-12">
+        
+     <span class="font-700 font-28_336 fc-main_2">Контакты и реквизиты</span></div></main>
+    <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
+       <main class="main-p">  <div class="fi-header">
+        <div class=" pb-40 ">
+            <ng-container *ngIf="link === 'unlisted'">
+                <div class ="f-nn gap-24 f-wrap">
+           <div  class="con_card padding-24 gap-12 br-4 column f-sn" *ngFor="let requisite of requisites">
+            <div class="font-700 font-22_26">{{requisite.title}}</div> 
+           
+            <div class="line" *ngFor="let t of requisite.property let last = last">
+                   <div class='info pb-12' aria-details="last">
+             <div> <span class=" font-600  font-16_192 ">{{t.name}}</span></div>
+             <div><span class=" font-300 font-16_224 ">{{t.info}}</span></div>
+             <div><span class=" font-300 font-16_224 ">{{t.info1}}</span></div>
+              </div>
+            </div>
+            </div></div>
+            </ng-container>
+            <ng-container *ngIf="link !== 'unlisted'">
+                <div class="column-1 fl-l br-r">
+                    <ul class="vertical-menu ">
+                        <li (click)="viewMode ='tab1'" class="font-300 font-14_168 " [ngClass]="{'active font-900':viewMode =='tab1'}">Основные контакты</li>
+                        <li (click)="viewMode ='tab2'"   class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab2'}">Торги и рынки</li>
+                        <li (click)="viewMode ='tab3'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab3'}">Клиринг и деятельность ЦК</li>
+                        <li (click)="viewMode ='tab4'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab4'}">Листинг</li>
+                        <li (click)="viewMode ='tab5'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab5'}">Мониторинг деятельности компаний</li>
+                        <li (click)="viewMode ='tab6'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab6'}">Информационные продукты и аналитика</li>
+                        <li (click)="viewMode ='tab7'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab7'}">Маркетинг и PR</li>
+                        <li (click)="viewMode ='tab8'"  class="font-300 font-14_168 "[ngClass]="{'active font-900':viewMode =='tab8'}">Эмитентам и инвесторам</li>
+                  
+                    </ul>
+                  </div>
+                  <div class=" column f-nc pt-10 " [ngSwitch]="viewMode">
+                    <div *ngSwitchCase="'tab1'" >
+                  <div class="row tab"*ngFor="let contact of contacts">
+                      <div class=" "><img src="{{contact.img}}">
+                         
+                      </div>
+                       <div class="pl-24"><div class="col2 p-12_0 line"  *ngFor="let t of contact.info">
+                
+                     <div class="name"><span class="font-300 font-14_196">{{t.name}}</span></div>
+                      <div class="in"><span class="font-600 font-16_192">{{t.inside}}</span></div>
+                      <div><a href="/" class="font-500 font-14_196">{{t.mail}}</a></div>
+                 <div><a href ='/' class="font-500 font-14_196">{{t.mail1}}</a>
+                 
+                  
+                </div>
+                 
+                  </div>
+               
+                 
+                  </div>
+                    </div></div>
+                    <div *ngSwitchCase="'tab2'">
+                       </div>
+                    <div *ngSwitchCase="'tab3'">
+                        </div>
+                    <div *ngSwitchCase="'tab4'">
+                      </div>
+                    <div *ngSwitchCase="'tab5'">
+                       </div>
+                  </div>
+                  
+               
+                          </ng-container>
+         </div>
+   
+   
+     
+   
+   
+   </div>
+  </main>
+  </div>
+   

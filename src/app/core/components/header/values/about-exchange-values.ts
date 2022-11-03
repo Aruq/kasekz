@@ -49,7 +49,7 @@ export const AboutExchangeValues: TabsInterface[] = [
   {
     header: 'Устойчивое развитие',
     translateCode: '',
-    link: '/technologies',
+    link: 'governance',
     active: false
   },
   {
