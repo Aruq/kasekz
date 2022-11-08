@@ -1,25 +1,26 @@
 <div class="bg-main_4 ">
-    <app-path-tree [pathTree]="pathTree"></app-path-tree>
-    <main class="main-p">
-        <span class="font-700 font-28_336 ">Участие в профессиональных организациях</span>
+    <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
+    <main class="main-c">
+        <span class="font-700 font-28_336  pl-30">Участие в профессиональных организациях</span>
     
       <div class="body row">
-      <div *ngFor="let organization of organizations" class="organization">
+      <div *ngFor="let organization of organizations" class="organization"  >
         <div class="row">
           <div class="img">
             <img  class="i" src="{{organization.imageUrl}}" /></div>
             <div class="name"><span class="font-600 font-16_192">{{organization.name}}</span></div>
         </div>
-        <div>
+        <div class="mh">
             <span class="font-300 font-14_196">{{organization.info}}</span>
         </div>
-        <div class="font-500 font-14_24 pointer p_d">
-     <span class="font-500 font-14_196">Подробнее</span>
+        <a class="font-500 font-14_24 pointer p_d" href="{{organization.url }}" >
+    
+     <span class="font-500 font-14_196 as">Подробнее</span>
      <app-svg-icon [width]="'20'" [height]="'20'"
                    class=""
                    [iconName]="'arrow_right-light'">
      </app-svg-icon>
-   </div>
+    </a>
       </div>
       </div></main>
 </div> 

@@ -1,3 +1,5 @@
+/* MODAL STYLES
+-------------------------------*/
 jw-modal {
     /* modals are hidden by default */
     display: none;
@@ -14,26 +16,26 @@ jw-modal {
         z-index: 1000;
         
         /* enables scrolling for tall modals */
-        overflow: auto;
+       
 
         .jw-modal-body {
-            z-index: 1200;
-        
-position: absolute;
-width: 837px;
-height: 592px;
-left: 0px;
-top: 48px;
-overflow-y: scroll;
-margin-top:7%;
-margin-left:27%;
-border-radius: 8px;
-background: #F8F9FA;
-/* shadow */
+            padding-top: 20px;
+            background: #fff;
 
-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-backdrop-filter: blur(10px);
+            /* margin exposes part of the modal background */
+            margin: 40px;
+            width: 837px;
+height: 640px;
+overflow-y: scroll;
+margin: 170px 0px 0px 470px;
+border-radius: 8px;
         }
+    }
+    .header{
+        
+    }
+    .fix{
+        position: fixed;
     }
 
     .jw-modal-background {
@@ -45,7 +47,7 @@ backdrop-filter: blur(10px);
         left: 0;
 
         /* semi-transparent black  */
-        background-color: #696969;
+        background-color: #000;
         opacity: 0.75;
         
         /* z-index must be below .jw-modal and above everything else  */
@@ -56,20 +58,4 @@ backdrop-filter: blur(10px);
 body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
     overflow: hidden;
-    .header{
-        position: fixed;
-      float: right;
-        z-index: 1200;
-        width: 840px;
-      
-
-    }
-    .fix{
-        position: fixed;
-        float: right;
-          z-index: 1200;
-          
-          /* enables scrolling for tall modals */
-          overflow:auto;
-    }
 }

@@ -143,7 +143,7 @@ constructor( ){}
 viewMode: string | undefined;
 ngOnInit():void
 {
-   
+    this.viewMode = "tab1";
   }
   public test(v: string){
     console.log(v);

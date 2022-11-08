@@ -361,6 +361,12 @@ $footer-license: rgba(255, 255, 255, 0.7);
       }
     }
   }
+  .ab{
+    color: $main_3;
+    &:hover {
+      border-bottom: 1px solid #696969;
+    }
+  }
  
 
   // mat-menu

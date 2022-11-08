@@ -1,6 +1,6 @@
 
 <div class="bg-main_4" style="height: 614px;">
-    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
      <main class="main-p">
         <span class="font-900  font-28_336">Корпоративные документы</span>
     
@@ -19,7 +19,7 @@
 </div>
 <div class="column ml-23 w-876" [ngSwitch]="viewMode">
   <div *ngSwitchCase="'tab1'">
-<div class="custom line"*ngFor="let constit of consts">
+<div class="custom p-12026 gap-8 row f-sc line"*ngFor="let constit of consts">
   <img src="assets/images/const-svgs/file-types/doc.svg">
   <span class="font-300 font-14_196">{{constit.name}}</span> 
 

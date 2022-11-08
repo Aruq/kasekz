@@ -14,7 +14,7 @@ info:string
 })
 export class BoardComponent implements OnInit {
 
-  public pathTree: any = [
+  public pathTree = [
     {
       name: 'О Бирже',
       link:'/about-us'

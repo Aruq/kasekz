@@ -11,25 +11,18 @@ padding: 24px;
 gap: 24px;
 width: 620px;
 height: 208px;
-
 background: #FFFFFF;
 border: 1px solid #FFFFFF;
-/* shadow new */
-
 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 backdrop-filter: blur(10px);
-/* Note: backdrop-filter has minimal browser support */
-
 border-radius: 8px;
-
-
 }
 .body{
     flex-wrap:wrap;
     gap: 24px;
     padding-top: 24px;
     padding-bottom: 50px;
-    padding-left: 20px;
+    padding-left: 30px;
 }
 .img{
     width: 120px;
@@ -55,4 +48,15 @@ gap: 10px;
 }
 .p_d{
     display: flex;
+    text-decoration: none;
+    color:black;
+    
+}
+.as{
+    &:hover{
+     border-bottom:1px solid #45464F ;
+    }
+}
+.mh{
+    min-height: 40px;
 }

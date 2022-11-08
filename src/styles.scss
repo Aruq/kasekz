@@ -49,7 +49,10 @@ $kasekz-theme: mat.define-light-theme((
 @import "src/assets/scss/layout/tool/tool-bidding/tool-bidding";
 @import "src/assets/scss/layout/technologies/technologies";
 @import "src/assets/scss/layout/governance/governance";
-
+@import "src/assets/scss/layout/about-us/about-us";
+@import "src/assets/scss/layout/board/board";
+@import "src/assets/scss/layout/career/career";
+@import "src/assets/scss/layout/contacts/contacts";
 // shared
 @import "src/assets/scss/shared/filter-button/filter-button";
 @import "src/assets/scss/shared/path_tree/path_tree";

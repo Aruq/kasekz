@@ -1,5 +1,5 @@
 <div class="bg-main_4 ">
-    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
     <main class="main-p">
         <div class ="career gap-40 row f-ns">
            <div class="left column f-ns gap-12"> <span class="font-700 font-28_336 fc-main_2">Карьера</span>
@@ -33,11 +33,8 @@
                     </div>
                    
                   </div>
-                  <div class="br-r fl-l">
+                  <div class="br-r fl-l mb-24">
                     <ul class="vertical-menu ">
-                       
-
-                        
                        <!-- 
                          [ngClass]="{'active font-900':viewMode =='tab1'}"
                         
@@ -52,14 +49,9 @@
                        ><div class="col gap-24 row f-ns" [ngClass]="{' a font-700':viewMode ==vacancie.tab}">    <div class="font-500 font-16_224 title">{{vacancie.title}}</div> 
                     <div class="font-300 font-12_168  fl-l date">{{vacancie.date}}</div>
                     </div>
-                    <div class="font-300 font-14_196">{{vacancie.name}}</div>
-                       
+                    <div class="font-300 font-14_196">{{vacancie.name}}</div>  
                     </li>
-                       
-                  
-                    </ul>
-
-                  
+                  </ul>
                   </div>
         
                  <div class="column f-ns pl-24" >

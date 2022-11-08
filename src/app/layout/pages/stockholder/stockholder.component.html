@@ -1,9 +1,9 @@
 <div class="bg-main_4 ">
-    <app-path-tree [pathTree]="pathTree"></app-path-tree>
+    <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
     <main class="main-p mb-12">
      <span class="font-700 font-28_336 fc-main_2">Акционерам Биржи</span></main>
        <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
-       <main class="main-p"> <div class="">
+       <main class="main-p"> 
      
             <ng-container  *ngIf="link !== 'unlisted'">
 
@@ -27,9 +27,9 @@
                 <div class="font-300 font-14_196 a">{{stock.company}}</div> 
                 <div class="font-300 font-14_196 b">{{stock.q_stock}}</div> 
                 <div class="font-300 font-14_196 c">{{stock.p_stock}}</div> 
-            </div></div> </ng-container>
-    
-            <ng-container *ngIf="link === 'unlisted'">
+            </div></div> </ng-container></main>
+          
+           <main class="main-c"> <ng-container *ngIf="link === 'unlisted'">
               <div class="row pb-40">
                 <div class="left">
                   <div class="row mb-8">
@@ -115,6 +115,6 @@
                           </ng-container>
                               
                           
-            </div> 
+            
         </main>
           

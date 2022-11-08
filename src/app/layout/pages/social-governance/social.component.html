@@ -34,7 +34,7 @@
   
     <div class="">
       <app-tabs [tabs]="getTabsSec()" [id]="tabId"  class="margin-top_30"></app-tabs>
-      <main class="main-p padding-bottom_30" *ngIf="getTabCurrentTab().header === 'Новости'">
+      <main class="main-p padding-bottom_30" >
         <app-news-env></app-news-env>
       </main>
     </div>

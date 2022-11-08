@@ -1,11 +1,11 @@
 
 <div class="bg-main_4 ">
- <app-path-tree [pathTree]="pathTree"></app-path-tree>
+ <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
  <main class="main-p">
  <div class="fi-header">
      <span class="font-700 font-28_336 fc-main_2">Руководство</span></div></main>
  <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
-     <main class="main-p"> <div class="fi-header">
+     <main class="main-c"> <div class="fi-header">
      <div class="margin-top_15  row-wrap">
    <ng-container *ngIf="link === 'unlisted'">
  <div class="slip" (click) ="modalOn($event) " *ngFor="let board of boards">
@@ -68,6 +68,7 @@
          <div class = "backgroundForImg"><img  class ="img" src="{{director.imageUrl}}" width="100" height="100"/>
           </div>
                  <div class='info'>
+                  
             <div><span class=" font-700  font-20_24 ">{{director.name}}</span></div>
             <div><span class=" font-500 font-12_168 uppercase">{{director.post}}</span></div>
             </div>
@@ -104,11 +105,11 @@
 
 
 
-    <div class="header">
-      <div class="mt-12 p-0_24 f-nc gap-4 pointer fl-r" >
-        <svg-icon src="assets/images/exit.svg" (click)="modalClose(modalId)"></svg-icon>
+    <div class="header mt-12 p-0_24 f-nc gap-4 pointer fl-r margin-right_16">
+      
+        <svg-icon src="assets/images/exit.svg" (click)="modalClose(modalId)" style="position: fixed;"></svg-icon>
         
-      </div></div>
+      </div>
     <div class="row a" >
     <div class ="fix">
       <div class = "forImg margin-left_16 margin-right_16"><img  class ="im" src="{{boardForModal[0].imageUrl}}" width="100" height="100"/></div>
@@ -118,7 +119,7 @@
       
       </div></div>
  
-      <div class="column e  ov-y">
+      <div class="column e  ">
          <div><span class=" font-700  font-22_26 ">Образование</span></div>
       <div  class="ac line" *ngFor="let n of boardForModal[0].education">
   
