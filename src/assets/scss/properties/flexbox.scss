@@ -33,7 +33,12 @@
   flex-direction: column;
   justify-content: center;
 }
-
+.column-cc{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
 .column-cr {
   display: flex;
   flex-direction: column;
@@ -69,7 +74,9 @@
 .gap-30 {
   gap: 30px;
 }
-
+.gap-40{
+  gap:40px;
+}
 
 .gap-48 {
   gap: 48px;

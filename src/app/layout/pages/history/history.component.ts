@@ -22,7 +22,11 @@ export class HistoryComponent implements OnInit {
     },
     {
       name: 'История Биржи'
-    }
+    },
+    
+        {name2:'Руководство',
+    link:'/board'
+  }
   ]
   hist:history[]=[{
     img:'assets/images/const-svgs/about-us/history/history1993.svg',
@@ -49,7 +53,7 @@ export class HistoryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    for (let i = 1993; i < 2022; i++) {
+    for (let i = 1993; i < 2023; i++) {
       this.tabsYears.push({
         header: i.toString(),
         translateCode: '',

@@ -1,16 +1,16 @@
 <div class="bg-main_4 ">
-    <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
+    <app-path-tree2 [pathTree]="pathTree" class="pointer"></app-path-tree2>
     <main class="main-p">
         <div class="fi-header">
         
-     <span class="font-700 font-28_336 fc-main_2 ">План закупок</span></div></main>
+     <span class="font-900 font-28_336 fc-main_2 ">План закупок</span></div></main>
     <app-tabs [tabs]="getTabs()" class="mt-12"></app-tabs>
        <main class="main-p">
          <div class="fi-header main">
         <div class=" row-wrap pb-40">
-            <div class="custom line" *ngFor="let custom of customs">
+            <div class=" p-12_0 row-c gap-8 line" *ngFor="let custom of customs">
                 <img src="assets/images/const-svgs/file-types/xls.svg">
-                <span class="font-300 font-14_196">{{custom.plan}}</span> 
+                <span class="font-300 font-14_196 underline ">{{custom.plan}}</span> 
             </div>
             </div>
             </div></main>

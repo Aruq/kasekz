@@ -10,7 +10,7 @@ footer {
     max-width: $width;
     margin-left: auto;
     margin-right: auto;
-    padding: 60px 0 18px;
+    padding: 40px 0 40px;
     display: flex;
     flex-direction: column;
   }
@@ -26,7 +26,7 @@ footer {
       flex-direction: column;
       .fhl-menu {
         margin-top: 15px;
-        width: 509px;
+        width: 600px;
         display: flex;
         flex-wrap: wrap;
         gap: 8px 15px;
@@ -51,6 +51,16 @@ footer {
 
         span {
           text-align: left !important;
+        }
+      }    .fbl-links {
+      
+        margin-top: 8px;
+        display: flex;
+        flex-direction: row;
+        padding: 0px;
+        gap: 15px;
+        @media screen and (max-width: 1140px) {
+          margin-top: 8px;
         }
       }
 
@@ -103,12 +113,7 @@ footer {
           justify-content: space-around;
         }
       }
-      .fbl-links {
-        margin-top: 30px;
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
-      }
+     
     }
     .fb-right {
       margin-left: auto;
@@ -118,6 +123,7 @@ footer {
           margin-top: 24px;
         }
       }
+   
     }
   }
 

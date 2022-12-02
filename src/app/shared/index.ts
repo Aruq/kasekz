@@ -1,4 +1,5 @@
 export * from './components/path-tree/path-tree.component';
+export * from './components/path-tree2/path-tree2.component';
 export * from './components/table-news/table-news.component';
 export * from './components/actual-information/actual-information.component';
 export * from './components/filter-button/filter-button.component';

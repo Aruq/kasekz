@@ -25,8 +25,9 @@
     [tabs]="getTabs()"
     class="margin-top_30"
   ></app-tabs>
-  <main class="main-p padding-bottom_30">
-    <app-esg></app-esg>
+  <main class="main-p padding-bottom_30"> 
+    <app-esg *ngIf="getTabCurrentTab().header === 'ESG облигации'"></app-esg>
+    <app-esg-verifies *ngIf="getTabCurrentTab().header === 'ESG верификаторы'"></app-esg-verifies>
   </main>
 
   </div>
@@ -36,6 +37,10 @@
       <app-tabs [tabs]="getTabsSec()" [id]="tabId"  class="margin-top_30"></app-tabs>
       <main class="main-p padding-bottom_30" >
         <app-news-env></app-news-env>
+        <div class="row fl-r mt-24" ><span class="font-700 font-14_196">Все новости</span>      <app-svg-icon [width]="'20'" [height]="'20'"
+          class=""
+          [iconName]="'arrow_right-light'">
+</app-svg-icon></div>
       </main>
     </div>
 

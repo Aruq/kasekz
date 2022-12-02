@@ -24,4 +24,9 @@ describe('PathTreeComponent', () => {
       name: 'Default empty'
     }]);
   });
+  it(`pathTree2 has default value`, () => {
+    expect(component.pathTree).toEqual([{
+      name: 'Default empty'
+    }]);
+  });
 });

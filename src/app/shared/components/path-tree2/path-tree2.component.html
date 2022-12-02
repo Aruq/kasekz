@@ -1,0 +1,18 @@
+<main class="p-24_40 main-p">
+    <div class="path_tree">
+      <ng-container *ngFor="let path of pathTree; index as i" >
+      <span class="font-300 font-16_224"
+            [ngClass]="{
+            'ab': i === 0,
+            'fc-main-2': i !== 0
+            }"
+            [routerLink]="path.link"
+         
+            >{{path.name}}</span>
+        <app-svg-icon class="arrow-rotate-right path_tree-arrow svg-main_3" [width]="'24'" [height]="'24'"
+                      [iconName]="'dropdown-arrow-down-icon'"
+                      *ngIf="i !== pathTree.length - 1">
+        </app-svg-icon>
+      </ng-container>
+    </div>
+  </main>

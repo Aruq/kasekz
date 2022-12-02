@@ -25,6 +25,7 @@ interface MenuList {
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  private element: any;
   public languages: ILan[] = [
     { name: 'English', value: 'en' },
     { name: 'Русский', value: 'ru' },
@@ -87,6 +88,8 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     // this.getLangChange()
+    
+
   }
 
   showHeaderMenuList(value: any) {
@@ -97,6 +100,7 @@ export class HeaderComponent implements OnInit {
     } else if (this.show === value.header) {
       this.show = '';
     }
+   
 
      console.log(value.active);
 

@@ -58,7 +58,10 @@ throw new Error('Method not implemented.');
         },
         {
           name: 'Руководство'
-        }
+        },
+        {name2:'Комитеты и комиссии',
+    link:'/board'
+  }
       ]
     
 directors:director[]=[

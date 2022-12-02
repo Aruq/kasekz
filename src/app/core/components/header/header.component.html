@@ -1,6 +1,6 @@
 <div id="header-field" class="header-field box-shadow_2 bg-main_5">
   <div id="header-inner" class="header-inner">
-    <div class="header-item-1 screenMaxOff-1140px">
+    <div class="header-item-1 ">
       <div class="header-logo">
         <svg-icon src="assets/images/const-svgs/companies-logo/kase-logo.svg"></svg-icon>
       </div>
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="header-item-2 screenMaxOff-1140px">
-      <div class="header-menu-1 font-300 font-14_168 fc-main_2">
+      <div class="header-menu-1 font-300 font-16_192 fc-main_2">
         <div class="hms-header pointer us-none"
             
              *ngFor="let item of headerMenuBigList"
@@ -56,7 +56,7 @@
         
      
      {{item.header}}
-          <app-header-menu-small *ngIf="show === item.header" [show]="show" [itemHeader]="item.header"
+          <app-header-menu-small *ngIf="show === item.header"  [show]="show" [itemHeader]="item.header"
                                  [menuList]="item.menuList"></app-header-menu-small>
         </div>
       </div>

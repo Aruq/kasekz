@@ -44,8 +44,9 @@ export * from './pages/purchase/purchase.component';
 export * from './pages/stockholder/stockholder.component';
 export * from './pages/career/career.component';
 export * from './pages/history/history.component'
-export *from './pages/social-governance/social.component';
+export *from './pages/social-governance/social-governance.component';
 
 export * from './pages/management/modal/modal.component';
 export * from './pages/social-governance/esg/esg.component';
 export * from './pages/social-governance/news-env/news-env.component';
+export * from './pages/social-governance/esg-verifies/esg-verifies.component'

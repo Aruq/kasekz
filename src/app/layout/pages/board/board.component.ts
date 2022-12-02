@@ -21,7 +21,10 @@ export class BoardComponent implements OnInit {
     },
     {
       name: 'Комитеты и комиссии'
-    }
+    },
+    {name2:'Участие в профессиональных организациях',
+link:'/participation'
+}
   ]
   budgets:budget[]=[
     {

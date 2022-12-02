@@ -2,10 +2,14 @@
     width:730px
 }
 .b{
-    width: 157px;
+    display: flex;
+    width: 195px;
+    justify-content: flex-end;
 }
 .c{
-    width:377px;
+    width:395px;
+    justify-content: flex-end;
+    display: flex;
 }
 .stock{
 
@@ -33,12 +37,7 @@ margin-top: 20px;
 width: 740px;
 height: 1176px;
 
-/* Main colors/White BG
-
-Фоновый белый, дополнительный
-*/
 background: #FFFFFF;
-/* shadow */
 
 box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 backdrop-filter: blur(10px);
@@ -120,49 +119,35 @@ width: 692px;
 }
 .select{
     box-sizing: border-box;
-
-    /* Auto layout */
-    
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 8px 16px;
     gap: 8px;
-    
     width: 94px;
     height: 36px;
-    
-    /* Secondary colors/Middle gray
-    
-    Основные линии
-    */
     border: 1px solid #D1D1D1;
     border-radius: 8px;
-    
-    /* Inside auto layout */
-    
+
     flex: none;
     order: 1;
     flex-grow: 0;
 }
 select {
+    
     -webkit-appearance: none;
     -moz-appearance: none;
     background: transparent;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-image: url("ac.svg");
     background-repeat: no-repeat;
-    background-position-x: 100%;
+    background-position-x: 85%;
     background-position-y: 5px;
     padding: 8px 16px;
     gap: 8px;
     
     width: 94px;
     height: 36px;
-    
-    /* Secondary colors/Middle gray
-    
-    Основные линии
-    */
+
     border: 1px solid #D1D1D1;
     border-radius: 8px;
   }
@@ -175,3 +160,8 @@ select {
   .ml-40{
     margin-left: 40px;
   }
+  .line2{
+
+    text-decoration: underline;
+  }
+  

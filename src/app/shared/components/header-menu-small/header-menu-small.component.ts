@@ -44,7 +44,7 @@ export class HeaderMenuSmallComponent implements OnInit {
   modalOn() {
     if (this.show === this.itemHeader) {
       let interval = setInterval(() => {
-        let temp = this.modalPositionService.modalOn(this.itemHeader, 'header-field', 223, 154, this.screenWidth, this.screenHeight)
+        let temp = this.modalPositionService.modalOn(this.itemHeader, 'header-field', 77, 154, this.screenWidth, this.screenHeight)
         this.x = temp.x;
         this.y = temp.y;
         if (this.show != this.itemHeader) {

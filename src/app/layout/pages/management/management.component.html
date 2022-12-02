@@ -1,9 +1,9 @@
 
 <div class="bg-main_4 ">
  <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
- <main class="main-p">
+ <main class="main-p mb-30">
  <div class="fi-header">
-     <span class="font-700 font-28_336 fc-main_2">Руководство</span></div></main>
+     <span class="font-900 font-28_40 fc-main_2">Руководство</span></div></main>
  <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
      <main class="main-c"> <div class="fi-header">
      <div class="margin-top_15  row-wrap">
@@ -12,8 +12,8 @@
   
         <div class = "backgroundForImg"><img  class ="img" src="{{board.imageUrl}}" width="100" height="100"/>
       </div>
-             <div class='info'>
-        <span class=" font-700  font-20_24 ">{{board.name}}</span>
+             <div class='info bg-main_5'>
+        <span class=" font-700  font-16_192 ">{{board.name}}</span>
         <span class=" font-500 font-12_168 uppercase">{{board.post}}</span>
         </div>
      </div>
@@ -34,7 +34,7 @@
       <div >
         <div class = "forImg"><img  class ="im" src="{{board.imageUrl}}" width="100" height="100"/></div>
           <div class='in'>
-        <span class=" font-700  font-20_24 ">{{board.name}}</span>
+        <span class=" font-700  font-20_24">{{board.name}}</span>
         <span class=" font-500 font-12_168 uppercase">{{board.post}}</span>
         
         </div></div>
@@ -67,9 +67,9 @@
  <div   (click) ="modalOpen(director.id) " class="slip" *ngFor="let director of directors">
          <div class = "backgroundForImg"><img  class ="img" src="{{director.imageUrl}}" width="100" height="100"/>
           </div>
-                 <div class='info'>
+                 <div class='info bg-main_5'>
                   
-            <div><span class=" font-700  font-20_24 ">{{director.name}}</span></div>
+            <div><span class=" font-700  font-16_192">{{director.name}}</span></div>
             <div><span class=" font-500 font-12_168 uppercase">{{director.post}}</span></div>
             </div>
           </div>

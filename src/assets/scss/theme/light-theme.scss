@@ -87,7 +87,10 @@ $footer-license: rgba(255, 255, 255, 0.7);
     text-decoration: underline;
     text-decoration-color: $main_1;
   }
-
+  .text-dec-main_5 {
+    text-decoration: underline;
+    text-decoration-color: $main_5;
+  }
   .block-main_1 {
     color: $main_1;
     border-style: solid;

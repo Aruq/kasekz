@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SocialService} from "@layout/pages/social-governance/social.service";
+import {SocialService} from "@layout/pages/social-governance/social-governance.service";
 import {TabsInterface} from "@shared/interfaces/tabs-interface";
 import {TabsService} from "@shared/components/tabs/tabs.service";
 interface title{
@@ -99,7 +99,7 @@ export class EsgComponent implements OnInit {
     return this.socialService.tabsSec;
   }
 
- 
+
 
   getTabCurrentTab(id: string): TabsInterface {
     return this.tabsService.getByKey(id);

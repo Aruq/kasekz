@@ -1,0 +1,12 @@
+<div class="column">
+    <div class="row gap-15 f-nn p-15_12">
+        <div  class=" ass font-700 font-14_168" *ngFor ="let a of titles">{{a.title}}</div>
+
+    </div>
+    <div class="row gap-15 f-nn p-15_12 br-t "  *ngFor ="let a of ins">
+     <div class="w-430 f-nn"  > <img  class ="pr-8" src="{{a.img}}" /><span class=" font-300 font-14_196 underline">{{a.name}}</span> </div> 
+      <span class="  w-400  font-300 font-14_196">{{a.fact}}</span>
+      <span class="  w-316  font-300 font-14_196">{{a.contact}}</span>
+      <div class=" w-200 f-cc  "><a href={{a.url}} class=" fc-main_2"> <span class="font-300 font-14_196">{{a.site}}</span>
+    </a></div></div>
+    </div>

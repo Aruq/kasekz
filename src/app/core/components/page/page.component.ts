@@ -12,8 +12,12 @@ export class PageComponent implements OnInit {
   public vv = false;
 
   constructor(private router: RouterLinkService, private route: Router) {
-      this.router.getValue().subscribe(next =>{
-         this.vv = next;
+      this.router.getValue().subscribe((next:any) =>{  this.vv = next;
+        next.forEach((element:any) =>{
+          console.log(element)
+           
+   
+        })
       })
 
 

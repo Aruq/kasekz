@@ -9,37 +9,7 @@ export const AboutExchangeValues: TabsInterface[] = [
     
     
   },
-  {
-    header: 'История',
-    translateCode: 'История',
-    link: 'history',
-    active: false,
 
-  },
-  {
-    header: 'Руководство',
-    translateCode: 'Руководство',
-    link: 'management',
-    active: false
-  },
-  {
-    header: 'Комитеты и комиссии',
-    translateCode: 'Комитеты и комиссии',
-    link: 'board',
-    active: false
-  },
-  {
-    header: 'Корпоративные документы',
-    translateCode: 'Корпоративные документы',
-    link: 'corparate-documents',
-    active: false
-  },
-  {
-    header: 'Участие в профессиональных организациях',
-    translateCode: '',
-    link: 'participation',
-    active: false
-  },
   {
     header: 'Акционерам Биржи',
     translateCode: '',

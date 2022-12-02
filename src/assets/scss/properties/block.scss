@@ -20,6 +20,9 @@
 .line {
 border-bottom: 1px solid #F8F9FA;
 }
+.br-t{
+  border-top:1px solid #d1d1d1;
+}
 .line:not(:last-child){
   border-bottom:1px solid #d1d1d1
 }
@@ -71,7 +74,7 @@ border-bottom: 1px solid #F8F9FA;
   flex-direction: column;
 }
 .active{
-  border-left:1px solid #038726;
+  border-left:2.7px solid #038726;
   cursor: pointer;
 
   color:  #038726;;
@@ -116,4 +119,10 @@ border-bottom: 1px solid #F8F9FA;
 }
 .w-496{
   width:496px;
+}
+.w-200{
+  width: 200px;
+}
+.w-430{
+  width:430px !important;
 }

@@ -1,21 +1,21 @@
 <div class="bg-main_4 ">
     <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
     <main class="main-c">
-        <span class="font-700 font-28_336  pl-30">Участие в профессиональных организациях</span>
+        <span class="font-900 font-28_336  pl-30">Участие в профессиональных организациях</span>
     
-      <div class="body row">
-      <div *ngFor="let organization of organizations" class="organization"  >
+      <div class=" p-40_0_40 pl-30 gap-40 flex-wrap row">
+      <div *ngFor="let organization of organizations" class="organization padding-24  f-ns column gap-24 b-main_5 br-8"  >
         <div class="row">
-          <div class="img">
-            <img  class="i" src="{{organization.imageUrl}}" /></div>
-            <div class="name"><span class="font-600 font-16_192">{{organization.name}}</span></div>
+          <div class="img column-cc gap-10 ">
+            <img  class="row-cc" src="{{organization.imageUrl}}" /></div>
+            <div class="name ml-15"><span class="font-700 font-16_192">{{organization.name}}</span></div>
         </div>
         <div class="mh">
             <span class="font-300 font-14_196">{{organization.info}}</span>
         </div>
-        <a class="font-500 font-14_24 pointer p_d" href="{{organization.url }}" >
+        <a class="font-500 font-14_24 pointer fc-main_2__main-3  none row " href="{{organization.url }}" >
     
-     <span class="font-500 font-14_196 as">Подробнее</span>
+     <span class="font-700 font-14_196 as">Подробнее</span>
      <app-svg-icon [width]="'20'" [height]="'20'"
                    class=""
                    [iconName]="'arrow_right-light'">

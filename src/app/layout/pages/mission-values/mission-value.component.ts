@@ -20,8 +20,12 @@ export class MissionValueComponent implements OnInit {
     },
     {
       name: 'Миссия и ценности'
-    }
+    },
+    {name2:'Руководство',
+    link:'/management'
+  }
   ]
+  
 
   missions: mission[]=[
     {

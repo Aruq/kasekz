@@ -8,6 +8,7 @@ import {AngularSvgIconModule} from "angular-svg-icon";
 
 const components : any = [
   component.PathTreeComponent,
+  component.PathTree2Component,
   component.TableComponent,
   component.ActualInformationComponent,
   component.FilterButtonComponent,

@@ -12,8 +12,13 @@ export class PathTreeComponent implements OnInit {
     }
   ]
 
+ 
   constructor() { }
+calc(i:number){
+ if(this.pathTree>=i){
 
+ }
+}
   ngOnInit(): void {
   }
 

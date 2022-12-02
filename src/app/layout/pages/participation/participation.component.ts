@@ -50,7 +50,10 @@ public b!: organization[];
         },
         {
           name: 'Участие в профессиональных организациях'
-        }
+        },
+        {name2:'Корпоративные документы',
+        link:'/corparate-documents'
+      }
       ]
 
 

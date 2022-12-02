@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {SocialService} from "@layout/pages/social-governance/social.service";
+import {SocialService} from "@layout/pages/social-governance/social-governance.service";
 import { TabsService } from '@shared/components/tabs/tabs.service';
 import { TabsInterface } from '@shared/interfaces/tabs-interface';
 import {v4 as uuidv4} from "uuid";
@@ -9,7 +9,7 @@ import {flatten} from "@shared/export-data/flatten";
 import { map } from 'rxjs';
 @Component({
   selector: 'app-social-governance',
-  templateUrl: './social.component.html',
+  templateUrl: './social-governance.component.html',
   styleUrls: ['./social-governance.component.scss']
 })
 export class SocialComponent implements OnInit {
