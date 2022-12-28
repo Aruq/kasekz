@@ -26,7 +26,7 @@ jw-modal {
             margin: 40px;
             width: 837px;
 height: 640px;
-overflow-y: scroll;
+//overflow-y: scroll;
 margin: 170px 0px 0px 470px;
 border-radius: 8px;
         }
@@ -37,7 +37,18 @@ border-radius: 8px;
     .fix{
         position: fixed;
     }
-
+    .exit{
+      justify-content: end;
+    }
+    .sc{
+     // overflow-y: scroll;
+      height:530px;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+    }
+    .sc::-webkit-scrollbar {
+        display: none;
+       }
     .jw-modal-background {
         /* modal background fixed across whole screen */
         position: fixed;
@@ -57,5 +68,6 @@ border-radius: 8px;
 
 body.jw-modal-open {
     /* body overflow is hidden to hide main scrollbar when modal window is open */
-    overflow: hidden;
+   // overflow: hidden;
+   overscroll-behavior: none;
 }

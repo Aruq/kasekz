@@ -8,21 +8,42 @@
     <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
        <main class="main-p">  <div class="fi-header">
         <div class=" pb-40 ">
-            <ng-container *ngIf="link === 'unlisted'">
+            <ng-container *ngIf="link === 'unlisted'" >
                 <div class ="f-nn gap-24 f-wrap">
            <div  class="con_card padding-24 gap-12 br-4 column f-sn" *ngFor="let requisite of requisites">
-            <div class="font-700 font-22_26">{{requisite.title}}</div> 
+            <div class="font-900 font-22_26 mb-12">{{requisite.title}}</div> 
+            <div class="line" *ngFor="let t of requisite.property">
+                   <div class='info pb-12'>
+             <div class="mb-4"> <span class=" font-700  font-16_192 ">{{t.name}}</span></div>
+             <span class=" font-300 font-16_224 ">{{t.info}}</span> 
+             <a class=" font-700 font-16_224 " href="/">{{t.href}}</a>
+             <div><a class=" font-700 font-16_224 " href="/">{{t.href1}}</a></div>
+             <span class=" font-700 font-16_192">{{t.tel}}</span>
+             <div><span class=" font-700 font-16_192 " href="/">{{t.tel1}}</span></div>
+           <span class=" font-300 font-16_224 ">{{t.info1}}</span>
+              </div>
+            </div>
+            </div></div>
+           <!-- <div>
+              <div>
+                <div class="" *ngFor="let data of details">
+                <div class="font-900 font-22_26">{{data.title}}</div> 
            
-            <div class="line" *ngFor="let t of requisite.property let last = last">
+            <div class="line" *ngFor="let t of data.info ">
                    <div class='info pb-12' aria-details="last">
-             <div> <span class=" font-600  font-16_192 ">{{t.name}}</span></div>
+             <div> <span class=" font-700  font-16_192 ">{{t.name}}</span></div>
              <div><span class=" font-300 font-16_224 ">{{t.info}}</span></div>
              <div><span class=" font-300 font-16_224 ">{{t.info1}}</span></div>
               </div>
             </div>
-            </div></div>
+              </div>
+
+
+
+              <div></div>
+            </div></div>-->
             </ng-container>
-            <ng-container *ngIf="link !== 'unlisted'">
+            <ng-container *ngIf="link !=='unlisted'">
                 <div class="column-1 fl-l br-r">
                     <ul class="vertical-menu ">
                         <li (click)="viewMode ='tab1'" class="font-300 font-14_168 pointer pl-12 mb-16 t-align" [ngClass]="{'active font-900':viewMode =='tab1'}">Основные контакты</li>
@@ -43,11 +64,10 @@
                          
                       </div>
                        <div class="pl-24"><div class="col2 p-12_0 line"  *ngFor="let t of contact.info">
-                
                      <div class="name"><span class="font-300 font-14_196">{{t.name}}</span></div>
                       <div class="margin-top_4 "><span class="font-700 font-16_192">{{t.inside}}</span></div>
-                      <div><a href="/" class="font-700 font-14_196">{{t.mail}}</a></div>
-                 <div><a href ='/' class="font-700 font-14_196">{{t.mail1}}</a>
+                      <div><a href="/" class="font-700 font-16_224">{{t.mail}}</a></div>
+                 <div><a href ='/' class="font-700 font-16_224">{{t.mail1}}</a>
                  
                   
                 </div>

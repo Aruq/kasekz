@@ -21,8 +21,8 @@ export class MissionValueComponent implements OnInit {
     {
       name: 'Миссия и ценности'
     },
-    {name2:'Руководство',
-    link:'/management'
+    {name2:' История Биржи',
+    link:'/history'
   }
   ]
   

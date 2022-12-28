@@ -8,6 +8,7 @@
 <div class=" mb-70">
 <div class="w-365 fl-l">
   <ul class="vertical-menu ">
+   
       <li (click)="viewMode ='tab1'" class="font-300 font-14_168 pl-12 mb-16" [ngClass]="{'active font-900':viewMode =='tab1'}">Комитет Совета директоров 
         <br>по бюджету и стратегическому планированию</li>
       <li (click)="viewMode ='tab2'"   class="font-300 font-14_168 pl-12 mb-16 "[ngClass]="{'active font-900':viewMode =='tab2'}">Комитет Совета директоров 
@@ -28,8 +29,8 @@
   <div *ngSwitchCase="'tab1'">
 <div class="row p-12_0 line"*ngFor="let budget of budgets">
     <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
-        <span class ="font-300 font-16_224">{{budget.post}}</span>
-        <span class="font-300 font-12_168 uppercase ">{{budget.job}}</span>
+        <span class ="font-500 font-16_224">{{budget.post}}</span>
+        <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
     </div>
 <div class="w-496">
     <span class="font-300 font-14_196">{{budget.info}}</span>
@@ -37,28 +38,70 @@
 </div>
   </div>
   <div *ngSwitchCase="'tab2'">
-    <h2>Tabs 2</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
-        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
-        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+    <div class="row p-12_0 line"*ngFor="let budget of staffs">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
   </div>
   <div *ngSwitchCase="'tab3'">
-    <h2>Tabs 3</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
-        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
-        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+    <div class="row p-12_0 line"*ngFor="let budget of audits">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
   </div>
   <div *ngSwitchCase="'tab4'">
-    <h2>Tabs 4</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
-        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
-        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+    <div class="row p-12_0 line"*ngFor="let budget of listings">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
   </div>
   <div *ngSwitchCase="'tab5'">
-    <h2>Tabs 5</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis fugiat velit saepe 
-        repudiandae obcaecati! Hic dicta harum autem odio amet dignissimos doloribus, quae, 
-        reprehenderit ratione, ea nulla molestias repellat ut!</p>
+    <div class="row p-12_0 line"*ngFor="let budget of issuers">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
+  </div>
+  <div *ngSwitchCase="'tab6'">
+    <div class="row p-12_0 line"*ngFor="let budget of conflicts">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
+  </div>
+  <div *ngSwitchCase="'tab7'">
+    <div class="row p-12_0 line"*ngFor="let budget of indexes">
+      <div class="w-365 gap-4 column f-sn"><span class="font-700 font-16_192">{{budget.name}}</span>
+          <span class ="font-500 font-16_224">{{budget.post}}</span>
+          <span class="font-500 font-12_168 uppercase ">{{budget.job}}</span>
+      </div>
+  <div class="w-496">
+      <span class="font-300 font-14_196">{{budget.info}}</span>
+  </div>
+  </div>
   </div>
 </div>
 </div></main>

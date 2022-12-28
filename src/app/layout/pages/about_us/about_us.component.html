@@ -29,13 +29,13 @@
        </div>  <div class="p-0_24 w-702" >
          <div ><span class="font-900 font-28_336" >Фондовый рынок</span></div>
          <div class="margin-top_15"><span class="font-300 font-16_224"  >Биржа проводит торги акциями, корпоративными облигациями, государственными ценными бумагами Республики Казахстан
-           <br> и государственными ценными бумагами иностранных государств, облигациями международных финансовых организаций, суверенными и корпоративными еврооблигациями, депозитарными расписками, ценными бумагами инвестиционных фондов, биржевыми инвестиционными фондами (Exchange Traded Funds — ETF).
+            и государственными ценными бумагами иностранных государств, облигациями международных финансовых организаций, суверенными и корпоративными еврооблигациями, депозитарными расписками, ценными бумагами инвестиционных фондов, биржевыми инвестиционными фондами (Exchange Traded Funds — ETF).
             <br><div   class ="margin-top_15 font-300">Расчеты по ликвидным ценным бумагам происходят по технологии T+2
             <br>(на второй день после заключения сделки), по неликвидным ценным бумагам
             <br>по технологии T+0 (в день заключения сделки)</div></span></div>
             <div class="w-130 f-nn mt-24 " 
             [routerLink]="">
-         <span class="font-14_196 font-600" >Подробнее</span>
+         <span class="font-14_196 font-700" >Подробнее</span>
          <app-svg-icon [width]="'20'" [height]="'20'"
                        class=""
                        [iconName]="'arrow_right-light'">
@@ -43,15 +43,15 @@
        </div>
            </div>
 </div>
-    <div class=" f-nn f-row__f-col  ">
-        <div drag-scroll-item class="scroll gap-24 mt-40 br-4 mr-24 padding-24" *ngFor="let market of markets"
+    <div class=" f-nn f-row__f-col f-sb_c ">
+        <div drag-scroll-item class="scroll gap-24 mt-40 br-4  padding-24" *ngFor="let market of markets"
 
         >
           <span class="font-34_28 font-900 ">{{market.type}}</span>
           <span class="height-115 fl-l mt-15 mb-20 font-16_224 font-300">{{market.title}}</span>
           <div class="f-nn w-130"
           [routerLink]="market.link">
-       <span class="font-16_192 font-500" >Подробнее</span>
+       <span class="font-16_192 font-700" >Подробнее</span>
        <app-svg-icon [width]="'20'" [height]="'20'"
                      class=""
                      [iconName]="'arrow_right-light'">
@@ -68,7 +68,7 @@
     <div  class="pr-25" style="width: 702px;">
       <span class="font-16_224 font-300 mb-15 ">Лицензия на осуществление деятельности на рынке ценных бумаг от 19 июля 2012 года
         № 4.2.3/1, выданная Комитетом по контролю и надзору финансового рынка <br>и финансовых организаций Национального банка Республики Казахстан. Лицензия дает право
-        на осуществление следующих видов деятельности на рынке ценных бумаг:" </span>
+        на осуществление следующих видов деятельности на рынке ценных бумаг: </span>
         <div class="margin-top_16">
         <div class="f-cc fl-l mb-12 f-nn f-row__f-col ">
         <app-svg-icon [width]="'20'" [height]="'20'"

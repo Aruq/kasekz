@@ -1,7 +1,17 @@
+<app-tabs [tabs]="getTabsSec()" [id]=""  class="margin-top_30"></app-tabs>
+<main class="main-p padding-bottom_30" >
+ 
+
 <div class="column">
-    <div class="row gap-15 f-nn p-15_12 br-t line1"  *ngFor ="let a of n">
+    <div class="row gap-15 f-nn p-15_12 br-t "  *ngFor ="let a of n">
         <span class="  w-112 font-300 font-14_196 fc-main-3">{{a.date}}</span> 
-        <span class="  font-300 font-14_196">{{a.info}}</span>
+        <span class="underline  font-500 font-14_196">{{a.info}}</span>
        
       </div>
 </div>
+
+  <div class="row fl-r mt-24" ><span class="font-700 font-14_196">Все новости</span>      <app-svg-icon [width]="'20'" [height]="'20'"
+    class=""
+    [iconName]="'arrow_right-light'">
+</app-svg-icon></div>
+</main>

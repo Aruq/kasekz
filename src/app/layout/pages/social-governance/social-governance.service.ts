@@ -6,6 +6,7 @@ import {
 import {
   ListFileDescriptionInterface
 } from "@shared/components/lists/list-file-description/interfaces/list-file-description-interface";
+import { flatten } from '@shared/export-data/flatten';
 
 @Injectable({
   providedIn: 'root'
@@ -33,25 +34,25 @@ export class SocialService {
     {
       header: 'Зеленые облигации',
       translateCode: '',
-      link: 'asts-currency',
+      link: '',
       active: false
     },
     {
       header: 'Социальные облигации',
       translateCode: '',
-      link: 'spectra',
+      link: '',
       active: false
     },
     {
       header: 'Компании, раскрывающие ESG информацию',
       translateCode: '',
-      link: 'next',
+      link: '',
       active: false
     },
     {
         header: 'ESG верификаторы',
         translateCode: '',
-        link: 'next',
+        link: '',
         active: false
       }
   ]
@@ -77,15 +78,7 @@ export class SocialService {
   constructor() {
   }
 
-  setCurrentTab(link: string) {
-    this.tabs.forEach(tab => {
-      if (tab.link === link) {
-        tab.active = true;
-        this.currentTab = tab;
-      } else {
-        tab.active = false;
-      }
-    })
+  end() {
   }
 
 }

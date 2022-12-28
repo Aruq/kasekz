@@ -10,12 +10,12 @@
           <span class="font-300 font-18_252 margin-top_15">По состоянию на 01 октября 2021 года общее количество объявленных акций 
             <br>АО "Казахстанская фондовая биржа" составляет  <span class='font-700'>5 000 000 </span>штук, <span class="font-700">1 075 231 </span>акция размещена.</span>
               <div class="pb-40"> 
-           <div class="row margin-top_24">
-                <div class="input-field-medium">
+           <div class="row margin-top_24 f-sb_c ">
+                <div class="input-field-new">
                   <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
-                  <input  placeholder="Поиск по коду или названию компании">
+                  <input class="font-300 font-14_196" placeholder="Поиск по названию" (keyup)="filter($event)">
                 </div>
-                <div class="all font-300 font-16_224">Всего акционеров – 49</div>
+                <div class="font-300 font-16_224">Всего акционеров – 49</div>
                 </div>
                 <div class="row margin-top_24 mb-15">
                     <div class="font-900 font-14_196 a">Полное официальное наименование держателя акций	</div>
@@ -24,9 +24,9 @@
                 </div>
 
             <div class="row stock " *ngFor="let stock of stocks">  
-                <div class="font-300 font-14_196 a">{{stock.company}}</div> 
-                <div class="font-300 font-14_196 b">{{stock.q_stock}}</div> 
-                <div class="font-300 font-14_196 c">{{stock.p_stock}}</div> 
+                <div class="font-500 font-14_196 a">{{stock.company}}</div> 
+                <div class="font-500 font-14_196 b">{{stock.q_stock}}</div> 
+                <div class="font-500 font-14_196 c">{{stock.p_stock}}</div> 
             </div></div> </ng-container></main>
           
            <main class="main-c"> <ng-container *ngIf="link === 'unlisted'">
@@ -37,17 +37,17 @@
 
                   </div>
                   
-                    <div class="f-nn  f-sb_c mb-24 margin-top_18">
+                    <div class="row f-sb_c mb-24 margin-top_18">
                       <div class="input-field-vacancies box-shadow_1 br-8 f-nc gap-4 font-14_196 font-300 bg-main_5 border-sec_5">
                         <svg-icon src="assets/images/const-svgs/search-icon.svg"></svg-icon>
                         <input [(ngModel)]="searchCode" placeholder="Поиск по названию">
                       </div>
-                     
+                     <div class="font-14_168 font-700">
                   <select  >
                   <option *ngFor="let year of years" > <span  class="font-14_196 font-700"></span>{{year.y}}</option>
-                  </select>
-                 
-                    </div>
+                  </select></div>
+                 </div>
+                   
               
                  
                   <div class="new line " *ngFor="let news of n">
@@ -61,7 +61,7 @@
               <div>
                 <div class="row f-sb_c margin-top_36">
                   <span class="font-700 font-20_24">Уведомления</span>
-                  <div class="ml-360 " class="font-14_196 font-700">
+                  <div class="" class="font-14_196 font-700">
                     <select  >
                     <option *ngFor="let year of years" >{{year.y}}</option>
                     </select>
@@ -83,9 +83,9 @@
                 </div>
                 <div class="right">
                   <div class ='right1'>
-                    <div class="row mb-8">
+                    <div class="row  f-sb_c mb-8">
                       <span class="font-700 font-20_24 pt-4">Финансовая отчетность </span>
-                      <div class="ml-105">
+                      <div class="font-14_196 font-700">
                         <select  >
                         <option *ngFor="let year of years">{{year.y}}</option>
                         </select>
@@ -94,14 +94,14 @@
                     <div class="" *ngFor="let fin of fins">
                       <div class="fin ap line1" *ngFor="let a of fin.year">
                       <img src="assets/images/const-svgs/file-types/file.svg">
-                      <div class="font-500 font-16_224 td">{{a.name}}</div> 
+                      <div class="font-16_224 font-700 td">{{a.name}}</div> 
                     </div>
                   </div>
                     </div>
                   <div class="right1">
-                    <div class="row mb-8">
+                    <div class="row mb-8 f-sb_c">
                       <span class="font-700 font-20_24 pt-4">Годовые и квартальные  отчеты </span>
-                      <div class="ml-40">
+                      <div class="font-14_196 font-700">
                         <select  >
                         <option *ngFor="let year of years">{{year.y}}</option>
                         </select>
@@ -111,7 +111,7 @@
                       <div class="fin ap line1" *ngFor="let report of reports">
                       <img src="assets/images/const-svgs/file-types/file.svg">
                       <div class="">
-                      <div class="font-500 font-16_224  td">{{report.name}}</div> 
+                      <div class="font-16_224 font-700  td">{{report.name}}</div> 
                       <div class="font-300 font-14_196 " >{{report.weight}}</div> 
                   </div></div>
                    </div>

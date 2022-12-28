@@ -13,12 +13,19 @@
 backdrop-filter: blur(10px);
   .hms-items {
     .hms-item {
-      padding: 8px 100px 8px 16px;
+      padding: 8px 16px 8px 16px;
       gap: 4px;
+      width: 362px;
     }
   }
   
 }
 
 .hms-header {
+}
+.hms-items {
+  .hms-item :hover{
+    color: #038726;
+    font-family: MuseoSansCyrl700;
+  }
 }

@@ -56,7 +56,7 @@ throw new Error('Method not implemented.');
           link:'/about-us'
         },
         {
-          name: 'План закупок'
+          name: 'Акционерам биржи'
         }
       ]
       years:year[]=[{
@@ -317,6 +317,10 @@ ngOnInit():void
   public test(v: string){
     console.log(v);
     this.link = v;
-
-}
+ 
+     
+}   filter(event: Event) {
+        const filter = (event.target as HTMLInputElement).value;
+      //stocks.filter= filter.trim().toLowerCase();
+      } 
 }

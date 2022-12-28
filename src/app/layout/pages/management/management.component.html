@@ -6,62 +6,17 @@
      <span class="font-900 font-28_40 fc-main_2">Руководство</span></div></main>
  <app-tabs [tabs]="getTabs()" (currentTab)="test($event)"></app-tabs>
      <main class="main-c"> <div class="fi-header">
-     <div class="margin-top_15  row-wrap">
+     <div class="margin-top_15  row-wrap pointer">
    <ng-container *ngIf="link === 'unlisted'">
- <div class="slip" (click) ="modalOn($event) " *ngFor="let board of boards">
   
-        <div class = "backgroundForImg"><img  class ="img" src="{{board.imageUrl}}" width="100" height="100"/>
+ <div class="slip "   (click) ="modalOpen(board.id) "*ngFor="let board of boards">
+        <div class = "backgroundForImg"><img  class ="img" src="{{board.imageUrl}}" />
       </div>
              <div class='info bg-main_5'>
         <span class=" font-700  font-16_192 ">{{board.name}}</span>
         <span class=" font-500 font-12_168 uppercase">{{board.post}}</span>
         </div>
      </div>
-     <div [ngStyle]="{
-      top: y+'px',
-      left: x+'px'
-    }"
-         *ngIf="show"
-         class=" box">
-         <div >
-          <div class="mt-12 p-0_24 f-nc gap-4 pointer fl-r" >
-            <svg-icon src="assets/images/exit.svg" (click)="modalOn()"></svg-icon>
-            
-          </div>
-
-
-      <div class="row a" *ngFor="let board of boards">
-      <div >
-        <div class = "forImg"><img  class ="im" src="{{board.imageUrl}}" width="100" height="100"/></div>
-          <div class='in'>
-        <span class=" font-700  font-20_24">{{board.name}}</span>
-        <span class=" font-500 font-12_168 uppercase">{{board.post}}</span>
-        
-        </div></div>
-        <div class="column e">
-           <div><span class=" font-700  font-22_26 ">Образование</span></div>
-        <div  class="ac line" *ngFor="let n of board.education">
-    
-          <div><span class=" font-500  font-16_192 c ">{{n.year}}</span></div>
-          <div><span class=" font-300   font-14_196">{{n.edu}}</span></div>
-
-        </div>
-        <div class="mt-12"><span class=" font-700  font-22_26  ">Опыт работы</span></div>
-        <div  class="ac line" *ngFor="let n of board.experience">
-         
-          <div><span class=" font-500  font-16_192 c">{{n.year}}</span></div>
-          <div><span class=" font-300 font-14_196  ">{{n.work}}</span></div>
-
-        </div>
-        <div class="mt-12"><span class=" font-700  font-22_26 ">Дополнительные сведения</span></div>
-        <div  class="ac line" *ngFor="let n of board.more_info">
-        
-          <div><span class=" font-300 font-14_196  ">{{n.info}}</span></div>
-
-        </div>
-      </div>
-        </div></div>
-        </div>
   </ng-container>
  <ng-container *ngIf="link !== 'unlisted'">
  <div   (click) ="modalOpen(director.id) " class="slip" *ngFor="let director of directors">
@@ -75,77 +30,76 @@
           </div>
  
            </ng-container>
-               
-           
-          
-      
-          <!-- <div  class="slip" *ngFor="let director of directors">
-           
-           
-
-
-           <div class = "backgroundForImg"><img  class ="img" src="{{director.imageUrl}}" width="100" height="100"/>
       </div>
-             <div class='info'>
-        <span class=" font-600  font-20_24 ">{{director.name}}</span>
-        <span class=" font-500 font-12_168 uppercase">{{director.post}}</span>
-        </div>
-      </div> -->
-      </div>
-    
 </div>
 </main>
 </div>
 
 
+<ng-container *ngIf="link === 'unlisted'">
 
-
-<jw-modal [id]="modalId" *ngIf="boardForModal !== undefined">
-
-
-
-
-    <div class="header mt-12 p-0_24 f-nc gap-4 pointer fl-r margin-right_16">
-      
+<jw-modal [id]="modalId" *ngIf="boardForModal !== undefined" >
+    <div class="header mt-12 p-0_24 f-nc gap-4 pointer exit "> 
         <svg-icon src="assets/images/exit.svg" (click)="modalClose(modalId)" style="position: fixed;"></svg-icon>
-        
-      </div>
+           </div>
     <div class="row a" >
     <div class ="fix">
-      <div class = "forImg margin-left_16 margin-right_16"><img  class ="im" src="{{boardForModal[0].imageUrl}}" width="100" height="100"/></div>
+      <div class = "forImg margin-left_16 margin-right_16"><img  class ="im" src="{{boardForModal[0].image}}" width="100" height="100"/></div>
         <div class='in margin-left_16 margin-right_16'>
       <span class=" font-700  font-20_24 ">{{boardForModal[0].name}}</span>
       <span class=" font-500 font-12_168 uppercase">{{boardForModal[0].post}}</span>
-      
       </div></div>
- 
+ <div class="sc">
       <div class="column e  ">
-         <div><span class=" font-700  font-22_26 ">Образование</span></div>
+         <div><span class=" font-700  font-22_26 ">{{boardForModal[0].edu_title}}</span></div>
       <div  class="ac line" *ngFor="let n of boardForModal[0].education">
-  
         <div><span class=" font-500  font-16_192 c ">{{n.year}}</span></div>
         <div><span class=" font-300   font-14_196">{{n.edu}}</span></div>
-
       </div>
       <div class="mt-12"><span class=" font-700  font-22_26  ">Опыт работы</span></div>
-      <div  class="ac line" *ngFor="let n of boardForModal[0].experience">
-       
-        <div><span class=" font-500  font-16_192 c">{{n.year}}</span></div>
-        <div><span class=" font-300 font-14_196  ">{{n.work}}</span></div>
-
+      <div  class="ac line" *ngFor="let n of boardForModal[0].experience"> 
+        <div><span class=" font-500  font-16_192 c">{{n.year}}</span> </div>
+        <div class=""><span class=" font-300 font-14_196  ">{{n.work}}</span></div>
       </div>
-      <div class="mt-12"><span class=" font-700  font-22_26 ">Дополнительные сведения</span></div>
+      <div class="mt-12" ><span class=" font-700  font-22_26 ">{{boardForModal[0].more_data}}</span></div>
       <div  class="ac line" *ngFor="let n of boardForModal[0].more_info">
-      
         <div><span class=" font-300 font-14_196  ">{{n.info}}</span></div>
-
       </div>
     </div>
       </div>
-    
-
-
-
-
-
+    </div>
 </jw-modal>
+</ng-container>
+<!---->
+<ng-container *ngIf="link !== 'unlisted'" >
+<jw-modal [id]="modalId" *ngIf="directorForModal !== undefined">
+  <div class="header mt-12 p-0_24 f-nc gap-4 pointer exit "> 
+      <svg-icon src="assets/images/exit.svg" (click)="modalClose(modalId)" style="position: fixed;"></svg-icon>
+         </div>
+  <div class="row a" >
+  <div class ="fix">
+    <div class = "forImg margin-left_16 margin-right_16"><img  class ="im" src="{{directorForModal[0].image}}" width="100" height="100"/></div>
+      <div class='in margin-left_16 margin-right_16'>
+    <span class=" font-700  font-20_24 ">{{directorForModal[0].name}}</span>
+    <span class=" font-500 font-12_168 uppercase">{{directorForModal[0].post}}</span>
+    </div></div>
+<div class="sc">
+    <div class="column e  ">
+       <div><span class=" font-700  font-22_26 ">{{directorForModal[0].edu_title}}</span></div>
+    <div  class="ac line" *ngFor="let n of directorForModal[0].education">
+      <div><span class=" font-500  font-16_192 c ">{{n.year}}</span></div>
+      <div><span class=" font-300   font-14_196">{{n.edu}}</span></div>
+    </div>
+    <div class="mt-12"><span class=" font-700  font-22_26  ">Опыт работы</span></div>
+    <div  class="ac line" *ngFor="let n of directorForModal[0].experience"> 
+      <div><span class=" font-500  font-16_192 c">{{n.year}}</span> </div>
+      <div class=""><span class=" font-300 font-14_196  ">{{n.work}}</span></div>
+    </div>
+    <div class="mt-12" ><span class=" font-700  font-22_26 ">{{directorForModal[0].more_data}}</span></div>
+    <div  class="ac line" *ngFor="let n of directorForModal[0].more_info">
+      <div><span class=" font-300 font-14_196  ">{{n.info}}</span></div>
+    </div>
+  </div>
+    </div>
+  </div>
+</jw-modal></ng-container>

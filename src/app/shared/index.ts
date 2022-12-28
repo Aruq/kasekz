@@ -13,6 +13,7 @@ export * from './components/header-menu-big/header-menu-big.component';
 
 // tabs
 export * from './components/tabs/tabs.component';
+
 export * from './components/tabs-sec/tabs-sec.component';
 export * from './components/tabs-his/tabs-his.component'
 // export * from './components/';

@@ -2,27 +2,32 @@
     <app-path-tree [pathTree]="pathTree" class="pointer"></app-path-tree>
     <main class="main-p">
       <div class="left"> <span class="font-900 font-28_336 fc-main_2">История Биржи</span></div>
-<div class="row">
-<div class="a">
- <div  *ngFor="let history of hist" >
-  <div class="font-900 font-22_26 margin-top_24 mb-30">{{history.year}}</div>
-  <div class="row">
-    <div class="">
-      <img  class ="img br-4" src="{{history.img}}"/>
+<div class="row ">
+<div class="width">
+ <div>
+  <ng-container *ngFor="let r of hist" >
+    <div class="font-900 font-22_26 mt-16 mb-24"*ngIf="r.year === s.header" >{{r.year}}
+    
+      <div class="row ">
+        <div class="image-shadow">
+          <img  class ="img br-4"   src="{{r.img}}"/>
+        </div>
+        <div class="ov-y">
+      <div class="column mt-20 ">
+      <div class="info column-c mb-20" *ngFor="let a of r.info"><div class="column"><span class="font-700 font-16_192">{{a.date}}</span>
+       <span class="font-300 font-16_224">{{a.title}}</span>
+       </div>
+      </div></div></div> </div>
     </div>
-  <div class="column">
-  <div class="info column-c mb-30" *ngFor="let a of history.info"><div class="column"><span class="font-700 font-16_192">{{a.date}}</span>
-   <span class="font-300 font-16_224">{{a.title}}</span>
-   </div>
-  </div></div> </div>
+  </ng-container>
+
 </div>
+
 </div>
-    <div class="padding-bottom_30 al mb-30">
-      <app-tabs-his [tabs]="tabsYears" [overflow]="true"></app-tabs-his>
-    </div>
-   
+    <div class="padding-bottom_30 tab-height mb-30">    
+  <app-tabs-his [tabs]="tabs"  [overflow]="true"  (currentTab)="test($event)" class="pointer"></app-tabs-his>
   </div>
- 
+    </div>
   </main>
   </div>
   

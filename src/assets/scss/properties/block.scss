@@ -18,16 +18,16 @@
 }
 
 .line {
-border-bottom: 1px solid #F8F9FA;
+border-bottom: 1px solid  #d1d1d1;
 }
 .br-t{
   border-top:1px solid #d1d1d1;
 }
-.line:not(:last-child){
-  border-bottom:1px solid #d1d1d1
+.line:last-child{
+  border-bottom:none;
 }
 .line1 {
- border-bottom: 1px solid white;
+ border-bottom:1px solid #d1d1d1;
 }
 .line1:not(:last-child){
   border-bottom:1px solid #d1d1d1
@@ -74,7 +74,7 @@ border-bottom: 1px solid #F8F9FA;
   flex-direction: column;
 }
 .active{
-  border-left:2.7px solid #038726;
+  border-left:2px solid #038726;
   cursor: pointer;
 
   color:  #038726;;

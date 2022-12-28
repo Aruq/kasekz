@@ -2,10 +2,16 @@
 import {Component,OnInit} from '@angular/core';
 
 import { TabsInterface } from '@shared/interfaces/tabs-interface';
+import { url } from 'inspector';
+import { title } from 'process';
 import { ContactService } from './contacts.service';
 interface requisite{
     title:string;
     property?:any[]
+}
+interface detail{
+    title:string;
+    info?:any[]
 }
 interface contact{
     img:string;
@@ -49,16 +55,18 @@ throw new Error('Method not implemented.');
         },
         {
             name:'Электронная почта:',
-            info:'kase@kase.kz',
-            info1:'info@kase.kz'},
+            href:'kase@kase.kz',
+            href1:'info@kase.kz'
+   
+        },
         {
             name:'Телефоны:',
-            info:'(+7 727) 237 53 00',
-            info1:'(+7 727) 237 53 11'
+            tel:'(+7 727) 237 53 00',
+            tel1:'(+7 727) 237 53 11'
         },
         {
             name:'Официальный сайт:',
-            info:'kase.kz'
+            href:'kase.kz'
         }]},
         {title:'Акции Биржи',
     property:[{
@@ -75,7 +83,9 @@ throw new Error('Method not implemented.');
 
 }]
 
-    },{title:'Общие сведения',
+    },
+    
+    {title:'Общие сведения',
         property:[{
             name:'Полное наименование:',
             info:'Акционерное общество "Казахстанская фондовая биржа"'
@@ -86,7 +96,7 @@ throw new Error('Method not implemented.');
         },
         {
             name:'Аббревиатура:',
-            info:'KASE'
+            tel:'KASE'
         },
         {
             name:'Вид юридического лица:',
@@ -111,9 +121,36 @@ throw new Error('Method not implemented.');
             info:'931240000220'
         },{
             name:'РНН:',
-            info:'600200049149, Свидетельство о постановке на учет по НДС серия 60001 №0078118 от 01 августа 2012 года'
+            info:'600200049149, ', 
+            href:'Свидетельство о постановке на учет по НДС',
+            info1:' серия 60001 №0078118 от 01 августа 2012 года'
         }]
 
+    }
+]
+
+details:detail[]=[
+    {
+        title:'Контактные данные',
+        info:[{
+            name:'Фактический и зарегистрированный адрес:',
+            info:'Республика Казахстан, А15G7M6, г. Алматы, ул. Байзакова, 280, Северная башня Многофункционального комплекса "Almaty Towers", 8-й этаж'
+        },
+        {
+            name:'Электронная почта:',
+            info:'kase@kase.kz',
+            info1:'info@kase.kz'
+   
+        },
+        {
+            name:'Телефоны:',
+            info:'(+7 727) 237 53 00',
+            info1:'(+7 727) 237 53 11'
+        },
+        {
+            name:'Официальный сайт:',
+            info:'kase.kz'
+        }]
     }
 ]
 contacts:contact[]=[
@@ -147,6 +184,7 @@ contacts:contact[]=[
 ]
 
 }]
+
 
 
       constructor( public contactService :ContactService){}

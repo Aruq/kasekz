@@ -4,9 +4,7 @@ import {TabsInterface} from "@shared/interfaces/tabs-interface";
   providedIn: 'root'
 })
 export class ManagementService {
-  start() {
-    throw new Error('Method not implemented.');
-  }
+  
 
   public currentTab: TabsInterface = <TabsInterface>{};
 

@@ -18,6 +18,8 @@ export class SocialComponent implements OnInit {
   public esgValues:any[]=[];
   public esg:any[]=esg;
   public filterValues: any = [];
+  public t  = '';
+  
   constructor(private socialService: SocialService,
               private tabsService: TabsService,   private toolService: ToolService) { }
 
@@ -48,19 +50,21 @@ export class SocialComponent implements OnInit {
   convert() {
   }
 
-  getEmitCurrentTab(link: string): void {
-    this.socialService.setCurrentTab(link);
-  }
+  
 
   getTabs() {
     return this.socialService.tabs;
   }
 
   getTabCurrentTab(): TabsInterface {
+     console.log(this.tabId)
     return this.tabsService.getByKey(this.tabId);
   }
   getTabsSec() {
     return this.socialService.tabsSec;
+  }
+  ngOnDestroy(): void {
+    this.socialService.end();
   }
 
   getPathTree() {
@@ -71,4 +75,8 @@ export class SocialComponent implements OnInit {
     this.filterValues = values;
   }
  
+
+  test(e: any){
+      this.t = e.header;
+  }
 }

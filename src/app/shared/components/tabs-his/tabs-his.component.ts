@@ -9,12 +9,12 @@ import {TabsService} from "@shared/components/tabs/tabs.service";
   styleUrls: ['./tabs-his.component.scss']
 })
 export class TabsHisComponent implements OnInit, AfterViewInit {
-
+  @Input() active = false;
   @Input() tabs: TabsInterface[] = [];
   @Input() id: string = ''
   @Input() classStyle: string = ''
   @Input() overflow: boolean = false;
-
+  @Output() current: any = new EventEmitter<TabsInterface>();
   @Output() currentTab: any = new EventEmitter<string>();
 
   public pivot: any

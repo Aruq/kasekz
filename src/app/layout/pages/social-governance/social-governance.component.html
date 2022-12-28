@@ -1,3 +1,4 @@
+
 <div class="governance-header padding-bottom_30">
    
     <main class="main-p">
@@ -18,31 +19,25 @@
         <span>Критерии соответствия зеленых, социальных или иных облигаций, выпускаемых в целях финансирования проектов устойчивого развития, применимым принципам и стандартам, определяются соответствующим уполномоченным органом или организациями, осуществляющими независимую оценку проектов, подлежащих финансированию через выпуск облигаций устойчивого развития, перечень которых определяется Биржей.</span>
         <span>В целях развития ESG направления Биржа предоставляет льготы по уплате листинговых сборов эмитентам облигаций устойчивого развития, а также соответствующую консультационную поддержку.</span>
     </div>
-  </div>    
+  </div>  
+    
   </main>
-  <app-tabs
+  <div><app-tabs
     [id]="tabId"
     [tabs]="getTabs()"
+    (current)="test($event)"
     class="margin-top_30"
   ></app-tabs>
   <main class="main-p padding-bottom_30"> 
-    <app-esg *ngIf="getTabCurrentTab().header === 'ESG облигации'"></app-esg>
-    <app-esg-verifies *ngIf="getTabCurrentTab().header === 'ESG верификаторы'"></app-esg-verifies>
-  </main>
+    <app-esg *ngIf="t === 'ESG облигации'"></app-esg>
+    <app-esg-verifies *ngIf="t === 'ESG верификаторы'"></app-esg-verifies>
+  </main></div>
+  
 
   </div>
+  <app-news-env></app-news-env>
  
   
-    <div class="">
-      <app-tabs [tabs]="getTabsSec()" [id]="tabId"  class="margin-top_30"></app-tabs>
-      <main class="main-p padding-bottom_30" >
-        <app-news-env></app-news-env>
-        <div class="row fl-r mt-24" ><span class="font-700 font-14_196">Все новости</span>      <app-svg-icon [width]="'20'" [height]="'20'"
-          class=""
-          [iconName]="'arrow_right-light'">
-</app-svg-icon></div>
-      </main>
-    </div>
 
 
 

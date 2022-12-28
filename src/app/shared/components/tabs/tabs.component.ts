@@ -12,6 +12,8 @@ export class TabsComponent implements OnInit, OnDestroy {
   @Input() tabs: TabsInterface[] = [];
   @Input() id: string = ''
   @Output() currentTab: any = new EventEmitter<string>();
+  @Output() current: any = new EventEmitter<TabsInterface>();
+
 
   constructor(public router: Router,
               public tabsService: TabsService) {
@@ -48,6 +50,7 @@ export class TabsComponent implements OnInit, OnDestroy {
     })
     if (temp) {
       this.currentTab.emit(temp.link);
+      this.current.emit(temp);
     }
   }
 

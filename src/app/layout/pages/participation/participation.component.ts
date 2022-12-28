@@ -18,8 +18,7 @@ interface organization{
 })
 
 export class ParticipationComponent implements OnInit{
-    ngOnInit(): void {
-        throw new Error('Method not implemented.');
+    ngOnInit(){
     }
 
 getTableValues(arg0: any): any {

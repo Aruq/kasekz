@@ -109,6 +109,7 @@ export class HeaderComponent implements OnInit {
 
 
   }
+  
 
   // getLangChange() {
     // this.translateConfigService.getLangChange().subscribe(res => {

@@ -1,11 +1,11 @@
 <div class="col2">
-   
+  <div *ngIf="getCurrentTabByKey()" class="tabs f-nn">
     <div [id]="id" #tabsSec class="tabs font-14_168">
       <div class="tab-on"
            [id]="id + tab.header"
            (click)="clickTab(tab)"
            [ngClass]="{
-           'tab-on font-700 font-16_192 block-main_1': tab.active,
+           'tab-on font-900 font-16_192 block-main_1': tab.active,
            'tab-off font-300 font-main_2 border-sec_5': !tab.active
            }"
            *ngFor="let tab of tabs; index as i">

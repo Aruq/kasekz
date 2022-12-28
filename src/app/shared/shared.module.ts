@@ -13,6 +13,7 @@ const components : any = [
   component.ActualInformationComponent,
   component.FilterButtonComponent,
   component.TabsComponent,
+  
   component.ProspectusComponent,
   component.TabsSecComponent,
   component.TabsHisComponent,

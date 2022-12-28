@@ -1,12 +1,9 @@
 .path_tree {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-.path_tree{
-margin-left: auto;
-align-items: flex-end;
-}
-
+  //flex-direction: row;
+  //align-items: center;
+  margin-left: auto;
+  
   .path_tree-arrow {
     margin: 0 0px;
   }
